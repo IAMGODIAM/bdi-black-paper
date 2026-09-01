@@ -1,18 +1,7 @@
-# Chapter 4 — THE MEASURE: What Gets Counted and Why
-### Part Two — The Data Architecture
-
-**Work:** The Measure of the Wound  
-**Publisher:** E5 Enclave Incorporated · EIN 99-3822441 · Liberty City, Miami, Florida  
-**Filed:** April 20, 2026  
-**DAG:** bdi-chapter4-v1-2026-0420  
-**Status:** DRAFT v1.0
-
----
+# CHAPTER 4 — THE MEASURE: WHAT GETS COUNTED AND WHY
 
 > *"It is a peculiar sensation, this double-consciousness, this sense of always looking at one's self through the eyes of others."*
 > — W.E.B. Du Bois, *The Souls of Black Folk* (1903)
-
----
 
 ## Opening
 
@@ -40,7 +29,7 @@ The BDI synthesizes across eight dimensions simultaneously because the lived exp
 
 **What it measures:** Wealth gap, unemployment, household income, homeownership rates, poverty rates.
 
-**Why 20%:** The economic dimension is assigned the highest weight (tied with health and criminal justice) because it is both the most measurable and the most foundational. Wealth is the mechanism through which structural advantage and disadvantage are transmitted across generations. The Federal Reserve Survey of Consumer Finances provides the most rigorous longitudinal measure available. The BLS unemployment series provides the longest continuous racial comparison available in American public data (1972–2025, fifty-three years). Income and homeownership from the Census ACS provide the intermediate layer between wealth accumulation and daily economic survival.
+**Why 20%:** The economic dimension is assigned the highest weight (tied with health and criminal justice) because it is both the most measurable and the most foundational. Wealth is the mechanism through which structural advantage and disadvantage are transmitted across generations. The Federal Reserve Survey of Consumer Finances provides the most rigorous longitudinal measure available. The BLS unemployment series provides the longest continuous racial comparison available in American public data (1972–2025, fifty-four years). Income and homeownership from the Census ACS provide the intermediate layer between wealth accumulation and daily economic survival.
 
 **Key sources:** Fed Reserve SCF (wealth, 1989–2022), BLS CPS (unemployment, 1972–2025), Census ACS B19013 (income), Census ACS B25003 (homeownership), Census ACS B17001 (poverty), BLS LAUS (state-level, 2010–2024), Census ACS county-level 5-year estimates (2015–2022, 12,382 county-year observations).
 
@@ -48,7 +37,7 @@ The BDI synthesizes across eight dimensions simultaneously because the lived exp
 
 **What it measures:** Maternal mortality rate, life expectancy gap, COVID excess mortality, environmental health burden.
 
-**Why 20%:** The body is the final ledger of everything the built environment, the economic environment, and the political environment produce. Maternal mortality is not a health failure — it is a system failure. The 69.9 per 100,000 maternal mortality rate for Black women in 2021, documented by NCHS, is a metric that encodes discriminatory clinical treatment, under-resourced prenatal care, environmental stressors, economic precarity, and the cumulative physical burden of navigating anti-Black institutions across a lifetime. Life expectancy encodes the same compound burden in a single number at the population level.
+**Why 20%:** The body is the final ledger of everything the built environment, the economic environment, and the political environment produce. Maternal mortality is not a health failure — it is a system failure. The 69.9 per 100,000 maternal mortality rate for Black women in 2021 — the highest recorded since 1968, documented by NCHS — is a metric that encodes discriminatory clinical treatment, under-resourced prenatal care, environmental stressors, economic precarity, and the cumulative physical burden of navigating anti-Black institutions across a lifetime. Life expectancy encodes the same compound burden in a single number at the population level.
 
 **Key sources:** NCHS WONDER (maternal mortality, 1999–2021), NCHS vital statistics (life expectancy by race, 1999–2021), CDC PLACES (health burden at tract level for FarmBlock layer).
 
@@ -56,7 +45,7 @@ The BDI synthesizes across eight dimensions simultaneously because the lived exp
 
 **What it measures:** Incarceration rate by race, police killing rate by race, unarmed killing rate.
 
-**Why 20%:** The carceral system is an economic system. Incarceration removes labor from families, destroys wealth-building capacity, removes voting rights in most states, restricts housing access, restricts employment access, and generates lifetime economic penalties that compound across generations. The 5.7x incarceration ratio — which has not moved in thirty-three years of data — is not a public safety metric. It is a structural extraction metric. The BJS Prisoners series measures it with the same methodological rigor as any other federal statistical program.
+**Why 20%:** The carceral system is an economic system. Incarceration removes labor from families, destroys wealth-building capacity, removes voting rights in most states, restricts housing access, restricts employment access, and generates lifetime economic penalties that compound across generations. The incarceration ratio — which has moved 0.14 points in ninety-seven years of data, and has not fallen below 5.8 within the empirical window — is not a public safety metric. It is a structural extraction metric. The BJS Prisoners series measures it with the same methodological rigor as any other federal statistical program.
 
 **Key sources:** BJS Prisoners series (incarceration rate by race, 1991–2023), Mapping Police Violence database (police killings by race, 2013–2023, DOJ-confirmed methodology).
 
@@ -72,7 +61,7 @@ The BDI synthesizes across eight dimensions simultaneously because the lived exp
 
 **What it measures:** Mortgage denial rates by race, historical homeownership rates, eviction rates.
 
-**Why 10%:** Housing is the primary mechanism of wealth accumulation for American families without inherited wealth. The mortgage denial ratio — documented by the Home Mortgage Disclosure Act — is the most direct federal measure of discriminatory access to this mechanism. The 2x denial rate, stable since 1995, is one of the most durable findings in the dataset. The 10% weighting reflects the significant overlap between housing and economic conditions (Pillar 1): they are measuring different mechanisms of the same fundamental condition of wealth exclusion.
+**Why 10%:** Housing is the primary mechanism of wealth accumulation for American families without inherited wealth. The mortgage denial ratio — documented by the Home Mortgage Disclosure Act — is the most direct federal measure of discriminatory access to this mechanism. The denial ratio, which ranged from 2.01 to 2.36 across thirty years of HMDA reporting and never fell below 2.0, is one of the most durable findings in the dataset. The 10% weighting reflects the significant overlap between housing and economic conditions (Pillar 1): they are measuring different mechanisms of the same fundamental condition of wealth exclusion.
 
 **Key sources:** HMDA (mortgage denial by race, 1995–2022), Census decennial homeownership (1940–2010 historical series), eviction data integrated from available administrative sources.
 
@@ -80,7 +69,7 @@ The BDI synthesizes across eight dimensions simultaneously because the lived exp
 
 **What it measures:** Proximity to industrial pollution sources, environmental health burden by race and geography.
 
-**Why 10%:** Environmental racism — the pattern by which polluting industrial facilities are sited disproportionately in Black and low-income communities — is documented across decades of environmental justice research and confirmed in federal EPA data. Cancer Alley, Louisiana — 150 industrial facilities in an 85-mile corridor with 85% Black population — is the most documented example, but the pattern is national and appears in the FarmBlock data across the 50-city priority universe. The 10% weighting reflects that environmental burden is both a direct health input (it belongs to Pillar 2 in terms of outcomes) and a distinct structural condition in its own right (community geography as a site of intentional disinvestment and industrial siting).
+**Why 10%:** Environmental racism — the pattern by which polluting industrial facilities are sited disproportionately in Black and low-income communities — is documented across decades of environmental justice research and confirmed in federal EPA data. The Louisiana petrochemical corridor — 150 industrial facilities across an 85-mile stretch, with fence-line census tracts 65 to 94 percent Black against a parish-wide share near 44 percent — is the most documented example, but the pattern is national and appears in the FarmBlock data across the 50-city priority universe. The 10% weighting reflects that environmental burden is both a direct health input (it belongs to Pillar 2 in terms of outcomes) and a distinct structural condition in its own right (community geography as a site of intentional disinvestment and industrial siting).
 
 **Key sources:** EPA facility data (industrial siting by community demographics), CDC PLACES environmental burden indicators at tract level.
 
@@ -98,7 +87,7 @@ The BDI synthesizes across eight dimensions simultaneously because the lived exp
 
 **Why 0% composite weight:** The historical pillar is not weighted in the BDI composite index because it is not a contemporary condition that varies across the 50-city comparison universe — it is the shared origin of the structural conditions that do. Every community in the priority universe descends from this history. Weighting it in the composite would not differentiate communities; it would add a constant. The historical data is present in the dataset, documented in the vault, and present in this paper because the 33-year empirical window does not explain itself without it. The wealth gap that opens Chapter 5 does not begin in 1991.
 
-**Key sources:** SlaveVoyages Trans-Atlantic Slave Trade Database (1514–1866), 42 aggregate observations.
+**Key sources:** Slave Voyages Trans-Atlantic Slave Trade Database (1514–1866), 42 aggregate observations: 12,521,337 embarked, 10,702,656 disembarked in the Americas, 1,818,681 lost in the crossing.
 
 ---
 
@@ -134,14 +123,8 @@ These gaps are documented because a sovereign empirical record that conceals its
 
 Chapter 3 described how the data was built. Chapter 4 has described what it measures and why.
 
-Part Three begins with the findings. Thirty-three years. The wealth gap that has never closed. The unemployment ratio that has never moved. The maternal mortality rate that places the wealthiest country in human history in the statistical company of nations that lack running water.
+Part Three begins with the findings. Thirty-three years. The wealth gap that has never closed. The unemployment ratio that has never once inverted in fifty-four years. The maternal mortality ratio that is wider today than it was under legal segregation.
 
 The data is ready. The architecture is described. The methodology is documented.
 
 Turn the page.
-
----
-
-*CC0 1.0 Universal — Public Domain*  
-*E5 Enclave Incorporated · EIN 99-3822441 · Liberty City, Miami, Florida*  
-*DAG: bdi-chapter4-v1-2026-0420 · Nil satis nisi optimum*

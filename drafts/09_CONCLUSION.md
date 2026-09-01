@@ -1,86 +1,75 @@
-# Conclusion — THE MEASURE OF THE WOUND
-### Version 2.1 — Canonical Draft
+# CONCLUSION — WHAT THE DATA DEMANDS OF WHOEVER HOLDS THIS PAPER
 
-**Work:** The Measure of the Wound  
-**Subtitle:** A Sovereign Empirical Record of Black American Structural Distress, 1991–2024  
-**Publisher:** E5 Enclave Incorporated · EIN 99-3822441 · Liberty City, Miami, Florida  
-**Filed:** April 20, 2026  
-**DAG:** bdi-conclusion-v2.1-2026-0420  
-**Status:** DRAFT — pending peer review
+Thirty-three years in the core window, and series reaching back to 1900, to 1925, to 1940, to 1514. Eight dimensions of American life. Seventeen priority states. Forty-nine cities. Fifteen thousand five hundred and seven census tracts. Approximately fourteen thousand eight hundred and eleven raw federal observations, synthesized into one thousand five hundred and seventy-four verified empirical records, sealed on a public blockchain and released into the public domain.
+
+The question before every person who holds this paper is no longer whether the wound is real. The data settled that. The question is what you intend to do now that you know.
 
 ---
 
-Thirty-three years. Eight dimensions of American life. Seventeen priority states. Fifty cities. Five compound catastrophe zones where every pillar of structural distress has collapsed simultaneously. Fourteen thousand, eight hundred and eleven raw federal data points drawn from seventeen unmodified source files. One thousand, five hundred and seventy-four verified empirical observations, dual-source confirmed, sealed on a public blockchain. Fifteen thousand, five hundred and seventy-eight census tracts where the wound is not metaphor — it is a zip code, a school district, a hospital admission record, a mortgage denial, a police report filed and then not filed.
+## What the Data Established
 
-The question before every person who holds this paper is no longer whether the wound is real. The data settled that. Permanently, verifiably, without the possibility of revision under political pressure, because the dataset is sealed on the Base Mainnet blockchain and published under CC0 — belonging to no one and therefore to everyone, irrevocably, forever. The question is what you intend to do now that you know.
+**On wealth.** The median gap between Black and white families did not narrow in absolute terms. It grew from $83,000 in 1989 to $240,100 in 2022 — a 2.89-fold expansion, $157,100 of new distance. The wealth ratio improved by 3.2 cents on the dollar across thirty-three years. At that rate, ratio parity is roughly eight and a half centuries away.
+
+**On labor.** Across fifty-four years of monthly federal data — the longest continuous race-disaggregated labor series in American statistics — the Black/white unemployment ratio ranged from 1.58 to 2.56 and averaged 2.115. It has never once inverted. Not in one year of fifty-four, through four recessions, one pandemic and nine presidencies.
+
+**On housing.** The Fair Housing Act was signed in 1968, when the homeownership gap stood at approximately twenty-four percentage points. In 2022 it was 28.9. The gap is wider than when the law was passed. Mortgage denial ratios have not fallen below 2.0 in thirty years of mandatory federal disclosure. And fifty-three percent of public housing authorities did not file the reports that would show whether a 1968 statutory mandate was ever honored.
+
+**On health.** In 2021, Black women in America died in childbirth at 69.9 per 100,000 live births — a rate the World Health Organization associates with low-income nations. And the ratio that matters most in this dataset: in 1930, under legal Jim Crow and in segregated hospitals, a Black woman died in childbirth 1.48 times as often as a white woman. In 2022, she died 2.61 times as often. Ninety-two years of modern medicine widened the disparity by a factor of 1.76. Between 2019 and 2021, Black life expectancy fell four full years, to a level last seen in the mid-1990s.
+
+**On criminal justice.** In 1925, Black Americans were imprisoned at 6.45 times the white rate. In 2022, at 6.31 times. The ratio moved 0.14 points in ninety-seven years, across two world wars, the Civil Rights Act, the Voting Rights Act, mass incarceration's rise and a genuine 46 percent decarceration from its peak. From 2013 to 2023, 3,496 Black Americans were killed by police; 397 were unarmed.
+
+**On education.** The Grade 8 reading gap narrowed from 29.6 points in 1992 to 24.5 in 2022 — five points in thirty years. At the observed convergence rate, closing what remains requires approximately 144 years.
+
+**On political participation.** In 2012, Black voter turnout exceeded white turnout for the first and only time in fifty-six years of federal record. In 2013, *Shelby County v. Holder* removed the Voting Rights Act's preclearance coverage formula. By 2020, the gap was −8.3 points, the widest since the 1990s. The sequence is documented. The causation is a legal argument this paper does not make.
+
+**On the historical record.** Between 1514 and 1866, 12,521,337 Africans were forced onto slave ships. 1,818,681 did not survive the crossing. 10,702,656 reached the Americas. And between 1910 and 1997, thirteen and a half million acres of Black-owned farmland — ninety percent of the peak — passed out of Black hands without a single event large enough to be remembered by name.
 
 ---
 
-## What the Data Shows
+## What the Pattern Reveals
 
-On the economy: the wealth gap between Black and white Americans has not closed in thirty-three years of data. Not in 1991. Not following the Clinton-era expansion. Not in the Obama years. Not in 2024. The Federal Reserve Survey of Consumer Finances documents this with the precision of a ledger. Black homeownership applicants are denied mortgages at more than twice the rate of white applicants — a ratio that has held steady since 1995, through three administrations, two major housing reforms, a financial crisis, and a global pandemic. The 2008 collapse erased in eighteen months the homeownership gains of an entire decade, disproportionately in Black communities, built on predatory loan instruments that federal regulators allowed to be marketed specifically to Black families. Black unemployment has not fallen below twice the white unemployment rate in any calendar year in the fifty-three-year BLS record ending 2025. Not once.
+Across every pillar, in every decade, the same sequence.
 
-On health: in 2021, Black women in America died in childbirth at 69.9 per 100,000 live births — a rate the World Health Organization associates with low-income nations, not the wealthiest country in human history. The COVID-19 pandemic erased twenty years of hard-won life expectancy gains in eighteen months. In Cancer Alley, Louisiana — one hundred and fifty industrial facilities in an eighty-five-mile corridor, eighty-five percent Black population — the body has become the final ledger of everything the system refused to address in the built environment, the regulatory environment, and the political environment simultaneously.
+A crisis is documented. Public pressure builds. A law is passed or a program funded. Enforcement infrastructure is underfunded and deprioritized. The metric improves in absolute terms — sometimes dramatically — while the ratio between Black and white outcomes holds or widens. The absolute improvement is reported as progress. Political energy dissipates. The structure continues.
 
-On criminal justice: there is no year in this dataset — not 1991, not 2000, not 2012, not 2024 — in which Black Americans were not incarcerated at more than five times the rate of white Americans. The ratio has never fallen below 5.7. From 2013 to 2023, three thousand and fifteen Black Americans were killed by police. Three hundred and seventy-seven were unarmed. In thirty-three years of reform, advocacy, protest, legislation, consent decrees, and public mourning, the incarceration ratio has not changed by a single decimal point that would constitute meaningful progress.
+This is not policy failure in the ordinary sense. Failure implies the intended outcome was not achieved. But the maternal mortality series makes the sharper reading unavoidable: absolute performance improved by a factor of eighteen while the disparity ratio grew by a factor of 1.76. A system can improve enormously and distribute the improvement unequally, and if it does so consistently for ninety-two years, the distribution is not an accident of the improvement. It is a property of the system doing the improving.
 
-On education: the NAEP score gap — the national reading and mathematics assessment, the most rigorous standardized measure of academic achievement in American public education — has not closed in thirty years of national data. The gap that existed in 1992 exists in 2022. The children who entered school after the Civil Rights Act, after school desegregation, after every education reform of the last half century, still face the same structural deficit their parents faced. The data does not explain this as a failure of children or families. The data measures what the environment produces.
+This is a claim about function, not intention. Systems are judged by what they produce. What this one has produced, measured across fifty-four years of labor data, ninety-seven years of incarceration data and one hundred and twenty-two years of mortality data, is a set of ratios more durable than every legal remedy aimed at them.
 
-On housing: the eviction rate for Black renters has held at three times the white rate for the full span of available data. The mortgage denial ratio, documented above, is not a product of creditworthiness differences alone — the Home Mortgage Disclosure Act data shows the gap persists when income and loan amount are controlled. The deed is in the data.
-
----
-
-## The Five Cities Where Everything Has Failed
-
-The BDI composite index — weighting economic conditions at twenty percent, health at twenty percent, criminal justice at twenty percent, education at fifteen percent, housing at ten percent, environmental at ten percent, and political representation at five percent — identifies five American cities where all eight pillars of structural distress have reached critical simultaneous failure. These cities are not anomalies. They are the destination of thirty-three years of policy choices made at every level of government, private sector, and civil society. They represent the logical outcome of a system that has never, in the period this data covers, produced a single year in which Black Americans achieved parity on any of the eight dimensions measured.
-
-The FarmBlock Distress Index extends the analysis to fifteen thousand, five hundred and seventy-eight census tracts across fifty priority cities in seventeen states. The tract-level data does not tell a different story than the national data. It tells the same story with a street address attached.
+Ralph McCartney understood this from inside the geography. *"They have their plans set decades and scores in advance."* He was not speaking metaphorically. The redlining maps confirm it. The urban renewal records confirm it. This paper confirms it at national scale across eight dimensions.
 
 ---
 
 ## What This Paper Is
 
-This paper is the first instrument to combine, simultaneously: eight dimensions of structural distress, a thirty-three-year empirical window, dual-source verification for every data point, CC0 public domain status, blockchain immutability, and authorship by the community it measures.
+A forensic instrument, and a corrected one.
 
-It was built without government funding. Without university affiliation. Without foundation permission. Without a grant cycle. Without an editorial board that required softening the language to protect institutional relationships. It was built in Liberty City, Miami, Florida, by E5 Enclave Incorporated — a Black-led 501(c)(3) public charity — because the data needed to exist, and it needed to exist in the public domain, permanently.
+It documents what the system has done, where, and with what consistency. It maps the places where the compound weight of every pillar lands simultaneously — Humphreys, Claiborne, Sunflower, Amite, Alexander — and it names them by what the instrument measured rather than by what would have been more familiar to name.
 
-The intellectual tradition this paper stands in is precise. W.E.B. Du Bois built *The Philadelphia Negro* in 1899 without institutional support and against institutional resistance, because the data needed to exist and the community it described needed to own it. Ida B. Wells documented lynching with the same empirical discipline applied to an atrocity that the press refused to quantify. Ralph McCartney of Overtown, Miami — community organizer, oral historian, honored on the floor of the United States Congress by Congresswoman Carrie Meek on February 1, 1994 — gave the tradition its local fidelity: the refusal to leave the geography of the wound, to keep naming what was taken, to keep demanding what must be restored. His oral history testimony, recorded August 14, 1997 for the Black Archives of South Florida, is primary source evidence of how urban highway construction was used as a deliberate policy instrument of Black community destruction. The plans were on the books. He knew it. He said it. He stayed.
+It also documents its own errors. Twenty-seven claims triaged, eleven found conflicting with their sources. Ten arithmetic errors found by recomputing every derived statistic from the raw series. Three canonical counts in this project's own governance documents found stale. The highest-scoring tract in the published index found to be an imputation artifact. An unsourced $4.5 billion aggregate removed entirely. A "five compound catastrophe zones" list that did not match the instrument's output, withdrawn and replaced.
 
-This paper stays.
+All of it is in Appendix H, with the original claim and the verified value side by side.
 
----
+We print it because the alternative is a record that invites scrutiny it has not performed on itself. Every number in this paper can be checked against a public federal source or a public repository. Inviting that and concealing our own findings would be incoherent.
 
-## What This Paper Is Not
-
-It is not a request for sympathy. The data is not assembled to generate pity. It is assembled to generate accountability.
-
-It is not a policy brief, though policy follows directly from every chapter. It is not a foundation report, because no funder shaped its conclusions. It is not an academic monograph, though its standards of evidence match or exceed those of peer-reviewed scholarship. It is not a protest document, though the findings are damning.
-
-It is a sovereign empirical record. The sovereignty matters. The data belongs to the community it describes. CC0 means no one can license it away, restrict its use, or make its conclusions contingent on institutional approval. The blockchain seal means no one can revise it under political pressure. These are not technical details. They are the architecture of permanence.
+It is licensed CC0. It is sealed on-chain. It cannot be revised under pressure, placed behind a paywall, or defunded. It will be the same data in 2030 and in 2040, in the collections of institutions that do not yet exist.
 
 ---
 
-## What Comes Next
+## The Call
 
-The BDI Sovereign Dataset is version one. It covers eight pillars. It covers thirty-three years. It covers the national, state, metro, and county levels. What it does not yet cover, at the granularity this work demands, is the census tract. The FarmBlock Distress Index partially addresses this for food insecurity and economic conditions. BDI version two must complete the synthesis: all eight pillars, tract-level, for all fifty priority cities.
+Every generation of this tradition has faced the same question in a different form: knowing what we know, with the tools we have, in the moment we are in — what is the move?
 
-The FarmBlock program — E5 Enclave's operational response to the compound catastrophe zones — is the translation of this data into action. Fifteen thousand, five hundred and seventy-eight tracts are scored. The highest-distress tracts in the highest-distress cities are the first targets of intervention. Not because they are the easiest. Because the data says they are the most necessary.
+The data answers the diagnostic question. It does not answer the strategic one. That answer lives in the communities this paper documents — in the organizing rooms, the churches, the HBCUs, the school board meetings, the courtrooms, the legislative chambers, and on the front porches of Humphreys County and Cairo and the Delta and Overtown and Liberty City.
 
-The peer review process for this paper is open. The methodology is public. The data is public. The counting rules are documented. The corrections are documented. If the findings are wrong, the mechanism to demonstrate that is fully available to any researcher, institution, or critic. This is what sovereign data stewardship looks like: not the insulation of conclusions from scrutiny, but the structuring of the dataset so that scrutiny is possible, rigorous, and welcome.
+McCartney was asked, near the end of his 1997 testimony, what he would want Overtown to be. He said: *"Where every child belongs to them and every child realizes that he has a parent in every adult. That's the type of community — sure it's ideal, but everybody looks for a haven."*
 
----
+He was describing what was taken. The data in this paper is the empirical record of the taking.
 
-## The Final Statement
+The wound is measured. The address is known. The lineage is long and the cost has been staggering. What the next chapter says depends on what is done with this instrument — by whom, in which rooms, toward which ends, and with what urgency.
 
-One thousand, five hundred and seventy-four verified empirical observations drawn from fourteen thousand, eight hundred and eleven raw federal data points. Fifteen thousand, five hundred and seventy-eight census tracts. Thirty-three years. The wound is not metaphor.
-
-The data has spoken. It has spoken clearly, reproducibly, and permanently.
-
-What you do with what you now know — that is yours.
+The board submits this paper as evidence of what is, as testimony to what was, and as instrument for what must come.
 
 ---
 
-*CC0 1.0 Universal — Public Domain*  
-*E5 Enclave Incorporated · EIN 99-3822441 · Liberty City, Miami, Florida*  
-*DAG: bdi-conclusion-v2.1-2026-0420*  
-*Nil satis nisi optimum — Nothing but the best is good enough*
+*By Grace, perfect ways.*

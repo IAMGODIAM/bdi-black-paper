@@ -1,0 +1,3071 @@
+<!DOCTYPE html><html lang='en'><head><meta charset='utf-8'><title>The Measure of the Wound</title><style>@page {
+  size: Letter;
+  margin: 22mm 20mm 20mm 20mm;
+  @bottom-center { content: counter(page); font-family: "Bitstream Charter", serif; font-size: 8.5pt; color: #6a6257; }
+  @top-center { content: string(runhead); font-family: "DejaVu Sans", sans-serif; font-size: 7pt;
+                letter-spacing: .13em; text-transform: uppercase; color: #8d8477; }
+}
+@page :first { @top-center { content: none } @bottom-center { content: none } }
+@page blank  { @top-center { content: none } @bottom-center { content: none } }
+
+:root{
+  --ink:#14110d; --body:#211c16; --mute:#6a6257; --faint:#8d8477;
+  --rule:#c9c1b4; --hair:#e0dad0; --accent:#7a2318; --paper:#fdfcfa;
+}
+
+html { font-size: 10.6pt; }
+body {
+  font-family: "Bitstream Charter", "DejaVu Serif", Georgia, serif;
+  color: var(--body); background: var(--paper);
+  line-height: 1.52; text-align: justify; hyphens: auto;
+  orphans: 3; widows: 3; margin: 0;
+}
+p { margin: 0 0 .55em; }
+p + p { text-indent: 1.2em; }
+em { font-style: italic; }
+strong { font-weight: 700; color: var(--ink); }
+a { color: inherit; text-decoration: none; }
+.mono { font-family: "DejaVu Sans Mono", monospace; font-size: .84em; }
+
+/* ---------- TITLE PAGE ---------- */
+.titlepage { page: blank; text-align: center; padding-top: 42mm; break-after: page; }
+.tp-rule { border-top: 1.6pt solid var(--ink); width: 62%; margin: 0 auto 9mm; }
+.titlepage .tp-rule:last-of-type { margin: 9mm auto 0; }
+.tp-pub { font-family:"DejaVu Sans",sans-serif; font-size:8pt; letter-spacing:.34em;
+          text-transform:uppercase; color:var(--mute); margin-bottom:16mm; text-indent:0; }
+.tp-title { font-size: 40pt; line-height: 1.06; font-weight: 400; color: var(--ink);
+            margin: 0 0 8mm; letter-spacing: -.015em; }
+.tp-sub { font-size: 13pt; line-height: 1.5; font-style: italic; color: var(--body);
+          margin: 0 0 6mm; text-indent: 0; }
+.tp-dates { font-family:"DejaVu Sans",sans-serif; font-size:11pt; letter-spacing:.2em;
+            color: var(--accent); margin: 0; text-indent: 0; }
+.tp-ed { font-family:"DejaVu Sans",sans-serif; font-size:8.5pt; letter-spacing:.2em;
+         text-transform:uppercase; color:var(--mute); margin: 8mm 0 2mm; text-indent:0; }
+.tp-place { font-size: 10pt; font-style: italic; color: var(--faint); text-indent:0; margin:0; }
+
+/* ---------- COPYRIGHT ---------- */
+.copyright { page: blank; break-after: page; font-size: 8.6pt; line-height: 1.5;
+             color: var(--mute); text-align: left; padding-top: 30mm; }
+.copyright p { margin: 0 0 1.1em; text-indent: 0; }
+.copyright strong { color: var(--body); }
+.copyright .cc { border-left: 2pt solid var(--rule); padding-left: 3mm; }
+.copyright .motto { text-align:center; margin-top: 8mm; color: var(--faint); font-size: 9pt; }
+
+/* ---------- CONTENTS ---------- */
+.toc-page { break-after: page; }
+.toc-h { font-family:"DejaVu Sans",sans-serif; font-size:10pt; letter-spacing:.3em;
+         text-transform:uppercase; color:var(--mute); font-weight:400;
+         border-bottom:1pt solid var(--rule); padding-bottom:3mm; margin:0 0 8mm; }
+.toc { font-size: 10pt; }
+.toc a { display:flex; align-items:baseline; width:100%; }
+.toc .t { flex:0 1 auto; }
+.toc .dots { flex:1 1 auto; border-bottom:.5pt dotted var(--rule); margin:0 .45em;
+             transform: translateY(-3px); min-width:6mm; }
+.toc a::after { content: target-counter(attr(href), page);
+                font-family:"DejaVu Sans",sans-serif; font-size:8.5pt; color:var(--mute);
+                flex:0 0 auto; }
+.toc-item { margin: 0 0 2.6mm; }
+.toc-part { margin: 6mm 0 3mm; font-family:"DejaVu Sans",sans-serif; font-size:8pt;
+            letter-spacing:.18em; text-transform:uppercase; color:var(--accent); }
+
+
+/* ---------- PART PAGES ---------- */
+.partpage { page: blank; break-before: page; break-after: page;
+            text-align:center; padding-top: 78mm; }
+.part-label { font-family:"DejaVu Sans",sans-serif; font-size:9pt; letter-spacing:.38em;
+              text-transform:uppercase; color:var(--accent); margin:0 0 6mm; text-indent:0; }
+.part-title { font-size: 24pt; font-weight:400; color:var(--ink); margin:0;
+              border-top:.75pt solid var(--rule); border-bottom:.75pt solid var(--rule);
+              padding: 6mm 0; display:inline-block; }
+
+/* ---------- CHAPTER OPENERS ---------- */
+.chapter { break-before: page; }
+.ch-label { font-family:"DejaVu Sans",sans-serif; font-size:8pt; letter-spacing:.3em;
+            text-transform:uppercase; color:var(--accent); margin:0 0 3mm; text-indent:0;
+            string-set: runhead content(); }
+.ch-title { font-size: 21pt; font-weight:400; line-height:1.18; color:var(--ink);
+            margin: 0 0 9mm; padding-bottom: 5mm; border-bottom: 1.4pt solid var(--ink);
+            text-align:left; letter-spacing:-.008em; }
+.ch-title.solo { string-set: runhead content(); }
+.ch-title.mid { break-before: page; font-size: 19pt; margin-top: 0;
+                string-set: runhead content(); }
+
+/* ---------- HEADINGS ---------- */
+h2 { font-size: 12.5pt; font-weight:700; color:var(--ink); margin: 7mm 0 2.5mm;
+     text-align:left; break-after: avoid; line-height:1.3; }
+h3 { font-family:"DejaVu Sans",sans-serif; font-size:9.4pt; font-weight:700; color:var(--accent);
+     letter-spacing:.04em; margin: 5.5mm 0 2mm; text-align:left; break-after: avoid; }
+h4 { font-size:10.4pt; font-style:italic; font-weight:400; color:var(--ink);
+     margin:4.5mm 0 1.5mm; text-align:left; break-after: avoid; }
+h2 + p, h3 + p, h4 + p { text-indent: 0; }
+
+/* ---------- EPIGRAPHS & QUOTES ---------- */
+blockquote { margin: 0 0 8mm 0; padding: 0 0 0 5mm; border-left: 2pt solid var(--rule);
+             font-size: 9.8pt; line-height:1.45; color: var(--mute); font-style: italic;
+             text-align:left; break-inside: avoid; }
+blockquote p { text-indent: 0 !important; margin-bottom:.3em; }
+blockquote em { font-style: normal; }
+blockquote .attrib { font-style: normal; font-family:"DejaVu Sans",sans-serif;
+                     font-size: 8pt; letter-spacing:.04em; color: var(--faint);
+                     margin-top: 1.5mm; }
+blockquote .attrib em { font-style: italic; }
+
+/* ---------- TABLES ---------- */
+table { width:100%; border-collapse: collapse; margin: 4mm 0 6mm; font-size: 8.4pt;
+        font-family:"DejaVu Sans",sans-serif; break-inside: avoid; line-height:1.32; }
+thead { display: table-header-group; }
+th { text-align:left; font-weight:700; font-size:7.4pt; letter-spacing:.05em;
+     text-transform:uppercase; color:var(--ink); padding: 2mm 2.2mm;
+     border-bottom: 1pt solid var(--ink); border-top: 1pt solid var(--ink); }
+td { padding: 1.5mm 2.2mm; border-bottom: .4pt solid var(--hair); vertical-align: top; }
+tbody tr:last-child td { border-bottom: 1pt solid var(--ink); }
+td:nth-child(n+2), th:nth-child(n+2) { text-align: right; }
+table td:first-child { text-align: left; }
+/* keep wide appendix source tables readable */
+.backmatter table { font-size: 7.2pt; break-inside: auto; table-layout: fixed; }
+.backmatter td { overflow-wrap: anywhere; word-break: break-word; padding: 1.1mm 1.6mm; }
+.backmatter td .mono, .backmatter td code { font-size: 6.4pt; overflow-wrap: anywhere; }
+.backmatter td br + * { color: var(--mute); }
+.backmatter tr { break-inside: avoid; }
+.backmatter tbody tr:last-child td { border-bottom: 1pt solid var(--ink); }
+/* long body tables may also break rather than leave a page empty */
+table { break-inside: auto; }
+tr { break-inside: avoid; }
+.backmatter td:nth-child(n+2), .backmatter th:nth-child(n+2) { text-align: left; }
+
+/* ---------- CODE ---------- */
+pre { background:#f4f1ec; border:.5pt solid var(--rule); border-left:2pt solid var(--accent);
+      padding: 3mm 3.5mm; font-family:"DejaVu Sans Mono",monospace; font-size:7.8pt;
+      line-height:1.45; white-space: pre-wrap; margin: 3mm 0 5mm; break-inside: avoid;
+      text-align:left; color:#2c2620; }
+code { font-family:"DejaVu Sans Mono",monospace; font-size:.85em; background:#f4f1ec;
+       padding: 0 .25em; }
+pre code { background:none; padding:0; font-size:1em; }
+
+/* ---------- LISTS & RULES ---------- */
+ul, ol { margin: 0 0 .8em; padding-left: 5mm; }
+li { margin-bottom: .25em; }
+hr { border:none; border-top:.5pt solid var(--rule); width:28%; margin: 6mm auto; }
+
+/* Appendix A source table column proportions */
+.srctable col, .srctable th, .srctable td { }
+.srctable th:nth-child(1), .srctable td:nth-child(1) { width: 4%; }
+.srctable th:nth-child(2), .srctable td:nth-child(2) { width: 23%; }
+.srctable th:nth-child(3), .srctable td:nth-child(3) { width: 26%; }
+.srctable th:nth-child(4), .srctable td:nth-child(4) { width: 12%; }
+.srctable th:nth-child(5), .srctable td:nth-child(5) { width: 35%; }
+</style></head><body>
+<section class="titlepage">
+  <div class="tp-rule"></div>
+  <p class="tp-pub">E5 ENCLAVE INCORPORATED</p>
+  <h1 class="tp-title">The Measure<br/>of the Wound</h1>
+  <p class="tp-sub">A Sovereign Empirical Record of<br/>Black American Structural Distress</p>
+  <p class="tp-dates">1991&#8202;&ndash;&#8202;2024</p>
+  <div class="tp-rule"></div>
+  <p class="tp-ed">Corrected Print Edition &middot; Black Paper v1.1</p>
+  <p class="tp-place">Liberty City &middot; Miami, Florida</p>
+</section>
+
+<section class="copyright">
+  <p><strong>The Measure of the Wound: A Sovereign Empirical Record of Black American Structural Distress, 1991&ndash;2024</strong></p>
+  <p>Corrected Print Edition &middot; Black Paper v1.1<br/>Published August 2026</p>
+  <p>E5 Enclave Incorporated<br/>820 NW 64th Street, Liberty City, Miami, Florida 33150<br/>EIN 99-3822441 &middot; UEI H8NGXEYE2HH8 &middot; CAGE 07E88<br/>e5enclave.com</p>
+  <p class="cc"><strong>CC0 1.0 Universal &mdash; Public Domain Dedication.</strong> To the extent possible under law, E5 Enclave Incorporated has waived all copyright and related or neighboring rights to this work. No permission is required to copy, translate, adapt, excerpt or republish it, in whole or in part, for any purpose. No attribution is required, though it is appreciated.</p>
+  <p><strong>Suggested citation.</strong> E5 Enclave Incorporated. (2026). <em>The Measure of the Wound: A Sovereign Empirical Record of Black American Structural Distress, 1991&ndash;2024.</em> Corrected Print Edition. CC0 1.0 Universal. github.com/IAMGODIAM/bdi-black-paper</p>
+  <p><strong>Underlying data.</strong> All source data is public and openly licensed. Layer 1 raw evidence: <span class="mono">IAMGODIAM/bdi-raw-data-vault</span>. Layer 2 synthesized instrument: <span class="mono">IAMGODIAM/bdi-sovereign-dataset</span>, sealed on Base Mainnet, ExodusV4 token #2. Layer 3 place-level application: <span class="mono">IAMGODIAM/farmblock-data</span> and <span class="mono">IAMGODIAM/farmblock-dataset</span>.</p>
+  <p><strong>On this edition.</strong> Every derived statistic in this paper was recomputed from the raw source series rather than carried forward from prior drafts, and flagged figures were re-verified against live federal sources in August 2026. Twenty-seven public claims were put through evidentiary triage; ten further arithmetic errors were found by recomputation; three canonical counts in the project&rsquo;s own governance documents were found stale. All corrections are enumerated in Appendix H.</p>
+  <p class="motto"><em>Nil satis nisi optimum.</em></p>
+</section>
+
+<section class="toc-page">
+  <h1 class="toc-h">Contents</h1>
+  <div class="toc"><div class="toc-item"><a href="#sec1"><span class="t">Preface</span><span class="dots"></span></a></div>
+<div class="toc-item"><a href="#sec2"><span class="t">Introduction &middot; The Wound</span><span class="dots"></span></a></div>
+<div class="toc-part"><span class="t">Part One &middot; The Tradition and the Gap</span></div>
+<div class="toc-item"><a href="#sec3"><span class="t">Chapters 1&ndash;2 &middot; The Tradition, and the Data Gap</span><span class="dots"></span></a></div>
+<div class="toc-part"><span class="t">Part Two &middot; The Data Architecture</span></div>
+<div class="toc-item"><a href="#sec4"><span class="t">Chapter 3 &middot; The Stack: How the Data Was Built</span><span class="dots"></span></a></div>
+<div class="toc-item"><a href="#sec5"><span class="t">Chapter 4 &middot; The Measure: What Gets Counted and Why</span><span class="dots"></span></a></div>
+<div class="toc-part"><span class="t">Part Three &middot; The Findings</span></div>
+<div class="toc-item"><a href="#sec6"><span class="t">Chapter 5 &middot; The Economic Wound</span><span class="dots"></span></a></div>
+<div class="toc-item"><a href="#sec7"><span class="t">Chapter 6 &middot; The Health Wound, the Justice Wound, the Education Wound</span><span class="dots"></span></a></div>
+<div class="toc-item"><a href="#sec8"><span class="t">Chapter 7 &middot; The Compound Catastrophe</span><span class="dots"></span></a></div>
+<div class="toc-part"><span class="t">Part Four &middot; The Argument</span></div>
+<div class="toc-item"><a href="#sec9"><span class="t">Chapter 8 &middot; What the Data Demands</span><span class="dots"></span></a></div>
+<div class="toc-item"><a href="#sec10"><span class="t">Conclusion &middot; What the Data Demands of Whoever Holds This Paper</span><span class="dots"></span></a></div>
+<div class="toc-item"><a href="#sec11"><span class="t">Appendices</span><span class="dots"></span></a></div></div>
+</section>
+<section class="chapter" id="sec1"><h1 class="ch-title solo">PREFACE</h1>
+<p>We publish this paper in 2026 because the record demands it.</p>
+<p>The empirical case for the structural dispossession of Black Americans has never been stronger. The tools to make that case have never been more accessible. And the institutional willingness to hold that case in front of the people with power to act on it has, in this moment, rarely been more fragile. Datasets documenting racial inequality are being contested and removed from federal databases — the EPA's own environmental justice screening tool was taken down from EPA.gov on February 5, 2025, and survives publicly only because an independent archive preserved it. Research programs that have tracked Black health, wealth and housing outcomes for decades are being defunded. The language of structural racism — a precise, evidence-based analytical category — is being litigated out of public discourse at the same moment the disparities it describes are widening.</p>
+<p>We do not read this moment as uniquely terrible in the history of this country. The suppression of evidence about Black American life is not new. What is new is that the tools now exist to produce a sovereign record — one belonging to no government, no foundation, no university and no political cycle. That record cannot be revised under pressure. It cannot be taken behind a paywall. It cannot be defunded.</p>
+<p>This paper is that record.</p>
+<hr />
+<p>What did not exist before this paper is specific: a single, freely available, empirically comprehensive instrument measuring all major dimensions of Black American structural distress — economic, health, criminal justice, education, housing, political, environmental and historical — in one place, dual-source verified, licensed for unrestricted public use.</p>
+<p>The federal government produces fragments of this record. The Bureau of Labor Statistics measures unemployment. The National Center for Health Statistics tracks maternal mortality. The Census Bureau publishes wealth, income and poverty data. The Bureau of Justice Statistics documents incarceration. Each source is rigorous. None of them synthesize. None are designed to tell a unified story across eight dimensions of the same life.</p>
+<p>Academic institutions have produced that synthesis — in peer-reviewed journals accessible to researchers with institutional affiliations and subscription budgets. The communities at the center of the data have not been among the primary beneficiaries of that work.</p>
+<p>This paper corrects that. The dataset underlying it is CC0, public domain. Every table, every trend line, every compound score, every city in the analysis belongs to anyone who can use it: the community organizer building a grant application, the attorney preparing a fair housing complaint, the journalist writing about the Delta, the student at an HBCU whose library cannot afford the journal that published the study she needs. There is no request form. There is no fee. There are no restrictions. It is yours.</p>
+<hr />
+<p>E5 Enclave Incorporated is a Black-led nonprofit headquartered in Liberty City, Miami, Florida. Liberty City is not incidental to this paper. It is one of the communities the data documents — a neighborhood redlined in the 1930s, displaced by highway construction in the 1960s, the site of the 1980 rebellion, and still, in 2026, carrying a poverty rate, food access gap and homeownership deficit that place it inside the compound distress geography this paper maps.</p>
+<p>E5 Enclave was established to build sovereign infrastructure — institutions that do not require the permission of their opposition to function, data that does not disappear when the political wind shifts, technology that transfers analytical power to communities rather than extracting intelligence from them. This paper is that mission expressed as an empirical act.</p>
+<p>The dataset behind it was produced without government funding, without foundation grants and without academic institutional support. That independence was not circumstantial. It was a design requirement. A record this important cannot be produced under conditions that create competing obligations to its accuracy.</p>
+<hr />
+<p>This paper is addressed to everyone who needs it.</p>
+<p><strong>To the funder</strong> whose portfolio has been pressured to retreat from racial equity work: this is the empirical record of what that retreat costs, measured in years of life, percentage points and dollars.</p>
+<p><strong>To the congressional staffer</strong> preparing testimony on federal housing enforcement: Chapter 5 documents that fifty-three percent of public housing authorities did not file the Section 3 reports required by a 1968 statute — which means that for more than half the program, whether the law was honored is not merely unproven but unknowable.</p>
+<p><strong>To the attorney</strong> litigating an environmental justice case in the Louisiana petrochemical corridor: Chapter 6 documents 150 industrial facilities across an 85-mile stretch, and specifies the geography precisely — fence-line census tracts in St. James Parish Districts 4 and 5 are 65 to 94 percent Black, against a parish-wide share of approximately 44 percent. The distinction is the case.</p>
+<p><strong>To the community organizer in Humphreys County, Mississippi</strong> — FarmBlock distress score 87.25, the highest in the corpus; no acute-care hospital since 2013; hypertension prevalence of 51.7 percent; 55 percent of children below the poverty line: you have the data now, with its full decomposition and its margins of error printed alongside it. It belongs to you.</p>
+<p><strong>To the researcher</strong> at Howard, Spelman, Morehouse, or any institution serving the communities this paper documents: build on it, challenge it, extend it. The methodology is transparent. The sources are cited. The errors we found in our own drafts are printed in Appendix H. The license is CC0. That is the invitation.</p>
+<hr />
+<p>The tradition this paper enters is long.</p>
+<p>Ida B. Wells counted the dead and published the names when no institution would. W.E.B. Du Bois applied the full force of social science methodology to Black American life when the academy insisted the question was not worth asking. Ella Baker built organizing infrastructure requiring no charismatic center, because she understood that sovereign capacity cannot live in one person. James Baldwin refused the distance of academic prose because the subject was too important for comfort. Cornel West insisted that the empirical and the moral must travel together — that data without witness is arithmetic, and witness without data is sentiment.</p>
+<p>And there is Ralph McCartney of Overtown, Miami — community organizer, oral historian, veteran of decades of displacement resistance, honored on the floor of the United States Congress by Congresswoman Carrie Meek on February 1, 1994. In 1997 he recorded his testimony about what the construction of I-95 and I-395 did to Overtown: a neighborhood where "never did a hungry person cross that door and leave out that same way," where teachers and principals were "like extended members of the family." The expressways bisected that community into four disconnected fragments. The property was taken. The compensation was inadequate. The plans, McCartney said, had been on the books for fifty years: <em>"They know everything there is to know about us. The only problem we have is what they decide to do with us."</em></p>
+<p>His testimony is primary source evidence. The data in this paper is, among other things, the empirical record at national scale of what happened to the community he spent his life defending.</p>
+<p>This paper is built in that tradition. It is empirical and it is moral. The two are not in tension. In the face of what this data shows, precision and witness are the same act.</p>
+<hr />
+<p><strong>A note on what this edition is.</strong></p>
+<p>This is the corrected print edition. Between the working drafts and this printing, every public claim was put through an evidentiary triage, every derived statistic was recomputed from the raw source series rather than carried forward, and the flagged figures were re-verified against the live federal sources in August 2026.</p>
+<p>Twenty-seven claims were triaged; eleven conflicted with their sources and four had been derived internally without published methodology. Ten additional arithmetic and transcription errors were found in the drafts. Three canonical counts in our own governance documents were stale. The highest-scoring tract in our published index turned out to be an imputation artifact.</p>
+<p>Every one of these is corrected in the text and enumerated in Appendix H, with the original claim, the verified value and the reason for the change.</p>
+<p>We print the errata because a sovereign record that conceals its corrections is not sovereign — it is promotional. The dataset is CC0 and the sources are public precisely so that this paper can be checked. It would be incoherent to invite that scrutiny and then hide what our own scrutiny found.</p>
+<p>E5 Enclave Incorporated authors this paper as an institutional act of witness. The data is the contribution. The communities it documents are the authority.</p></section><section class="chapter" id="sec2"><p class="ch-label">INTRODUCTION</p><h1 class="ch-title">THE WOUND</h1>
+<blockquote>
+<p><em>"I cried because there was one white man who had the power to say to another white man</p><p class="attrib">— finish wiping out this Black history."</em>
+— Ralph McCartney, oral history, August 14, 1997, Black Archives of South Florida</p>
+</blockquote>
+<p>The wound is not a metaphor. It is measurable. It has a geography, a timeline, a set of federal series numbers, and a spreadsheet. This paper measures it.</p>
+<p>That sentence is the whole argument, and everything that follows is its documentation. What has been written about Black American structural distress has most often been written in one of two registers — the moral, which is true and unquantified, or the technical, which is quantified and fragmented across a dozen federal agencies that do not speak to one another. This paper refuses the choice. It holds both.</p>
+<h2>The Window, and What Is Nested Inside It</h2>
+<p>The core empirical window of this paper is 1991 to 2024 — thirty-three years, chosen deliberately. It is the era of formal legal equality. The Civil Rights Act is twenty-seven years old when the window opens. The Voting Rights Act is fully extended. The Fair Housing Act has been law for a generation. Whatever is measured inside this window cannot be attributed to explicit legal segregation, because explicit legal segregation had already been abolished. The disparities documented here exist <em>within</em> the framework of equal protection, produced by systems that operate lawfully.</p>
+<p>That is the point. A gap that closes when the law changes is a gap the law was causing. A gap that does not close when the law changes is a gap something else is causing — and the something else is what this paper measures.</p>
+<p>But the thirty-three-year window does not explain itself. So where federal data permits, the series run longer, and each longer series is nested inside the argument rather than appended to it:</p>
+<ul>
+<li><strong>Health to 1900</strong> — 122 years of life expectancy by race, and maternal mortality to 1915.</li>
+<li><strong>Criminal justice to 1925</strong> — 97 years of incarceration rates by race.</li>
+<li><strong>Housing to 1940</strong> — 82 years of decennial homeownership.</li>
+<li><strong>Labor to 1972</strong> — 54 years of monthly BLS unemployment, the longest continuous race-disaggregated federal labor series in American public data.</li>
+<li><strong>Political participation to 1964</strong> — 56 years of Census voting supplements.</li>
+<li><strong>The historical architecture to 1514</strong> — 352 years of documented transatlantic voyages.</li>
+</ul>
+<p>These extensions are not context. They are causation — the documented mechanism that produced the conditions the thirty-three-year window measures. A wealth gap measured in 2022 is the present-tense reading of an instrument that was calibrated in 1866, and again in 1934, and again in 1968.</p>
+<h2>What Has Been Measured</h2>
+<p>Three layers, each publicly auditable, each committed before the analysis that used it:</p>
+<p><strong>~14,811 raw federal observations</strong>, pulled from seventeen source files across BLS, the Census Bureau, NCHS, BJS, the Federal Reserve, USDA, NCES, CFPB and the Slave Voyages Database, and committed unmodified to a public repository before any scoring occurred.</p>
+<p><strong>1,574 verified empirical observations</strong>, synthesized into an eight-pillar instrument spanning the empirical window, dual-source confirmed, and sealed on a public blockchain.</p>
+<p><strong>15,507 census tracts</strong>, scored across forty-nine cities in seventeen states, where the national pattern acquires a street address.</p>
+<p>The middle figure was once published as 1,855. It was wrong — the count had included JSON metadata keys as though they were observations. The correction to 1,574 is documented in the counting specification, disclosed in Chapter 3, and printed in Appendix B. It is recorded here, in the introduction, rather than buried in a methods note, because a record that corrects itself in public is the only kind worth trusting.</p>
+<h2>The Five Compound Catastrophe Zones</h2>
+<p>Eight pillars measured separately produce eight findings. Measured together, they produce something different: a small number of places where every pillar has failed at once, and where the failures reinforce each other faster than any single-pillar intervention can address them.</p>
+<p>Humphreys County, Mississippi. Detroit, Michigan. East St. Louis, Illinois. Claiborne County, Mississippi. The petrochemical corridor of southeastern Louisiana. These are not the poorest places in America by any single measure. They are the places where poverty, health burden, housing abandonment, digital exclusion and structural exposure arrive simultaneously and compound. Chapter 7 documents each.</p>
+<h2>What This Paper Is, and Is Not</h2>
+<p>It is <strong>not a policy brief</strong>, though policy follows directly from every chapter. It is <strong>not an academic monograph</strong>, though the evidentiary standard is meant to survive the same scrutiny. It is <strong>not a foundation report</strong>, because no funder shaped its conclusions — there was no funder. It is <strong>not a protest document</strong>, though the findings are damning enough to serve as one.</p>
+<p>It is a sovereign empirical record: eight-dimensional, dual-source verified, released into the public domain under CC0, sealed on-chain against revision, and produced by an organization headquartered inside the geography it measures.</p>
+<p>And it is a corrected record. Twenty-seven public claims were put through an evidentiary triage before this edition was set in type. Eleven were found to conflict with their sources. Four were internally derived without published methodology. Two carried stale citations. Ten independent recomputation errors were found in the drafts themselves. Every one of them is disclosed, with the corrected figure, in Appendix H.</p>
+<p>That appendix is not an embarrassment. It is the credential. A record whose numbers have never been challenged is a record no one has checked.</p>
+<h2>The Reader's Obligation</h2>
+<p>The data settles the factual question. Whether the wound is real, whether it is measurable, whether it has persisted across the full period of formal legal equality — these are no longer open questions, and this paper is built so that anyone who wishes to verify that can do so without permission, payment, or institutional affiliation.</p>
+<p>The moral question is untouched by any of it. It belongs to whoever is holding this paper.</p>
+<p>Turn the page.</p></section><section class="partpage" id="part-one"><p class="part-label">Part One</p><h1 class="part-title">The Tradition and the Gap</h1></section><section class="chapter" id="sec3"><p class="ch-label">CHAPTER 1</p><h1 class="ch-title">From Turner to Baker to West: The Unbroken Line</h1>
+<p>Every generation of Black liberation has produced its instrument. Not a slogan. Not a symbol. An instrument — something that functions, that carries weight, that can be picked up and used by the next person in line. The tradition does not run from a single source. It is a braid: methodology and resistance, testimony and infrastructure, empirical rigor and moral urgency, each strand necessary, none sufficient alone. This paper is the latest instrument in that braid. It did not arrive without ancestry. Nothing sovereign ever does.</p>
+<h2>The Body as First Instrument</h2>
+<p>In August of 1831, Nat Turner led the only large-scale, sustained slave rebellion in American history. He was a literate man, a preacher, and a tactician. He understood that the law did not acknowledge the value of his life, and that waiting for the law to change was itself a choice — with consequences. What Turner did was declare, in the only language the system was prepared to hear, that Black life carried a sovereignty the law refused to name. He is not honored here for the deaths that followed his rebellion — of the enslaved who were executed, of the white Southerners killed, of the hundreds of Black people massacred by militia in the weeks of retribution that followed. He is named because the act of refusal was prior to every instrument that came after it. Before the narrative, before the database, before the policy platform — there was a man who looked at the architecture of his captivity and said: this has a cost you have not yet been asked to pay. Turner did not survive. The instrument he built did not survive. What survived was the proof that the architecture could be refused.</p>
+<h2>Infrastructure as Liberation</h2>
+<p>Harriet Tubman built a system. Not a symbol — a logistics operation. Between 1849 and 1860, she made nineteen return trips into slave territory and liberated approximately seventy people. Zero were captured. The Underground Railroad — a term applied retroactively to a network of routes, safe houses, contacts, and protocols that Tubman and others developed and maintained — was the first model of what this organization calls sovereign infrastructure: decentralized, requiring no institutional permission, built to operate regardless of what the law said.</p>
+<p>The methodological lesson is not courage. It is architecture. Tubman did not build a movement that depended on a center. She built a network that could survive the loss of any node. The people she liberated did not follow a leader. They followed a system. When she said she never lost a passenger, she was not describing inspiration. She was describing operational discipline.</p>
+<p>Every subsequent instrument in this tradition has faced the same design question Tubman solved: how do you build something that cannot be shut down? The answer she gave in 1850 is the same answer this paper gives in 2026 — you make it sovereign, you make it distributed, and you make it free to anyone who needs it.</p>
+<h2>Testimony as Data</h2>
+<p>Frederick Douglass's Narrative of the Life of Frederick Douglass, an American Slave, published in 1845, was an act of empirical self-documentation before the field of empirical social science existed. Douglass understood that the argument against slavery was not primarily moral — the moral argument had been made, repeatedly, and ignored. The argument that could not be dismissed was evidentiary: here is a man, here is what was done to him, here is the date, here is the place, here is the name of the person who did it. The Narrative is a dataset. It has subjects, conditions, outcomes, and sources. Ida B. Wells extended this method into journalism and turned it into political power. Beginning in 1892, following the lynching of three of her close friends in Memphis, Wells began systematically collecting records — names, dates, locations, stated justifications, actual circumstances — of every lynching she could document. She published them when no institution would. She cross-referenced the stated justifications against the actual evidence and demonstrated, with data, that the legal pretexts were fabrications. Her 1895 report <em>A Red Record</em> is the first Black investigative dataset in American history. Wells did not document suffering in order to produce sympathy. She documented it in order to produce accountability. The tradition established by Douglass and Wells — testimony transformed into irrefutable evidence — is the direct ancestor of the dual-source verification methodology that underlies every data point in this paper.</p>
+<h2>Rigor as Weapon</h2>
+<p>W.E.B. Du Bois published <em>The Philadelphia Negro</em> in 1899. It was the first systematic sociological study of a Black American urban community, and Du Bois produced it at a moment when the academy had not only declined to study Black American life but had constructed elaborate theoretical frameworks to justify that neglect. He used the tools of empirical social science — household surveys, economic analysis, historical records, occupational mapping — to document what the conditions of Black Philadelphia actually were, as opposed to what the dominant narrative claimed them to be.</p>
+<p>The insight that drove the methodology was precise: the system producing inequality had a vested interest in misrepresenting the results of its own operation. Independent empirical documentation was therefore not a scholarly exercise. It was a counter-intelligence operation. Du Bois gave the tradition its methodology — the insistence that the argument must be grounded in data rigorous enough that it cannot be dismissed on methodological grounds, only on political ones.</p>
+<p>When he wrote, in 1903, that "the problem of the twentieth century is the problem of the color line," he was not making a prediction. He was reading the empirical record he had already assembled. The data in this paper extends that reading by a century. The color line is still there. Now we have thirty-three years of federal data at the core, and a century or more in several pillars, to show exactly where it runs.</p>
+<h2>Architecture Without Leaders</h2>
+<p>Ella Baker spent forty years building organizing infrastructure that deliberately refused the model of charismatic leadership. As a field organizer for the NAACP in the 1940s, as the executive director of the Southern Christian Leadership Conference in the late 1950s, and as the founding mentor of the Student Nonviolent Coordinating Committee in 1960, Baker's consistent argument was the same: movements that depend on a singular leader are movements that can be stopped by stopping one person. The FBI understood this. COINTELPRO was, among other things, a systematic test of her thesis — and the assassinations, imprisonments, and manufactured scandals that dismantled the leadership of the Black liberation movement in the late 1960s confirmed it.</p>
+<p>Baker's model was the inverse: develop local leadership capacity, build horizontal networks, make every node sufficient to the task. "Strong people don't need strong leaders." The data in this paper is designed as a Baker instrument. It requires no institutional intermediary to use. It names no individual author. It transfers analytical capacity directly to whoever holds it. The organization that produced it does not need credit. The data needs to be used.</p>
+<h2>The Current Line</h2>
+<p>Malcolm X gave the tradition its declaration of sovereignty over the definition of legitimate response — the insistence that Black people had the right to determine, for themselves, what constituted an appropriate answer to the conditions being imposed on them. It was not a call to violence. It was a refusal of the frame in which Black response to violence was the only thing being regulated.</p>
+<p>James Baldwin gave the tradition its voice. Not the voice of documentation, not the voice of policy — the voice of witness. Baldwin understood that academic distance from the data was a moral failure, not a methodological virtue. The writer's obligation was to make the reader feel the weight of what the numbers meant in the lives of actual people. Every chapter in this paper attempts to honor that obligation: the data is precise, and the numbers represent people who had names and addresses and children and ambitions.</p>
+<p>Cornel West gave the tradition its philosophical insistence for the modern era: that the empirical and the moral cannot be separated without damage to both. Data without witness is arithmetic. Witness without data is sentiment. West demanded both simultaneously, and the discipline of holding them together — refusing the comfort of pure analysis and the comfort of pure feeling — is the operating standard of this paper.</p>
+<p>The Movement for Black Lives, launched in the wake of the police killing of Trayvon Martin in 2012 and formalized as a policy platform by 2016, produced the most comprehensive Black liberation policy framework in the modern era — a document that mapped demands across criminal justice, economic justice, reparations, political power, and community control. Dr. Melina Abdullah, co-founder of the Los Angeles chapter of Black Lives Matter and one of the movement's most disciplined organizers, embodied the Baker principle within the modern context: community accountability over celebrity leadership, local organizing as the primary unit of change, the street and the policy room as connected arenas rather than competing ones.</p>
+<p>And Ralph McCartney of Overtown, Miami — community organizer, veteran, oral historian, honored on the floor of the United States Congress by Congresswoman Carrie Meek for a life spent in service to his community — gives the tradition its local fidelity. In 1997, McCartney sat for an oral history interview that would be archived by the Black Archives of South Florida and cited decades later in academic literature. He described what was done to Overtown — the expressways, the displacement, the calculated destruction of a self-sufficient community — with the precision of a man who had watched it happen from inside the geography. "They have their plans set decades and scores in advance," he said. "50 to 60 years ago these plans were on the books and it's coming to pass every day."</p>
+<p>He was not speaking metaphorically. The HOLC redlining maps confirm it. The Urban Renewal displacement records confirm it. The city commission records he referenced confirm it. The data in this paper confirms it at national scale, across eight dimensions — and across series that reach back to 1900 in health, 1925 in criminal justice, 1940 in housing and 1514 in the historical architecture.</p>
+<p>McCartney's grand-nephew, Israel Armstead, is the Executive Director of E5 Enclave Incorporated, headquartered in Liberty City — the community McCartney helped shape and refused to abandon. The line runs unbroken from the McCartney Palace on Northwest 15th Street to the organization that produced this paper.</p>
+<p>Each built on the last. Each was met with resistance, then partial acknowledgment, then systematic absorption that diluted the demand. This paper is next in that line.</p>
+<h1 class="ch-title mid">CHAPTER 2 — The Data Gap: What Has Never Been Built</h1>
+<p>The tradition documented in Chapter 1 has never lacked for moral clarity. What it has lacked, at every stage, is a single instrument that could make the full scope of the wound legible in one place — empirically comprehensive, structurally organized, freely available, requiring no institutional affiliation to access, produced by and accountable to the communities at the center of the data. That instrument did not exist before this paper. This chapter explains precisely what was missing and why.</p>
+<h2>The Government Record: Rigorous and Fragmented</h2>
+<p>The federal government has assembled the raw material. The Bureau of Labor Statistics tracks Black unemployment every month. The Centers for Disease Control measures maternal mortality by race. The Census Bureau produces annual wealth, poverty, and homeownership data through the Survey of Consumer Finances and the American Community Survey. The Bureau of Justice Statistics documents incarceration rates by race. The National Assessment of Educational Progress measures academic outcomes by demographic group. The Home Mortgage Disclosure Act requires lenders to report mortgage approvals and denials by race. The EPA's EJScreen maps environmental burden by census tract. The National Archives holds the Freedmen's Bureau records. The Slave Voyages Database documents 12,521,337 Africans forced onto slave ships and 10,702,656 who survived to reach the Americas — a precision that did not exist in any single source twenty years ago.</p>
+<p>Each of these instruments is rigorous within its lane. None of them synthesize. None of them are designed to tell a unified story across eight dimensions of the same life in the same community. The unemployment data does not speak to the incarceration data. The housing data does not speak to the environmental data. The historical record does not speak to the present-tense disparity data. They exist in separate agencies, separate databases, separate annual reports — each requiring a different data literacy, a different institutional access point, a different vocabulary.</p>
+<p>The community that is the subject of this data is not the primary audience it was designed to serve.</p>
+<h2>The Academic Record: Synthesized and Inaccessible</h2>
+<p>Academic researchers have done the synthesis. The scholarship on racial wealth gaps, carceral expansion, environmental racism, educational opportunity gaps, and housing discrimination is extensive, rigorous, and — behind institutional paywalls that cost forty dollars per article without a university subscription — largely unavailable to the communities and advocates who need it most.</p>
+<p>The peer-reviewed literature has done its work. The data exists in journals. It has been reviewed. It has been cited by policymakers who have used it to produce commission reports that confirm the disparity, recommend reforms, and return to the same shelves as the studies that preceded them.</p>
+<p>The academic tradition has not failed to produce knowledge. It has structured that knowledge in a way that does not transfer power to the communities the knowledge is about. This is not a critique of individual researchers. It is a structural observation about who the instrument of academic publication is designed to serve. A community organizer in Humphreys County, Mississippi — no university affiliation, no library subscription, a FarmBlock distress score of 87.25 — the highest in the scored corpus — does not have access to the literature that documents the conditions she lives inside. That is a design problem, not an accident.</p>
+<h2>The Advocacy Record: Urgent and Single-Pillar</h2>
+<p>The Movement for Black Lives' <em>A Vision for Black Lives</em> policy platform (2016) is the most comprehensive modern articulation of Black liberation demands in the policy register. The NAACP publishes annual criminal justice reporting. The National Fair Housing Alliance tracks mortgage discrimination and fair housing enforcement. The National Urban League's <em>State of Black America</em> has appeared annually since 1976. The Brookings Institution, the Economic Policy Institute, and the Urban Institute have produced significant work on racial wealth gaps, housing, and labor markets.</p>
+<p>Each is rigorous. None of them are what this paper is.</p>
+<p>The advocacy reports are designed for specific policy campaigns — they build the case for a particular intervention in a particular pillar. The academic reports are designed for peer review — they establish findings within a methodological framework. Neither is designed as a sovereign, eight-dimensional, dual-source verified, CC0-licensed, on-chain public instrument that belongs to anyone who can use it.</p>
+<p>The gap is not one of effort or intelligence or commitment. Every organization named above has produced work of consequence. The gap is structural: no single instrument has combined all eight dimensions of structural distress, dual-source verified, into a public document owned by no institution, paywalled by no gatekeeper, and produced by a Black-led organization without government funding or foundation conditions.</p>
+<h2>The Gap, Precisely Stated</h2>
+<p>What did not exist before this paper is specific. Not a synthesis — those exist. Not a dataset — the federal government produces those. Not an advocacy platform — those exist and have shaped policy. What did not exist was this combination:</p>
+<p>Eight-dimensional. Economic, health, criminal justice, education, housing, political, environmental, and historical — not as separate reports but as a single instrument in which the relationships between pillars are visible and the cumulative weight can be measured as a compound score.</p>
+<p>Longitudinally unprecedented. The federal government has collected racial data for over a century — but in separate agencies, across incompatible series, in publications never aggregated into a single instrument. This dataset integrates BLS unemployment to 1972 (fifty-four years), NCHS health data to 1900 (one hundred and twenty-two years), BJS incarceration to 1925 (ninety-seven years), Census homeownership to 1940 (eighty-two years) and Slave Voyages records to 1514. No existing public document assembles these series in one instrument, dual-source verified and CC0 licensed.</p>
+<p>Dual-source verified. Every data point confirmed against at least two independent sources. Where sources disagree, the more conservative estimate is used and the discrepancy is documented. This is a higher verification standard than most advocacy reports apply and matches the standard of peer-reviewed academic work — without the paywall.</p>
+<p>CC0. Not "free to read." Not "open access." CC0 — public domain. No license required. No attribution required. No restrictions. Copy it. Translate it. Build on it. Use it in litigation, in testimony, in a grant application, in a classroom, in a community meeting in Humphreys County at midnight with no internet access and a printed copy.</p>
+<p>On-chain. The dataset is sealed on the Base Mainnet blockchain. It cannot be revised under political pressure. It cannot be quietly altered. The record exists independent of any server, any institution, any administration.</p>
+<p>Produced without conditions. E5 Enclave Incorporated built this dataset without government funding, without foundation grants, without academic institutional support. Every condition of funding is a potential condition of finding. This dataset has no funders to satisfy. It has one obligation: accuracy.</p>
+<p>Black-led. The organization that produced this paper is headquartered in Liberty City, Miami, Florida — inside the compound distress geography it documents. The people who built this dataset live in the data. That is not a credential. It is an accountability structure.</p>
+<p>That combination — not any single element — is the novelty this paper represents. The BDI does not replace what came before. It is the synthesis layer that makes all of it more useful to the people who most need it: the attorney preparing a fair housing complaint, the organizer building the case for a city council member, the congressional staffer drafting testimony on maternal mortality, the researcher at an HBCU whose library cannot afford the journal that published the study she needs, the community in Humphreys County that has been waiting for someone to put all of it in one place and hand it over.</p>
+<p>Here it is.</p></section><section class="partpage" id="part-two"><p class="part-label">Part Two</p><h1 class="part-title">The Data Architecture</h1></section><section class="chapter" id="sec4"><p class="ch-label">CHAPTER 3</p><h1 class="ch-title">THE STACK: HOW THE DATA WAS BUILT</h1>
+<h2>3.1 Research Design Overview</h2>
+<p>This research employs a mixed-method observational design combining longitudinal secondary data analysis with cross-sectional composite index construction. The project produces two distinct but architecturally linked instruments:</p>
+<p><strong>Product A — The Black Distress Index (BDI):</strong> A national longitudinal structural record documenting eight dimensions of Black community disparity from 1991 through 2024, with historical framing extending to 1514. The BDI operates as a forensic documentation system — it does not model cause and effect. It records what happened and when, across verifiable federal and institutional data series.</p>
+<p><strong>Product B — The FarmBlock Food Distress Index (FDI):</strong> A place-based intervention prioritization instrument scoring structural co-occurrence at the census tract level (15,507 tracts, 49 cities) and at the county level (24-county published pilot; approximately 3,144 counties in estimated full coverage). The FDI is a correlation instrument. It identifies communities where structural burdens cluster. It does not assert that any one dimension causes another.</p>
+<p>The two instruments share a source architecture and governance protocol but serve different analytical functions. The BDI answers the question: <em>What has the structural record shown across time?</em> The FDI answers: <em>Where do these conditions concentrate now, and in what combination?</em></p>
+<p>Neither instrument makes causal claims. Both are designed for use in grant applications, policy testimony, litigation support, community organizing, and academic research contexts where evidentiary precision — not narrative assertion — is the standard.</p>
+<hr />
+<h2>3.2 Dataset Architecture</h2>
+<p>The data stack is organized into four layers. Each layer has a defined scope, unit of analysis, and governance rule. Layers do not substitute for one another.</p>
+<h3>Layer 1 — Sovereign Raw Evidence Archive</h3>
+<p><strong>Repository:</strong> <code>bdi-raw-data-vault</code> (GitHub: IAMGODIAM)
+<strong>Unit of analysis:</strong> Series-level observations — annual, decennial, event-count, and aggregate records
+<strong>Content:</strong> Approximately 14,811 verified data points across 17 active files
+<strong>Rule:</strong> Primary source data is committed unmodified before any analysis. No scoring at this layer. All transformations happen downstream.
+<strong>Sources include:</strong> BLS Local Area Unemployment Statistics, U.S. Census Bureau (ACS, CPS, decennial), NCHS National Vital Statistics, BJS Prisoners series, Slave Voyages Database, NAEP Main Assessment, CFPB HMDA, Mapping Police Violence, EPA EJScreen (via Public Environmental Data Partners), USDA FARA</p>
+<h3>Layer 2 — Pillar Metric Layer (National Structural Record)</h3>
+<p><strong>Repository:</strong> <code>bdi-sovereign-dataset</code>
+<strong>Unit of analysis:</strong> Flagship pillar metrics — disparity ratios, percentage-point gaps, absolute burden measures
+<strong>Content:</strong> 1,574 verified empirical observations across 8 pillars
+<strong>Empirical window:</strong> 1991–2024 (scoring series); 1514–1866 (Slave Voyages historical context — separate framing, separate pipeline)
+<strong>Formula:</strong> See Section 3.4</p>
+<h3>Layer 3 — Place-Level Compound Distress Layer</h3>
+<p><strong>Repository (tract):</strong> <code>farmblock-data</code> — 15,507 census tracts, 49 cities
+<strong>Repository (county):</strong> <code>farmblock-dataset</code> — 24-county pilot published; ~3,144-county estimated full scope across 17 states
+<strong>Unit of analysis:</strong> FDI composite score (0–100) per tract or county
+<strong>Formula:</strong> See Section 3.4</p>
+<h3>Layer 4 — Forensic Narrative and Analytical Record</h3>
+<p><strong>Repository:</strong> <code>bdi-raw-data-vault/reports/</code>
+<strong>Content:</strong> Analytical reports, claim triage records, scientific adjustment memos, peer review documentation</p>
+<p>The architecture enforces a principle of evidentiary separation: raw data is never modified, transformation logic is documented in methodology files, and canonical numbers for public use are locked in the Stack Truth Table (see Section 3.4).</p>
+<hr />
+<h2>3.3 Data Sourcing</h2>
+<h3>3.3.1 BDI National Structural Record — Eight Pillars</h3>
+<p><strong>Pillar 1 — Economic</strong>
+- Federal Reserve Survey of Consumer Finances (SCF): wealth data, 1989–2022 vintages
+- U.S. Census Bureau Current Population Survey (CPS): poverty rates, 1991–2022
+- U.S. Census Bureau American Community Survey (ACS): homeownership, income, 2022–2023 vintages
+- BLS Local Area Unemployment Statistics: annual unemployment by race, 1991–2024</p>
+<p><strong>Pillar 2 — Health</strong>
+- NCHS National Center for Health Statistics: life expectancy by race, 1991–2022; maternal mortality rates, 2018–2024 (Hoyert 2024)
+- CDC PLACES: small-area modeled estimates for chronic disease burden (diabetes, hypertension, obesity), 2023 vintage</p>
+<p><strong>Pillar 3 — Criminal Justice</strong>
+- BJS Prisoners series: incarceration rates by race, 1980–2022
+- Mapping Police Violence: police killing rates by race, 2013–2024
+- Sentencing Project: supplementary incarceration ratio documentation</p>
+<p><strong>Pillar 4 — Education</strong>
+- NAEP Main Assessment: 4th and 8th grade reading and math scores by race, 1992–2022</p>
+<p><strong>Pillar 5 — Housing</strong>
+- U.S. Census Bureau / CPS: homeownership by race, decennial and annual vintages
+- CFPB HMDA: mortgage denial rates by race, 2023 public dataset
+- Graetz et al. (2023) PNAS: eviction and eviction filing rates by race</p>
+<p><strong>Pillar 6 — Environmental</strong>
+- EPA EJScreen (via Public Environmental Data Partners, screening-tools.com/epa-ejscreen; note: removed from EPA.gov February 5, 2025)
+- Tessum et al. (2021) and Mikati et al. (2018): supplementary corroboration</p>
+<p><strong>Pillar 7 — Political and Civic</strong>
+- U.S. Census Bureau Current Population Survey November supplement: voter registration and turnout by race
+- NCSL and Brennan Center: voting rights restriction documentation</p>
+<p><strong>Pillar 8 — Historical Structural Context</strong>
+- Slave Voyages Database (slavevoyages.org, 2023 edition): 12.5 million Africans embarked; 10.7 million disembarked in the Americas; first recorded voyage 1514
+- Federal Reserve / NCRC: redlining and lending discrimination studies
+- FHWA and academic literature: urban highway displacement documentation</p>
+<h3>3.3.2 FDI Place-Level Instrument — Tract Layer</h3>
+<table>
+<thead>
+<tr>
+<th>Source</th>
+<th>Variables</th>
+<th>Vintage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Census Bureau ACS 5-Year</td>
+<td>Poverty rate, median household income, internet access, housing vacancy rate, racial composition</td>
+<td>2023</td>
+</tr>
+<tr>
+<td>CDC PLACES</td>
+<td>Diabetes prevalence, hypertension prevalence, obesity prevalence</td>
+<td>2023</td>
+</tr>
+<tr>
+<td>USDA FARA (proxy)</td>
+<td>Food desert designation</td>
+<td>2019 proxy via ACS income/poverty thresholds</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Food desert proxy note:</strong> USDA FARA direct download was unavailable (HTTP 404 at time of collection). The proxy applied is: <code>food_desert_proxy = 1 WHERE poverty_rate ≥ 20% AND median_household_income ≤ $65,000</code>. This approximates the USDA Low-Income, Low-Access (LILA) standard. All rows are labeled to distinguish proxy-designated from directly confirmed designations.</p>
+<h3>3.3.3 FDI Place-Level Instrument — County Layer</h3>
+<table>
+<thead>
+<tr>
+<th>Source</th>
+<th>Variables</th>
+<th>Vintage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BLS Local Area Unemployment Statistics</td>
+<td>County unemployment rate</td>
+<td>2025</td>
+</tr>
+<tr>
+<td>Census Bureau ACS 5-Year</td>
+<td>Poverty rate, income, racial composition</td>
+<td>2022</td>
+</tr>
+<tr>
+<td>CDC PLACES</td>
+<td>Health burden indicators</td>
+<td>2023</td>
+</tr>
+<tr>
+<td>Census Bureau ACS 5-Year</td>
+<td>Internet access, housing vacancy</td>
+<td>2022</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>3.4 Validation Architecture — Stack Truth Table and Claim Triage Protocol</h2>
+<h3>The Stack Truth Table</h3>
+<p>The project maintains a canonical crosswalk document — the Stack Truth Table (<code>STACK_TRUTH_TABLE.md</code>, committed to <code>bdi-raw-data-vault</code>) — that resolves conflicts between repositories, methodology files, READMEs, and paper language. The governing rule: when any document conflicts with the Stack Truth Table, the Stack Truth Table wins and the other document is updated.</p>
+<p>The Stack Truth Table locks the following canonical public claims:</p>
+<table>
+<thead>
+<tr>
+<th>Claim</th>
+<th>Locked Value</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tracts scored (FDI v2.0)</td>
+<td><strong>15,507</strong></td>
+<td><code>processed/farmblock_fdi_v2.csv</code> row count, re-verified August 2026 (supersedes 15,578)</td>
+</tr>
+<tr>
+<td>Cities ranked (FDI v2.0)</td>
+<td><strong>49</strong></td>
+<td><code>processed/farmblock_city_rankings.csv</code> row count, re-verified August 2026 (supersedes 50)</td>
+</tr>
+<tr>
+<td>Cities in county dataset</td>
+<td><strong>53</strong></td>
+<td><code>processed/farmblock_cities_v2.csv</code> row count, verified</td>
+</tr>
+<tr>
+<td>Counties in Phase 2 pilot</td>
+<td><strong>24</strong></td>
+<td><code>farmblock_fdi_phase2.csv</code> row count, verified</td>
+</tr>
+<tr>
+<td>Counties in Phase 3 estimated scope</td>
+<td><strong>~3,144</strong></td>
+<td><code>farmblock_phase3_manifest.json</code> coverage field</td>
+</tr>
+<tr>
+<td>BDI empirical observations</td>
+<td><strong>1,574</strong></td>
+<td>Verified JSON count per BDI_QUANT_SPEC.md counting rule</td>
+</tr>
+<tr>
+<td>Raw vault observations</td>
+<td><strong>~14,811</strong></td>
+<td>VAULT_MANIFEST.json v3.1</td>
+</tr>
+<tr>
+<td>BDI empirical window</td>
+<td><strong>1991–2024</strong></td>
+<td>BDI_QUANT_SPEC.md §2</td>
+</tr>
+<tr>
+<td>Historical evidence anchor</td>
+<td><strong>1514</strong></td>
+<td>Slave Voyages DB, first recorded voyage</td>
+</tr>
+<tr>
+<td>Priority states (BDI composite)</td>
+<td><strong>17</strong></td>
+<td>bdi_sovereign_dataset_v1.json state_scores</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Data point counting rule (BDI_QUANT_SPEC.md §3):</strong> One data point equals one row in a time series or one unique observation record. JSON metadata keys (source, pillar, notes) are explicitly excluded. The earlier public claim of 1,855 data points included metadata keys as data points — this was incorrect. The corrected figure is 1,574 verified empirical observations.</p>
+<h3>The BDI Claim Triage Matrix</h3>
+<p>All public claims in research outputs are classified against four evidentiary categories before publication:</p>
+<ul>
+<li><strong>source-confirmed:</strong> claim matches primary source at the stated vintage; safe to publish as-is with footnote</li>
+<li><strong>source-conflicted:</strong> claim appears in draft but does not match primary source value, geography, or vintage; requires rewrite per triage guidance before publication</li>
+<li><strong>internally-derived:</strong> claim is derived from E5 Enclave methodology not yet published externally; requires methodology publication or claim replacement before external sharing</li>
+<li><strong>citation-vintage-correction:</strong> primary source is correct but URL or institutional location has changed (e.g., EPA EJScreen removed from EPA.gov, February 5, 2025; now via Public Environmental Data Partners)</li>
+</ul>
+<p>The current Claim Triage Matrix (<code>BDI_CLAIM_TRIAGE_MATRIX.md</code>, committed to both <code>bdi-raw-data-vault</code> and <code>farmblock-data</code>) documents 27 claims across all eight pillars:</p>
+<table>
+<thead>
+<tr>
+<th>Status</th>
+<th>Count</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>source-confirmed</td>
+<td>10</td>
+</tr>
+<tr>
+<td>source-conflicted</td>
+<td>11</td>
+</tr>
+<tr>
+<td>internally-derived</td>
+<td>4</td>
+</tr>
+<tr>
+<td>citation-vintage-correction</td>
+<td>2</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td><strong>27</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Five highest-priority fixes required before external sharing:</strong></p>
+<ol>
+<li><strong>Slave Voyages (HI-1):</strong> Distinguish "12.5 million embarked" from "10.7 million disembarked in the Americas" — these are different figures. Current draft conflates them.</li>
+<li><strong>Cancer Alley geography (H-3/CD-5):</strong> 85% Black is a fence-line census tract figure, not a parish-level figure. Parish level ranges from 22–57% Black. Specify geography to prevent factual challenge.</li>
+<li><strong>NAEP gap (ED-1):</strong> Current draft cites 20-point gap. Verified NAEP 2022 figure is 24 points. Parity timeline in draft is also incorrect by a factor of approximately two.</li>
+<li><strong>Humphreys County poverty (CD-6):</strong> Draft uses 37% (ACS 2019 vintage). Current figure is 32.1% (ACS 2022). Child poverty figure of 55% (ACS 2022) is more powerful and current. Recommend updating to current vintage.</li>
+<li><strong>Section 3 HUD "$4.5 billion gap" (HO-3):</strong> No published source exists for this aggregate. Replace with HUD OIG (2013) finding: 53% of PHAs did not file required Section 3 reports.</li>
+</ol>
+<h3>Dual-Source Verification Protocol</h3>
+<p>All primary claims in the BDI National Structural Record are verified against at least two independent sources before commitment to the vault. The <code>dual_source_log.json</code> file in <code>bdi-raw-data-vault</code> records the source pair, verification date, and any discrepancy notes for each verified series. Series that cannot be verified against two independent sources are flagged as single-source and labeled accordingly in the dataset.</p>
+<h3>FDI Quality Assurance</h3>
+<p>The FDI tract pipeline applies the following validation checks before publication:
+- Dimension values confirmed within 0–1 normalization bounds
+- <strong>Sentinel-value audit (added August 2026):</strong> eight tracts were found carrying imputation artifacts — <code>poverty_rate</code> filled to 100.0 alongside <code>median_hh_income</code> filled to the corpus median of $75,738.50. One of them, Census Tract 106.06 in Muscogee County, Georgia, is the highest-scoring tract in the published corpus (FDI 79.42) and is a group-quarters tract. These rows are enumerated in Appendix E and flagged for exclusion in v3.0. Because the instrument min–max normalizes across the corpus, an artificially maximal tract compresses every other tract's normalized position on the affected dimensions.
+- FDI composite confirmed between 0–100
+- D4 health burden: confirmed using CDC PLACES direct measurement (diabetes + hypertension mean); not proxied in v2.0. Where CDC PLACES data is unavailable for a tract, D4 is imputed to zero — a conservative choice documented in LIMITATIONS.md.
+- Food desert proxy: all rows labeled (<code>food_desert_proxy_flag</code>) distinguishing proxy-assigned from FARA-confirmed designations</p>
+<hr />
+<h2>3.5 Scoring Formulas</h2>
+<h3>3.5.1 BDI National Composite (Product A)</h3>
+<p><code>BDI_composite = Economic×0.20 + Health×0.20 + CriminalJustice×0.20 +
+                Education×0.15 + Housing×0.10 + Environmental×0.10 + Political×0.05</code></p>
+<p><strong>Weighting rationale:</strong>
+- Economic (20%), Health (20%), Criminal Justice (20%) carry equal highest weight — these three pillars document the most irreversible structural outcomes: wealth deprivation, mortality, and state-imposed incarceration
+- Education (15%) — a high-leverage pillar that compounds across generations
+- Housing (10%) — foundational wealth-building mechanism; weighted below the top three because homeownership data carries ACS survey variance at some geographies
+- Environmental (10%) — growing evidentiary base; weighted moderately given recent EPA data access disruption (February 2025)
+- Political (5%) — civic participation data carries the highest measurement noise of any pillar</p>
+<p>All pillar scores normalized 0–100. Final composite normalized 0–100 across the comparison universe.</p>
+<h3>3.5.2 FDI Tract Composite (Product B — Tract Layer)</h3>
+<p><code>FDI_tract = (D1_economic + D2_income_deficit + D3_food_access + D4_health + D5_vacancy + D6_digital) / 6 × 100</code></p>
+<p>Where:
+- D1: <code>poverty_rate</code> (Census ACS 2023)
+- D2: <code>1 − normalize(median_hh_income)</code> (inverted; lower income = higher distress)
+- D3: <code>food_desert_proxy × 0.60 + pct_no_internet × 0.40</code>
+- D4: <code>mean(pct_diabetes, pct_high_bp)</code> — CDC PLACES 2023 direct measurement
+- D5: <code>vacancy_rate</code> (Census ACS 2023)
+- D6: <code>pct_no_internet</code> (Census ACS 2023)</p>
+<p>All dimensions min-max normalized 0–1 across all tracts in the dataset before compositing. Equal weighting (1/6 each) is the v2.0 baseline. PCA-derived weighting is recommended for v3.0.</p>
+<h3>3.5.3 FDI County Composite (Product B — County Layer, Phase 2)</h3>
+<p><code>FDI_county = poverty×0.25 + health×0.25 + digital×0.20 + vacancy×0.15 + Black_pct×0.15</code></p>
+<p><strong>Note on racial composition variable:</strong> The county-level formula includes <code>Black_pct</code> at 15% weight as a structural exposure proxy — not as a demographic descriptor or outcome variable. The theoretical basis is that communities with higher Black population concentration have historically been subjected to greater disinvestment, redlining, and structural exclusion. The variable captures exposure to systemic risk, not any intrinsic characteristic of race. This choice is documented in <code>methodology/race_variable_note.md</code>. The tract-level formula does not include this variable; the tract formula uses structural dimensions only.</p>
+<hr />
+<h2>3.6 Cross-Dataset Reconciliation</h2>
+<p>The two products share geography but operate at different resolutions. Reconciliation rules:</p>
+<p><strong>Temporal alignment:</strong> The BDI scoring series (1991–2024) and the FDI cross-sectional snapshots (ACS 2022–2023, BLS 2025) use different temporal frames by design. The BDI answers "what happened over time." The FDI answers "where is distress concentrated now." They are complementary, not substitutable.</p>
+<p><strong>Geographic alignment:</strong> FDI tract and county scores feed city and state aggregates used for cross-referencing against BDI state-level composite scores. Where city boundaries do not align with county or tract boundaries, the larger administrative unit is used and labeled.</p>
+<p><strong>Product A/B separation:</strong> The BDI national composite score and the FDI tract/county scores are distinct instruments. They share source data (CDC PLACES, ACS) but use different formulas, different geographic units, and different purposes. They must not be cited interchangeably. The Stack Truth Table "Do NOT cite for" column governs this boundary.</p>
+<hr />
+<h2>3.7 Methodological Choices — Explicit Rationale</h2>
+<p><strong>Equal weighting (FDI tract):</strong> FDI v2.0 uses equal dimension weights as a transparent, auditable baseline. Equal weighting makes no assumption about which structural burden matters more than another — a defensible position for a v1 public release. PCA-derived or expert-assigned weighting is recommended for v3.0 but would require public disclosure of the weight-assignment process.</p>
+<p><strong>Analyst-assigned weighting (FDI county and BDI composite):</strong> The county FDI and BDI composite use analyst-assigned weights with documented rationale. These weights are disclosed in the methodology files and are subject to sensitivity testing. Alternative weight sets produce similar rank orderings in high-distress communities, which increases confidence in the core findings.</p>
+<p><strong>Proxy substitution (food desert):</strong> The USDA FARA data download was unavailable at collection time. The ACS-based proxy is documented, labeled, and subject to validation against USDA's published LILA criteria. Tracts designated as food deserts via proxy are distinguishable from any FARA-confirmed designation in the dataset. This is consistent with accepted practice in small-area data estimation.</p>
+<p><strong>Normalization approach:</strong> Min-max normalization within each dataset's geographic universe ensures scores are interpretable as relative distress rankings within the study population. It does not support cross-study comparisons without re-normalization. This is labeled explicitly on all published outputs.</p>
+<p><strong>Inclusion of racial composition in county formula:</strong> Discussed in §3.5.3. The variable captures structural exposure, not intrinsic racial characteristics. Full methodological rationale is published in <code>race_variable_note.md</code>.</p>
+<hr />
+<h2>3.8 Limitations</h2>
+<ol>
+<li><strong>USDA FARA vintage (2019):</strong> Food access conditions may have changed post-2019. ACS proxy substituted and labeled at the row level.</li>
+<li><strong>CDC PLACES modeled estimates:</strong> CDC PLACES data represents small-area model estimates, not direct clinical measurement. These are the best available tract-level health burden data but carry model uncertainty.</li>
+<li><strong>D4 health imputed to zero:</strong> Where CDC PLACES data is unavailable for a tract, D4 is set to zero (conservative). This may understate distress in data-sparse tracts.</li>
+<li><strong>Equal weights (FDI tract):</strong> Not empirically validated. No dimension is demonstrated to matter more than another at the tract level. PCA-derived weighting is the recommended path for v3.0.</li>
+<li><strong>Geographic coverage:</strong> The FDI tract dataset covers 49 cities (15,507 tracts). It is not a national random sample. National coverage with weighting adjustments is planned for v3.0.</li>
+<li><strong>ACS 5-year rolling window:</strong> ACS 5-year estimates represent rolling averages, not point-in-time snapshots. Temporal precision is limited compared to administrative records.</li>
+<li><strong>Correlation only:</strong> Both the BDI and FDI identify co-occurrence of structural conditions. Neither instrument models causation. All analytical language uses co-occurrence framing.</li>
+<li><strong>EPA EJScreen access disruption:</strong> EJScreen was removed from EPA.gov on February 5, 2025. Current access is via Public Environmental Data Partners (screening-tools.com/epa-ejscreen). Environmental pillar data should be reverified using this updated source before final publication.</li>
+<li><strong>Internally-derived compound distress scores:</strong> Compound distress scores for flagship counties are derived from E5 Enclave methodology rather than from a federal instrument. <em>Status resolved for this edition:</em> the published Humphreys County score is <strong>87.25</strong> (an earlier draft figure of 83.5 was superseded), and the full component breakdown — formula, weights, normalization method, component scores, and the 7.5-point discrepancy between the published and hand-calculated values — is printed in Appendix E.</li>
+</ol>
+<hr />
+<h2>3.9 Data Governance and Ethics</h2>
+<p><strong>License:</strong> All data products are released under CC0 1.0 Universal (Public Domain). No restriction on use, distribution, or modification. No attribution required, though attribution is appreciated.</p>
+<p><strong>Intended beneficiaries:</strong> The datasets are designed for use by community organizations, legal advocates, academic researchers, policymakers, journalists, and grant writers working in communities affected by the structural conditions the data documents. The data belongs to the communities it describes.</p>
+<p><strong>Black-first framing:</strong> Per E5 Enclave's LOGOS Doctrine, all language describing affected communities avoids deficit framing. Communities are not described primarily by what they lack. Structural critique names systems and their documented effects, not populations.</p>
+<p><strong>Evidentiary standard:</strong> The BDI Claim Triage Matrix (§3.4) enforces a pre-publication evidentiary review for all public claims. Conflicted claims are rewritten before external sharing. Internally-derived claims are either supported with published methodology or replaced with verifiable source-confirmed alternatives.</p>
+<p><strong>Institutional authority:</strong> E5 Enclave Incorporated, EIN 99-3822441, is the publishing entity. All decisions about canonical numbers, formula choices, and public language rest with the board. The Stack Truth Table is the authoritative governance document for all numerical claims.</p>
+<hr />
+<h2>3.10 Summary</h2>
+<p>This research produces two architecturally linked instruments built on a four-layer sovereign data stack. The BDI National Structural Record documents 1,574 verified empirical observations across eight pillars and 33 years. The FDI Place Distress Instrument scores 15,507 census tracts across 49 cities and 24 counties in a published pilot release.</p>
+<p>Both instruments are correlation tools, not causal models. Both are released CC0 into the public domain. Both are governed by a Stack Truth Table and Claim Triage Matrix that enforce numerical consistency across all repositories and research outputs.</p>
+<p>The methodology is designed to withstand peer review. The limitations are disclosed. The formula choices are documented with rationale. The canonical numbers are locked and governed.</p>
+<p>The data is built to be used — by the communities, advocates, and researchers whose work these numbers serve.</p>
+<hr />
+<hr />
+<h2>3.11 Reconciliation Performed for This Edition (August 2026)</h2>
+<p>Three classes of check were run before this edition was set in type, and each produced corrections that are carried into the text.</p>
+<p><strong>Recomputation.</strong> Every ratio, gap, sum, mean and projection appearing in the drafts was recalculated from the Layer-1 raw series rather than copied forward from prior drafts. This surfaced ten errors that no source check would have caught, because each involved correct source data combined incorrectly. They include an unemployment "floor" claim contradicted by seventeen years of the series, a police-killings total understated by 481, a parity projection off by a factor of 3.3, and an incarceration floor stated 0.1 below the window minimum. All are enumerated in Appendix H.</p>
+<p><strong>Live source verification.</strong> Flagged series were re-pulled from primary federal sources in August 2026. The BLS unemployment series reproduced the vault values exactly. The NAEP Grade 8 reading series, queried against the NCES data service, confirmed the triage matrix's ED-1 ruling to the decimal: the 1992 gap was 29.63 points and the 2022 gap 24.54, against a draft claim of 20 points.</p>
+<p><strong>Governance-document audit.</strong> The Stack Truth Table's locked counts were tested against direct row counts of the published files. Two locked values — 15,578 tracts and 50 cities — were found stale, and the truth table had explicitly instructed that the pipeline manifest be corrected upward to match them. The row counts show the manifest was right and the table was wrong: the correct figures are 15,507 and 49, following the removal of duplicated Selma, Alabama rows at manifest version 2.1.</p>
+<p>This last finding is the most instructive. The Stack Truth Table was created precisely to prevent numerical drift between repositories, and it became a source of drift because it was locked at a moment in time and the pipeline continued to improve beneath it. <strong>A governance document that cannot be re-derived from the artifacts it governs will eventually contradict them.</strong> Version 3.0 of this stack will generate the truth table from row counts at build time rather than maintaining it by hand.</p></section><section class="chapter" id="sec5"><p class="ch-label">CHAPTER 4</p><h1 class="ch-title">THE MEASURE: WHAT GETS COUNTED AND WHY</h1>
+<blockquote>
+<p><em>"It is a peculiar sensation, this double-consciousness, this sense of always looking at one's self through the eyes of others."</em></p><p class="attrib">— W.E.B. Du Bois, <em>The Souls of Black Folk</em> (1903)</p>
+</blockquote>
+<h2>Opening</h2>
+<p>Measurement choices are moral choices. What you choose to count, what weight you assign each dimension, and what you decide to leave out of the composite is not a neutral technical exercise. It is an argument about what matters. Every index that has ever been built to measure human conditions — the United Nations Human Development Index, the Gini coefficient, the Federal Poverty Line — encodes a theory of what constitutes deprivation and what threshold marks its presence.</p>
+<p>This chapter makes the measurement choices of the BDI explicit. It names the theory behind the weighting. It explains why eight dimensions were chosen and not three or twelve. It documents what the index does not claim to capture. And it argues that the specific combination of dimensions, weights, and data sources assembled here is not arbitrary — it is the minimum necessary architecture to see the wound whole.</p>
+<hr />
+<h2>I. Why Eight Dimensions</h2>
+<p>The decision to organize the BDI around eight structural pillars responds to a specific failure in how Black American structural distress has been measured historically: the single-pillar problem.</p>
+<p>The federal government measures Black unemployment (BLS). It measures Black incarceration (BJS). It measures Black maternal mortality (NCHS). Each instrument is rigorous within its lane. None of them communicate with each other. A community can have low unemployment and high incarceration simultaneously. A community can have improving life expectancy and worsening mortgage denial rates simultaneously. The single-pillar instruments are not wrong. They are incomplete. They cannot see the interaction effects.</p>
+<p>The academic literature on racial inequality has produced powerful multi-dimensional analyses — Robert Sampson's work on neighborhood effects, Patrick Sharkey's research on urban poverty, Keeanga-Yamahtta Taylor on predatory inclusion in housing markets. But this scholarship is paywalled, time-bounded by research funding cycles, and produced for academic audiences, not for the communities it describes.</p>
+<p>The BDI synthesizes across eight dimensions simultaneously because the lived experience of structural distress is not single-pillar. A family in one of the five compound catastrophe zones identified in Chapter 7 is not experiencing poverty or health burden or carceral threat — they are experiencing all of these simultaneously, interacting with each other, compounding each other, foreclosing paths out of each other. An instrument that cannot see the compound cannot measure the catastrophe.</p>
+<hr />
+<h2>II. The Eight Pillars: Rationale and Evidence</h2>
+<h3>Pillar 1 — Economic (Weight: 20%)</h3>
+<p><strong>What it measures:</strong> Wealth gap, unemployment, household income, homeownership rates, poverty rates.</p>
+<p><strong>Why 20%:</strong> The economic dimension is assigned the highest weight (tied with health and criminal justice) because it is both the most measurable and the most foundational. Wealth is the mechanism through which structural advantage and disadvantage are transmitted across generations. The Federal Reserve Survey of Consumer Finances provides the most rigorous longitudinal measure available. The BLS unemployment series provides the longest continuous racial comparison available in American public data (1972–2025, fifty-four years). Income and homeownership from the Census ACS provide the intermediate layer between wealth accumulation and daily economic survival.</p>
+<p><strong>Key sources:</strong> Fed Reserve SCF (wealth, 1989–2022), BLS CPS (unemployment, 1972–2025), Census ACS B19013 (income), Census ACS B25003 (homeownership), Census ACS B17001 (poverty), BLS LAUS (state-level, 2010–2024), Census ACS county-level 5-year estimates (2015–2022, 12,382 county-year observations).</p>
+<h3>Pillar 2 — Health (Weight: 20%)</h3>
+<p><strong>What it measures:</strong> Maternal mortality rate, life expectancy gap, COVID excess mortality, environmental health burden.</p>
+<p><strong>Why 20%:</strong> The body is the final ledger of everything the built environment, the economic environment, and the political environment produce. Maternal mortality is not a health failure — it is a system failure. The 69.9 per 100,000 maternal mortality rate for Black women in 2021 — the highest recorded since 1968, documented by NCHS — is a metric that encodes discriminatory clinical treatment, under-resourced prenatal care, environmental stressors, economic precarity, and the cumulative physical burden of navigating anti-Black institutions across a lifetime. Life expectancy encodes the same compound burden in a single number at the population level.</p>
+<p><strong>Key sources:</strong> NCHS WONDER (maternal mortality, 1999–2021), NCHS vital statistics (life expectancy by race, 1999–2021), CDC PLACES (health burden at tract level for FarmBlock layer).</p>
+<h3>Pillar 3 — Criminal Justice (Weight: 20%)</h3>
+<p><strong>What it measures:</strong> Incarceration rate by race, police killing rate by race, unarmed killing rate.</p>
+<p><strong>Why 20%:</strong> The carceral system is an economic system. Incarceration removes labor from families, destroys wealth-building capacity, removes voting rights in most states, restricts housing access, restricts employment access, and generates lifetime economic penalties that compound across generations. The incarceration ratio — which has moved 0.14 points in ninety-seven years of data, and has not fallen below 5.8 within the empirical window — is not a public safety metric. It is a structural extraction metric. The BJS Prisoners series measures it with the same methodological rigor as any other federal statistical program.</p>
+<p><strong>Key sources:</strong> BJS Prisoners series (incarceration rate by race, 1991–2023), Mapping Police Violence database (police killings by race, 2013–2023, DOJ-confirmed methodology).</p>
+<h3>Pillar 4 — Education (Weight: 15%)</h3>
+<p><strong>What it measures:</strong> NAEP reading and mathematics score gaps by race, educational attainment rates by race and state.</p>
+<p><strong>Why 15%:</strong> Education is weighted at 15% rather than 20% not because it matters less, but because the causal pathway from structural conditions to educational outcomes is more mediated than in the economic, health, and criminal justice pillars. School funding inequities, environmental stressors in learning environments, and the cumulative cognitive burden of poverty are all documented mechanisms. But the NAEP score gap is a downstream measure of upstream structural failures that are more directly captured in the higher-weighted pillars. The 15% weighting reflects this position in the causal chain, not a diminished importance.</p>
+<p><strong>Key sources:</strong> NAEP (reading and math score gaps by race, 1992–2022), Census ACS B15002 (educational attainment by race, all states, 2022).</p>
+<h3>Pillar 5 — Housing (Weight: 10%)</h3>
+<p><strong>What it measures:</strong> Mortgage denial rates by race, historical homeownership rates, eviction rates.</p>
+<p><strong>Why 10%:</strong> Housing is the primary mechanism of wealth accumulation for American families without inherited wealth. The mortgage denial ratio — documented by the Home Mortgage Disclosure Act — is the most direct federal measure of discriminatory access to this mechanism. The denial ratio, which ranged from 2.01 to 2.36 across thirty years of HMDA reporting and never fell below 2.0, is one of the most durable findings in the dataset. The 10% weighting reflects the significant overlap between housing and economic conditions (Pillar 1): they are measuring different mechanisms of the same fundamental condition of wealth exclusion.</p>
+<p><strong>Key sources:</strong> HMDA (mortgage denial by race, 1995–2022), Census decennial homeownership (1940–2010 historical series), eviction data integrated from available administrative sources.</p>
+<h3>Pillar 6 — Environmental (Weight: 10%)</h3>
+<p><strong>What it measures:</strong> Proximity to industrial pollution sources, environmental health burden by race and geography.</p>
+<p><strong>Why 10%:</strong> Environmental racism — the pattern by which polluting industrial facilities are sited disproportionately in Black and low-income communities — is documented across decades of environmental justice research and confirmed in federal EPA data. The Louisiana petrochemical corridor — 150 industrial facilities across an 85-mile stretch, with fence-line census tracts 65 to 94 percent Black against a parish-wide share near 44 percent — is the most documented example, but the pattern is national and appears in the FarmBlock data across the 50-city priority universe. The 10% weighting reflects that environmental burden is both a direct health input (it belongs to Pillar 2 in terms of outcomes) and a distinct structural condition in its own right (community geography as a site of intentional disinvestment and industrial siting).</p>
+<p><strong>Key sources:</strong> EPA facility data (industrial siting by community demographics), CDC PLACES environmental burden indicators at tract level.</p>
+<h3>Pillar 7 — Political (Weight: 5%)</h3>
+<p><strong>What it measures:</strong> Elected representation by race at state and federal levels, voting access indicators.</p>
+<p><strong>Why 5%:</strong> Political representation is weighted at 5% — the lowest weight in the composite — not because political power is unimportant, but because the relationship between representation and structural outcomes is the most complex and least directly measurable in the BDI framework. The empirical record on the relationship between Black political representation and structural conditions in Black communities is contested in ways that the relationships in the other six pillars are not. A lower weight reflects appropriate epistemic humility about what the available data can support.</p>
+<p><strong>Key sources:</strong> Congressional and state legislative representation data by race, voting access indicators from existing civil rights monitoring databases.</p>
+<h3>Pillar 8 — Historical (Weight: 0% in composite, full presence in paper)</h3>
+<p><strong>What it measures:</strong> The Trans-Atlantic slave trade, 1514–1866 — the origin point.</p>
+<p><strong>Why 0% composite weight:</strong> The historical pillar is not weighted in the BDI composite index because it is not a contemporary condition that varies across the 50-city comparison universe — it is the shared origin of the structural conditions that do. Every community in the priority universe descends from this history. Weighting it in the composite would not differentiate communities; it would add a constant. The historical data is present in the dataset, documented in the vault, and present in this paper because the 33-year empirical window does not explain itself without it. The wealth gap that opens Chapter 5 does not begin in 1991.</p>
+<p><strong>Key sources:</strong> Slave Voyages Trans-Atlantic Slave Trade Database (1514–1866), 42 aggregate observations: 12,521,337 embarked, 10,702,656 disembarked in the Americas, 1,818,681 lost in the crossing.</p>
+<hr />
+<h2>III. The BDI Composite Index Formula</h2>
+<p>The BDI composite score for a given geography (national, state, metro, or county) is calculated as:</p>
+<p><code>BDI = (Economic × 0.20) + (Health × 0.20) + (CriminalJustice × 0.20) 
+    + (Education × 0.15) + (Housing × 0.10) + (Environmental × 0.10) 
+    + (Political × 0.05)</code></p>
+<p>Each pillar score is normalized to a 0–100 scale using min-max normalization across the comparison universe before weighting. A BDI score of 100 represents the most extreme structural distress in the comparison universe; a score of 0 represents the least. The composite is not an absolute measure — it is a relative instrument for identifying and ranking the most structurally compromised geographies within the priority universe.</p>
+<hr />
+<h2>IV. What the BDI Does Not Measure</h2>
+<p><strong>Mental health burden.</strong> The psychological toll of navigating anti-Black institutions — the documented phenomenon of weathering, the elevated cortisol levels and accelerated biological aging associated with chronic racial stress — is real, measurable, and consequential. It is not fully captured in the BDI v1.0 because the tract-level mental health data required to include it with the rigor this instrument demands was not available at time of synthesis. BDI v2.0 must address this.</p>
+<p><strong>Intergenerational wealth transfer.</strong> The Fed Reserve SCF captures current wealth levels. It does not fully capture the compound interest of historical exclusion — the way that the denial of land ownership to Black families during the Homestead Act era, the destruction of the Greenwood District in Tulsa, the targeted displacement of Overtown in Miami, and similar events represent not just historical injuries but compound wealth deficits that accumulate across generations. Quantifying this requires a different kind of modeling than the BDI framework employs.</p>
+<p><strong>Criminal legal debt.</strong> Court fees, fines, and supervision costs constitute a significant mechanism of wealth extraction from Black communities that is not captured in standard incarceration data. The BJS Prisoners series counts people. It does not count the dollar amounts extracted from communities through the criminal legal system. This is a gap.</p>
+<p><strong>Sub-county variation.</strong> The sovereign dataset covers national, state, MSA, and county levels. The FarmBlock layer addresses the census tract. The gap between county and tract — the neighborhood level, the school district level, the block level — is partially addressed but not fully resolved.</p>
+<p>These gaps are documented because a sovereign empirical record that conceals its limitations is not sovereign — it is promotional. The findings of this paper stand on what the data does show. They are sufficient.</p>
+<hr />
+<h2>V. The Transition</h2>
+<p>Chapter 3 described how the data was built. Chapter 4 has described what it measures and why.</p>
+<p>Part Three begins with the findings. Thirty-three years. The wealth gap that has never closed. The unemployment ratio that has never once inverted in fifty-four years. The maternal mortality ratio that is wider today than it was under legal segregation.</p>
+<p>The data is ready. The architecture is described. The methodology is documented.</p>
+<p>Turn the page.</p></section><section class="partpage" id="part-three"><p class="part-label">Part Three</p><h1 class="part-title">The Findings</h1></section><section class="chapter" id="sec6"><p class="ch-label">CHAPTER 5</p><h1 class="ch-title">THE ECONOMIC WOUND</h1>
+<blockquote>
+<p><em>"The problem of the twentieth century is the problem of the color line."</em></p><p class="attrib">— W.E.B. Du Bois, <em>The Souls of Black Folk</em> (1903)</p>
+</blockquote>
+<p>The wealth gap between Black and white American families has not closed. Not in 1991. Not in 2008. Not in 2024. Not in any year in between. This chapter documents that statement with four instruments — wealth, unemployment, income and homeownership — and one finding that runs through all four: the ratios move, sometimes substantially, while the absolute distance grows.</p>
+<hr />
+<h2>5.1 Wealth: The Ratio Improved and the Gap Nearly Tripled</h2>
+<p>The Federal Reserve's Survey of Consumer Finances is conducted every three years and is the most rigorous longitudinal measure of American household wealth in existence. Twelve waves span 1989 to 2022.</p>
+<p><strong>Table 5.1 — Median family wealth by race, Federal Reserve SCF, 1989–2022</strong></p>
+<table>
+<thead>
+<tr>
+<th>Year</th>
+<th>Black median</th>
+<th>White median</th>
+<th>Absolute gap</th>
+<th>Ratio</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1989</td>
+<td>$12,000</td>
+<td>$95,000</td>
+<td>$83,000</td>
+<td>0.126</td>
+</tr>
+<tr>
+<td>1992</td>
+<td>$14,000</td>
+<td>$95,000</td>
+<td>$81,000</td>
+<td>0.147</td>
+</tr>
+<tr>
+<td>1995</td>
+<td>$14,000</td>
+<td>$90,000</td>
+<td>$76,000</td>
+<td>0.156</td>
+</tr>
+<tr>
+<td>1998</td>
+<td>$17,000</td>
+<td>$107,000</td>
+<td>$90,000</td>
+<td>0.159</td>
+</tr>
+<tr>
+<td>2001</td>
+<td>$20,000</td>
+<td>$121,000</td>
+<td>$101,000</td>
+<td>0.165</td>
+</tr>
+<tr>
+<td>2004</td>
+<td>$20,400</td>
+<td>$134,000</td>
+<td>$113,600</td>
+<td>0.152</td>
+</tr>
+<tr>
+<td>2007</td>
+<td>$19,200</td>
+<td>$171,000</td>
+<td>$151,800</td>
+<td>0.112</td>
+</tr>
+<tr>
+<td>2010</td>
+<td>$13,700</td>
+<td>$130,700</td>
+<td>$117,000</td>
+<td>0.105</td>
+</tr>
+<tr>
+<td>2013</td>
+<td>$11,200</td>
+<td>$141,900</td>
+<td>$130,700</td>
+<td>0.079</td>
+</tr>
+<tr>
+<td>2016</td>
+<td>$17,600</td>
+<td>$171,000</td>
+<td>$153,400</td>
+<td>0.103</td>
+</tr>
+<tr>
+<td>2019</td>
+<td>$24,100</td>
+<td>$188,200</td>
+<td>$164,100</td>
+<td>0.128</td>
+</tr>
+<tr>
+<td><strong>2022</strong></td>
+<td><strong>$44,900</strong></td>
+<td><strong>$285,000</strong></td>
+<td><strong>$240,100</strong></td>
+<td><strong>0.158</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Read the ratio column and the story is modest progress: 0.126 to 0.158, a gain of 3.2 cents on the dollar across thirty-three years. Read the gap column and the story inverts. The absolute distance between the median Black family and the median white family grew from $83,000 to $240,100 — an increase of $157,100, a <strong>2.89-fold</strong> expansion.</p>
+<p>Both columns are true. They describe the same data. The reason they disagree is arithmetic that compounds: when the denominator triples, a ratio can improve while the distance between the two positions widens beyond any plausible route to closure.</p>
+<p>How far beyond? The observed rate of ratio improvement is 0.00097 per year — just under one-tenth of one cent on the dollar, annually, sustained since 1989. Projected forward at that rate, ratio parity arrives in approximately <strong>868 years</strong>.</p>
+<p>An earlier draft of this paper put the figure at 263 years. That was an arithmetic error and it is corrected here. The correct number is worse, and the correction is the point: this instrument is designed to be checked.</p>
+<p>The 2013 trough deserves its own sentence. Black median wealth fell to $11,200 — below the 1989 figure in nominal terms, twenty-four years later. That is the residue of the subprime collapse, and Section 5.4 returns to why it landed where it did.</p>
+<h3>The land beneath the wealth</h3>
+<p>Wealth data begins in 1989 because that is when the SCF begins. The asset base it measures has a longer history.</p>
+<p><strong>Table 5.2 — Black-owned farmland, USDA Census of Agriculture, 1910–1997</strong></p>
+<table>
+<thead>
+<tr>
+<th>Year</th>
+<th>Acres</th>
+<th>Change from peak</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1910</td>
+<td>15,000,000</td>
+<td>peak</td>
+</tr>
+<tr>
+<td>1940</td>
+<td>11,000,000</td>
+<td>−26.7%</td>
+</tr>
+<tr>
+<td>1960</td>
+<td>6,000,000</td>
+<td>−60.0%</td>
+</tr>
+<tr>
+<td>1978</td>
+<td>3,100,000</td>
+<td>−79.3%</td>
+</tr>
+<tr>
+<td>1997</td>
+<td>1,500,000</td>
+<td><strong>−90.0%</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Thirteen and a half million acres — ninety percent of the peak — transferred out of Black ownership across eighty-seven years. No single confiscation event. Tax sales, heir-property partition actions, discriminatory USDA lending, foreclosure, harassment and violence, each documented, each individually small enough to escape public memory.</p>
+<p>This is the largest systematic asset transfer in American history without a conventional name.</p>
+<p><em>A note on the 2017 and 2022 figures:</em> the Census of Agriculture changed methodology in 2017 to include leased acreage, producing an apparent recovery to 4.7 million acres and then 2.9 million in 2022. These are not comparable to the pre-2017 ownership series and are excluded from the trend statement above.</p>
+<hr />
+<h2>5.2 Unemployment: Fifty-Four Years, and the Ratio Has Never Inverted</h2>
+<p>The BLS series LNS14000006 and LNS14000003 — Black and white unemployment, seasonally adjusted, monthly — begin in 1972. Fifty-four years of continuous, race-disaggregated federal labor data. Nothing else in the American statistical system runs this long at this frequency.</p>
+<p><strong>Table 5.3 — Black/white unemployment ratio, BLS, selected years</strong></p>
+<table>
+<thead>
+<tr>
+<th>Year</th>
+<th>Black</th>
+<th>White</th>
+<th>Ratio</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1972</td>
+<td>10.40%</td>
+<td>5.05%</td>
+<td>2.059</td>
+<td>series opens</td>
+</tr>
+<tr>
+<td>1983</td>
+<td>19.50%</td>
+<td>8.37%</td>
+<td>2.330</td>
+<td></td>
+</tr>
+<tr>
+<td>1989</td>
+<td>11.47%</td>
+<td>4.48%</td>
+<td><strong>2.560</strong></td>
+<td>maximum</td>
+</tr>
+<tr>
+<td>2000</td>
+<td>7.59%</td>
+<td>3.48%</td>
+<td>2.181</td>
+<td></td>
+</tr>
+<tr>
+<td>2007</td>
+<td>8.26%</td>
+<td>4.12%</td>
+<td>2.005</td>
+<td></td>
+</tr>
+<tr>
+<td>2009</td>
+<td>14.78%</td>
+<td>8.49%</td>
+<td>1.741</td>
+<td>recession</td>
+</tr>
+<tr>
+<td>2019</td>
+<td>6.07%</td>
+<td>3.27%</td>
+<td>1.856</td>
+<td></td>
+</tr>
+<tr>
+<td>2020</td>
+<td>11.57%</td>
+<td>7.34%</td>
+<td><strong>1.576</strong></td>
+<td>minimum</td>
+</tr>
+<tr>
+<td>2022</td>
+<td>6.11%</td>
+<td>3.19%</td>
+<td>1.915</td>
+<td></td>
+</tr>
+<tr>
+<td>2024</td>
+<td>—</td>
+<td>—</td>
+<td>1.666</td>
+<td></td>
+</tr>
+<tr>
+<td>2025</td>
+<td>6.90%</td>
+<td>3.73%</td>
+<td>1.850</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Fifty-four-year distribution:</strong> minimum 1.576 (2020), maximum 2.560 (1989), mean 2.115, median 2.130, standard deviation 0.230. The ratio equalled or exceeded 2.0 in 37 of 54 years.</p>
+<p>Two claims that appeared in earlier drafts do not survive this table, and both are withdrawn here.</p>
+<p>The first was that Black unemployment "has never fallen below twice the white rate." It has — in seventeen of fifty-four years. The second, from an internal adjustment memo, was that the ratio never falls below 1.86 in a normal economic year. It does: 1.683 in 2023 and 1.666 in 2024, both ordinary expansion years, the narrowest sustained readings in the series.</p>
+<p>What survives is stronger for being exact. Across fifty-four years, four recessions, one pandemic, nine presidencies and every configuration of American economic policy in the modern era, <strong>the ratio has never inverted.</strong> Not for one year. Not for one month. Black unemployment has never once been lower than white unemployment in the entire history of the federal government measuring both.</p>
+<p>A ratio that oscillates between 1.58 and 2.56 and never crosses 1.0 is not noise around a fair baseline. It is a bounded quantity — and bounded quantities have mechanisms.</p>
+<p>Note also the shape of the minimum. The lowest ratio on record, 1.576, occurs in 2020 — and it occurs because <em>white</em> unemployment surged to 7.34%, not because Black unemployment fell. The ratio narrowed in the worst labor market in eighty years. Convergence toward the mean is not always good news; sometimes it means everyone is drowning and the distance between swimmers has shrunk.</p>
+<hr />
+<h2>5.3 Income and Poverty</h2>
+<p><strong>Table 5.4 — Median household income by race, Census ACS</strong></p>
+<table>
+<thead>
+<tr>
+<th>Year</th>
+<th>Black</th>
+<th>White</th>
+<th>Ratio</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2005</td>
+<td>$31,869</td>
+<td>$52,176</td>
+<td>0.611</td>
+</tr>
+<tr>
+<td>2010</td>
+<td>$33,578</td>
+<td>$54,168</td>
+<td>0.620</td>
+</tr>
+<tr>
+<td>2015</td>
+<td>$36,898</td>
+<td>$62,000</td>
+<td>0.595</td>
+</tr>
+<tr>
+<td>2019</td>
+<td>$41,935</td>
+<td>$68,785</td>
+<td>0.612</td>
+</tr>
+<tr>
+<td>2022</td>
+<td>$48,200</td>
+<td>$75,400</td>
+<td>0.639</td>
+</tr>
+</tbody>
+</table>
+<p>Seventeen years; 2.8 points of ratio improvement. The absolute income gap grew from $20,307 to $27,200.</p>
+<p><strong>Table 5.5 — Poverty rate by race, Census ACS</strong></p>
+<table>
+<thead>
+<tr>
+<th>Year</th>
+<th>Black</th>
+<th>White</th>
+<th>Ratio</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2005</td>
+<td>25.6%</td>
+<td>9.0%</td>
+<td>2.84</td>
+</tr>
+<tr>
+<td>2010</td>
+<td>27.1%</td>
+<td>10.6%</td>
+<td>2.56</td>
+</tr>
+<tr>
+<td>2015</td>
+<td>25.4%</td>
+<td>10.4%</td>
+<td>2.44</td>
+</tr>
+<tr>
+<td>2019</td>
+<td>21.2%</td>
+<td>9.0%</td>
+<td>2.36</td>
+</tr>
+<tr>
+<td>2022</td>
+<td>21.3%</td>
+<td>9.5%</td>
+<td>2.24</td>
+</tr>
+</tbody>
+</table>
+<p>The Black poverty rate fell 4.3 points across the series — real improvement, and it should be named as such. The ratio narrowed from 2.84 to 2.24 and did not approach 2.0 in any year of the ACS record. One in five Black Americans lived below the federal poverty line in 2022, in the wealthiest economy in human history.</p>
+<hr />
+<h2>5.4 Homeownership, and What the Fair Housing Act Did Not Do</h2>
+<p>Homeownership is where the previous three sections converge. It is the primary mechanism by which American families without inherited capital accumulate wealth, and it is the mechanism most directly governed by a specific federal civil rights statute.</p>
+<p><strong>Table 5.6 — Homeownership by race, Census decennial and ACS</strong></p>
+<table>
+<thead>
+<tr>
+<th>Year</th>
+<th>Black</th>
+<th>White</th>
+<th>Gap (pp)</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1940</td>
+<td>23.6%</td>
+<td>45.7%</td>
+<td>22.1</td>
+<td>Census of Housing</td>
+</tr>
+<tr>
+<td>1950</td>
+<td>34.5%</td>
+<td>57.0%</td>
+<td>22.5</td>
+<td>Census of Housing</td>
+</tr>
+<tr>
+<td>1960</td>
+<td>38.4%</td>
+<td>64.4%</td>
+<td>26.0</td>
+<td>Census of Housing</td>
+</tr>
+<tr>
+<td>1970</td>
+<td>41.6%</td>
+<td>65.4%</td>
+<td>23.8</td>
+<td>Census of Housing</td>
+</tr>
+<tr>
+<td>1980</td>
+<td>44.4%</td>
+<td>67.8%</td>
+<td>23.4</td>
+<td>Census of Housing</td>
+</tr>
+<tr>
+<td>1990</td>
+<td>43.4%</td>
+<td>68.2%</td>
+<td>24.8</td>
+<td>Census of Housing</td>
+</tr>
+<tr>
+<td>2000</td>
+<td>46.3%</td>
+<td>73.8%</td>
+<td>27.5</td>
+<td>Census of Housing</td>
+</tr>
+<tr>
+<td>2010</td>
+<td>44.3%</td>
+<td>73.0%</td>
+<td>28.7</td>
+<td>Census of Housing</td>
+</tr>
+<tr>
+<td>2022</td>
+<td>44.1%</td>
+<td>73.0%</td>
+<td><strong>28.9</strong></td>
+<td>ACS</td>
+</tr>
+<tr>
+<td>2023</td>
+<td>44.7%</td>
+<td>72.4%</td>
+<td>27.7</td>
+<td>ACS</td>
+</tr>
+</tbody>
+</table>
+<p><strong>The Fair Housing Act was signed in April 1968. The gap that year was approximately twenty-four percentage points. Fifty-four years later it was 28.9.</strong></p>
+<p>The law did not close the gap. The gap is wider than when the law was passed. This is the single most important finding in the housing pillar, and it is not a claim about intent — it is a claim about outcome, which is the only thing a dataset can adjudicate.</p>
+<p>An earlier draft placed the current gap at 30.1 points. The verified ACS 2022 figure is 28.9, and the 2023 release puts it at 27.7. The corrected figures are used throughout.</p>
+<h3>Access to the mechanism</h3>
+<p><strong>Table 5.7 — Mortgage denial rate by race, HMDA</strong></p>
+<table>
+<thead>
+<tr>
+<th>Year</th>
+<th>Black</th>
+<th>White</th>
+<th>Ratio</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1993</td>
+<td>34.3%</td>
+<td>15.3%</td>
+<td>2.24</td>
+</tr>
+<tr>
+<td>2000</td>
+<td>24.5%</td>
+<td>10.4%</td>
+<td>2.36</td>
+</tr>
+<tr>
+<td>2003</td>
+<td>20.3%</td>
+<td>10.1%</td>
+<td><strong>2.01</strong></td>
+</tr>
+<tr>
+<td>2010</td>
+<td>26.1%</td>
+<td>12.4%</td>
+<td>2.11</td>
+</tr>
+<tr>
+<td>2019</td>
+<td>17.4%</td>
+<td>8.5%</td>
+<td>2.05</td>
+</tr>
+<tr>
+<td>2022</td>
+<td>19.8%</td>
+<td>9.1%</td>
+<td>2.18</td>
+</tr>
+</tbody>
+</table>
+<p>Thirty years of Home Mortgage Disclosure Act reporting. The denial ratio ranged from 2.01 to 2.36 and <strong>did not fall below 2.0 in any year</strong>. Denial rates for both groups fell substantially — 34.3% to 19.8% for Black applicants — while the ratio between them held almost perfectly flat.</p>
+<h3>2008</h3>
+<p>The subprime crisis is the clearest case in this dataset of a mechanism operating in plain sight.</p>
+<p>Black homeownership peaked around 2004 and reached its trough in 2013 — a decline of roughly nine years, not the eighteen months an earlier draft asserted. The 18-month framing is withdrawn; the correct statement is that <strong>the crisis reversed nearly a decade of accumulated homeownership gains across the 2007–2013 window</strong>, and that Black median wealth fell to $11,200 in 2013, its lowest point in the entire SCF series.</p>
+<p>The loans that produced it were not distributed randomly. They were marketed, and the marketing was documented at the time by the regulators who did not stop it.</p>
+<h3>Section 3</h3>
+<p>Section 3 of the Housing and Urban Development Act of 1968 requires that HUD-funded construction generate employment and contracting opportunities for low-income residents of the communities being developed. It is a statutory mandate, not a goal.</p>
+<p>A 2013 audit by HUD's own Office of Inspector General found that <strong>53 percent of public housing authorities did not file the required Section 3 reports</strong> — which means that for more than half the program, whether the statutory benefit was ever delivered is not merely unproven but unknowable.</p>
+<p><em>Earlier drafts of this paper cited a "$4.5 billion cumulative Section 3 gap." No published source supports that aggregate; it was internally derived and its construction was never published. It has been removed. The HUD OIG finding replaces it, and is stronger for coming from HUD.</em></p>
+<hr />
+<h2>5.5 What the Economic Pillar Establishes</h2>
+<p>Four instruments, one pattern. In every case the rate improves and the distance grows. In every case the ratio between Black and white outcomes proves more stable than any policy intervention aimed at it. In no case does a legal remedy — the Fair Housing Act, HMDA disclosure, the Section 3 mandate — produce convergence in the measure it was written to address.</p>
+<p>The economy is not failing to deliver equity. It is delivering, reliably, across fifty-four years, a distribution it was built to deliver.</p>
+<p>Chapter 6 turns to the body, the cell block and the classroom, where the same architecture produces outcomes that cannot be recovered.</p></section><section class="chapter" id="sec7"><p class="ch-label">CHAPTER 6</p><h1 class="ch-title">THE HEALTH WOUND, THE JUSTICE WOUND, THE EDUCATION WOUND</h1>
+<blockquote>
+<p><em>"Not everything that is faced can be changed, but nothing can be changed until it is faced."</em></p><p class="attrib">— James Baldwin</p>
+</blockquote>
+<p>Chapter 5 measured what is extracted. This chapter measures what cannot be given back: years of life, years of liberty, years of instruction. These are the irreversible pillars. A wealth gap can in principle be closed by transfer. A woman who dies in childbirth is not recoverable by any policy.</p>
+<hr />
+<h2>PART I — THE BODY</h2>
+<h3>6.1 The Maternal Mortality Reversal</h3>
+<p>This is the single most disturbing series in the dataset, and it must be read in order.</p>
+<p><strong>Table 6.1 — Maternal mortality per 100,000 live births, NCHS, 1915–2022</strong></p>
+<table>
+<thead>
+<tr>
+<th>Year</th>
+<th>Black</th>
+<th>White</th>
+<th>Ratio</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1915</td>
+<td>1,050.0</td>
+<td>600.0</td>
+<td>1.75</td>
+</tr>
+<tr>
+<td><strong>1930</strong></td>
+<td><strong>900.0</strong></td>
+<td><strong>609.0</strong></td>
+<td><strong>1.48</strong></td>
+</tr>
+<tr>
+<td>1940</td>
+<td>773.5</td>
+<td>319.8</td>
+<td>2.42</td>
+</tr>
+<tr>
+<td>1950</td>
+<td>221.6</td>
+<td>61.1</td>
+<td>3.63</td>
+</tr>
+<tr>
+<td>1960</td>
+<td>97.9</td>
+<td>22.4</td>
+<td>4.37</td>
+</tr>
+<tr>
+<td>1970</td>
+<td>59.8</td>
+<td>14.4</td>
+<td>4.15</td>
+</tr>
+<tr>
+<td>1980</td>
+<td>21.5</td>
+<td>6.7</td>
+<td>3.21</td>
+</tr>
+<tr>
+<td>1990</td>
+<td>22.4</td>
+<td>5.1</td>
+<td>4.39</td>
+</tr>
+<tr>
+<td>2000</td>
+<td>22.6</td>
+<td>7.5</td>
+<td>3.01</td>
+</tr>
+<tr>
+<td>2010</td>
+<td>28.4</td>
+<td>12.7</td>
+<td>2.24</td>
+</tr>
+<tr>
+<td>2019</td>
+<td>44.0</td>
+<td>17.9</td>
+<td>2.46</td>
+</tr>
+<tr>
+<td><strong>2021</strong></td>
+<td><strong>69.9</strong></td>
+<td>26.6</td>
+<td>2.63</td>
+</tr>
+<tr>
+<td><strong>2022</strong></td>
+<td>49.5</td>
+<td>19.0</td>
+<td><strong>2.61</strong></td>
+</tr>
+</tbody>
+</table>
+<p>American medicine made childbirth dramatically safer. In 1930, roughly nine women in a thousand died giving birth if they were Black; by 2022 the figure was one in two thousand. That is a genuine and enormous achievement of the twentieth century.</p>
+<p>Now read the ratio column.</p>
+<p><strong>In 1930 — under legal Jim Crow, in segregated hospitals, with the explicit denial of equivalent care — a Black woman died in childbirth 1.48 times as often as a white woman. In 2022, she died 2.61 times as often.</strong></p>
+<p>The ratio did not narrow across ninety-two years of modern medicine. It widened by a factor of 1.76.</p>
+<p>The mechanism is differential improvement. Medicine got better for everyone and better for white women faster, and it did so continuously enough that the disparity ratio is now higher than it was under a healthcare system that did not pretend to serve Black women equally.</p>
+<p>The 2021 peak — <strong>69.9 deaths per 100,000</strong> — is the highest Black maternal mortality rate recorded in the United States since 1968. The World Health Organization associates rates in that range with low-income countries. It occurred in the wealthiest nation in human history, in the twenty-first century, three years ago.</p>
+<p>The 2022 figure of 49.5 represents real improvement from the pandemic peak, and NCHS reporting indicates continued decline thereafter. Improvement without erasure: the rate falls, the ratio holds.</p>
+<h3>6.2 Life Expectancy, and What COVID Revealed</h3>
+<p><strong>Table 6.2 — Life expectancy at birth by race, NCHS, 1900–2022</strong></p>
+<table>
+<thead>
+<tr>
+<th>Year</th>
+<th>Black</th>
+<th>White</th>
+<th>Gap (years)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1900</td>
+<td>33.0</td>
+<td>47.6</td>
+<td>14.6</td>
+</tr>
+<tr>
+<td>1940</td>
+<td>53.1</td>
+<td>64.2</td>
+<td>11.1</td>
+</tr>
+<tr>
+<td>1960</td>
+<td>63.6</td>
+<td>70.6</td>
+<td>7.0</td>
+</tr>
+<tr>
+<td>1980</td>
+<td>68.1</td>
+<td>74.4</td>
+<td>6.3</td>
+</tr>
+<tr>
+<td>2000</td>
+<td>71.8</td>
+<td>77.3</td>
+<td>5.5</td>
+</tr>
+<tr>
+<td>2010</td>
+<td>74.7</td>
+<td>78.8</td>
+<td>4.1</td>
+</tr>
+<tr>
+<td>2019</td>
+<td>74.8</td>
+<td>78.8</td>
+<td><strong>4.0</strong></td>
+</tr>
+<tr>
+<td>2020</td>
+<td>71.8</td>
+<td>77.6</td>
+<td>5.8</td>
+</tr>
+<tr>
+<td>2021</td>
+<td>70.8</td>
+<td>76.4</td>
+<td>5.6</td>
+</tr>
+<tr>
+<td>2022</td>
+<td>72.8</td>
+<td>76.5</td>
+<td>3.7</td>
+</tr>
+</tbody>
+</table>
+<p>Across 122 years the gap narrowed from 14.6 years to 3.7 — the most substantial convergence anywhere in this dataset, and it should be stated plainly before anything else is said about it.</p>
+<p>Then read 2010 to 2021. Nine years of effort moved the gap by one-tenth of one year: 4.1 to 4.0. Two years of pandemic moved it by 1.8 years in the opposite direction.</p>
+<p><strong>Black life expectancy fell from 74.8 years in 2019 to 70.8 in 2021 — four full years, returning the figure to a level last seen in the mid-1990s.</strong></p>
+<p>Earlier drafts described this as "twenty years of gains erased in eighteen months." The direction is right and the arithmetic was not: the decline occurred across two calendar years, and it returned Black life expectancy to roughly its mid-1990s level — approximately two decades of accumulated gains, lost over two years. That is the corrected formulation and it is used throughout.</p>
+<p>A pandemic is a stress test. It does not create the structure it exposes; it loads it until the weakest joins fail first. The 2022 recovery to a 3.7-year gap — the narrowest on record — indicates the system can move when it is forced to. It moved 1.8 years in the wrong direction in twelve months and 1.9 in the right direction in twelve more. Nine years of ordinary policy moved it one-tenth of a year.</p>
+<h3>6.3 The Fence Line</h3>
+<p>Environmental burden is where health outcomes acquire coordinates.</p>
+<p>The Louisiana petrochemical corridor along the Mississippi between Baton Rouge and New Orleans — commonly called Cancer Alley — contains roughly 150 industrial facilities across an 85-mile stretch. Cancer incidence and respiratory illness in the corridor exceed state and national averages.</p>
+<p><strong>A geographic precision is required here, and earlier drafts did not supply it.</strong> The claim that the corridor is "85 percent Black" is not accurate at the parish level, where Black population share ranges from about 22 to 57 percent — St. James Parish, the most-studied case, is approximately 44 percent Black.</p>
+<p>The 85-percent figure describes something narrower and more damning: the <strong>fence-line census tracts</strong>, the communities immediately adjacent to the facilities themselves. At that resolution, in St. James Parish Districts 4 and 5, <strong>Black population share ranges from 65 to 94 percent</strong> (ACS 2022).</p>
+<p>The parish-level number does not capture where the burden lands. The tract-level number does. The distinction matters because it is exactly the distinction industrial siting decisions operate on — and because a reviewer who checks the parish figure and finds 44 percent will discard the entire chapter. The corrected geography is stated everywhere this claim appears.</p>
+<p><em>Source note: EPA's EJScreen tool was removed from EPA.gov on February 5, 2025. It remains publicly accessible via the Public Environmental Data Partners archive, which is the citation used here. The removal of a federal environmental justice screening tool during the period this paper documents is itself a data point about the durability of public records — and part of why this dataset is sealed on-chain.</em></p>
+<hr />
+<h2>PART II — THE CELL</h2>
+<h3>6.4 Ninety-Seven Years of a Constant</h3>
+<p><strong>Table 6.3 — Imprisonment rate per 100,000 by race, BJS, 1925–2022</strong></p>
+<table>
+<thead>
+<tr>
+<th>Year</th>
+<th>Black</th>
+<th>White</th>
+<th>Ratio</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1925</td>
+<td>142</td>
+<td>22</td>
+<td>6.45</td>
+</tr>
+<tr>
+<td>1940</td>
+<td>272</td>
+<td>50</td>
+<td><strong>5.44</strong></td>
+</tr>
+<tr>
+<td>1960</td>
+<td>661</td>
+<td>96</td>
+<td>6.89</td>
+</tr>
+<tr>
+<td>1980</td>
+<td>1,111</td>
+<td>168</td>
+<td>6.61</td>
+</tr>
+<tr>
+<td>1990</td>
+<td>2,376</td>
+<td>339</td>
+<td>7.01</td>
+</tr>
+<tr>
+<td>2000</td>
+<td>3,457</td>
+<td>449</td>
+<td><strong>7.70</strong></td>
+</tr>
+<tr>
+<td>2010</td>
+<td>3,074</td>
+<td>459</td>
+<td>6.70</td>
+</tr>
+<tr>
+<td>2014</td>
+<td>2,724</td>
+<td>466</td>
+<td>5.85</td>
+</tr>
+<tr>
+<td>2018</td>
+<td>2,272</td>
+<td>392</td>
+<td>5.80</td>
+</tr>
+<tr>
+<td>2020</td>
+<td>1,882</td>
+<td>296</td>
+<td>6.36</td>
+</tr>
+<tr>
+<td>2022</td>
+<td>1,862</td>
+<td>295</td>
+<td>6.31</td>
+</tr>
+</tbody>
+</table>
+<p>In 1925, Black Americans were imprisoned at 6.45 times the white rate. In 2022, at 6.31 times.</p>
+<p><strong>The ratio moved 0.14 points in ninety-seven years.</strong></p>
+<p>Between those two readings: two world wars, the Great Migration, the New Deal, <em>Brown v. Board</em>, the Civil Rights Act, the Voting Rights Act, Thurgood Marshall on the Supreme Court, the entire NAACP legal campaign, the War on Drugs, mass incarceration's rise and partial retreat, the First Step Act, and <em>The New Jim Crow</em> becoming required reading in every progressive institution in the country.</p>
+<p>The absolute rates tell a second story. Black imprisonment rose from 142 to a peak of 3,457 per 100,000 and has since fallen to 1,862 — a genuine and substantial decarceration since 2000, roughly 46 percent off the peak. White imprisonment followed nearly the same arc. The decline is real; the ratio between the two is what refused to move.</p>
+<p><strong>A correction.</strong> Earlier drafts stated the ratio "has never fallen below 5.7." Within the paper's empirical window the verified minimum is <strong>5.80, in 2018</strong>; across the full 97-year series the range is <strong>5.44 to 7.70</strong>. The corrected bounds are used throughout. They do not weaken the finding — the finding is the stability itself, and the stability is what a 0.14-point movement across ninety-seven years demonstrates.</p>
+<p>When a system produces the same ratio across a century of legal, political and cultural transformation, that ratio is not a byproduct. It is an output specification.</p>
+<h3>6.5 Police Killings</h3>
+<p><strong>Table 6.4 — Police killings by race, Mapping Police Violence, 2013–2023</strong></p>
+<table>
+<thead>
+<tr>
+<th>Year</th>
+<th>Black killed</th>
+<th>Total killed</th>
+<th>Black share</th>
+<th>Unarmed Black</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2013</td>
+<td>312</td>
+<td>1,108</td>
+<td>28.2%</td>
+<td>35</td>
+</tr>
+<tr>
+<td>2015</td>
+<td>346</td>
+<td>1,307</td>
+<td>26.5%</td>
+<td>57</td>
+</tr>
+<tr>
+<td>2018</td>
+<td>282</td>
+<td>1,165</td>
+<td>24.2%</td>
+<td>27</td>
+</tr>
+<tr>
+<td>2020</td>
+<td>312</td>
+<td>1,145</td>
+<td>27.2%</td>
+<td>28</td>
+</tr>
+<tr>
+<td>2021</td>
+<td>328</td>
+<td>1,134</td>
+<td>28.9%</td>
+<td>29</td>
+</tr>
+<tr>
+<td>2023</td>
+<td>337</td>
+<td>1,286</td>
+<td>26.2%</td>
+<td>26</td>
+</tr>
+<tr>
+<td><strong>Total 2013–2023</strong></td>
+<td><strong>3,496</strong></td>
+<td><strong>13,096</strong></td>
+<td><strong>26.7%</strong></td>
+<td><strong>397</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Three thousand four hundred ninety-six Black Americans killed by police in eleven years. Three hundred ninety-seven of them unarmed.</strong></p>
+<p><em>Earlier drafts reported 3,015 and 377. Those figures were undercounts; the totals above are the summed annual rows from the source database and are the corrected figures of record.</em></p>
+<p>Black Americans were 13.6 percent of the population in the 2020 Census and 26.7 percent of those killed by police across the eleven-year window — an overrepresentation factor of approximately 1.96. The annual Black share ranged from 24.2 to 28.9 percent and shows no trend across a decade that contained Ferguson, the 2020 protests, dozens of consent decrees and the most sustained public attention to police violence in American history.</p>
+<p><em>Instrument note: Mapping Police Violence is not a federal statistical program. The United States does not maintain a complete federal count of civilians killed by police. MPV is the most comprehensive public database in existence and is labeled as non-federal wherever cited in this paper. That the most complete record of lethal state force in America is maintained by volunteers is itself a finding.</em></p>
+<hr />
+<h2>PART III — THE CLASSROOM</h2>
+<h3>6.6 What NAEP Shows</h3>
+<p>The National Assessment of Educational Progress is the most methodologically rigorous measure of American academic achievement, administered by the Department of Education on a common scale since 1990.</p>
+<p><strong>Table 6.5 — NAEP score gaps by race, national</strong></p>
+<table>
+<thead>
+<tr>
+<th>Assessment</th>
+<th>1992 gap</th>
+<th>2022 gap</th>
+<th>Change</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Grade 8 reading</td>
+<td>29.6 pts</td>
+<td><strong>24.5 pts</strong></td>
+<td>−5.1</td>
+</tr>
+<tr>
+<td>Grade 8 mathematics</td>
+<td>40 pts</td>
+<td>32 pts</td>
+<td>−8</td>
+</tr>
+<tr>
+<td>Grade 4 reading</td>
+<td>32 pts</td>
+<td>28 pts</td>
+<td>−4</td>
+</tr>
+</tbody>
+</table>
+<p>Grade 8 reading, verified against the live NCES data service in August 2026: in 1992 white students averaged 267.0 and Black students 237.4, a gap of 29.6 points. In 2022 the figures were 268.4 and 243.9 — a gap of <strong>24.5 points</strong>.</p>
+<p><strong>Two corrections, both material.</strong> Earlier drafts stated the current gap at 20 points and projected parity in 64 years. The verified gap is approximately 24 points. At the observed convergence rate — 5.1 points across thirty years, or 0.17 points annually — <strong>closing the remaining 24.5 points requires roughly 144 years.</strong></p>
+<p>Not sixty-four. A century and a half. The children entering kindergarten this September would need to be succeeded by four more generations before the trend line, extended, reaches parity.</p>
+<p>Both errors understated the severity, and both were trivially checkable by any education researcher. They are corrected here because a paper that overstates progress in the direction of comfort is making the same error as one that overstates distress in the direction of alarm.</p>
+<p>The gap is closing. It is not closing at a rate that constitutes a solution, and the honest statement of that is more useful than either the optimistic error or the pessimistic one.</p>
+<p>Note also the 2022 anomaly: Grade 4 reading widened from 26 points in 2019 to 28, and Grade 8 mathematics from 30 to 32. Pandemic learning disruption was not evenly distributed either.</p>
+<hr />
+<h2>6.7 What These Three Pillars Establish</h2>
+<p>Health, justice and education measure three different institutions with three different funding structures, three different governing statutes and three different professional cultures.</p>
+<p>They produce the same shape. A ratio that proves more durable than the reforms aimed at it. Absolute improvement that is real and that does not close the distance. And in the maternal mortality series, the clearest case in the dataset of a disparity that is <em>worse</em> under formal equality than it was under formal segregation.</p>
+<p>Chapter 7 stops measuring pillars separately and asks what happens in the places where all of them fail at once.</p></section><section class="chapter" id="sec8"><p class="ch-label">CHAPTER 7</p><h1 class="ch-title">THE COMPOUND CATASTROPHE</h1>
+<blockquote>
+<p><em>"They have their plans set decades and scores in advance... 50 to 60 years ago these plans were on the books and it's coming to pass every day."</em></p><p class="attrib">— Ralph McCartney, Overtown, Miami, 1997</p>
+</blockquote>
+<p>Eight pillars measured separately produce eight findings. Measured together, they produce something the separate measurements cannot see: places where every pillar has failed simultaneously, and where the failures feed each other faster than any single-pillar remedy can reach them.</p>
+<p>A county with high poverty is a poor county. A county with high poverty, the highest hypertension prevalence in its comparison universe, no acute-care hospital, twenty-eight percent of its housing stock vacant and thirty percent of its residents without home internet is not a poor county. It is a county in which each condition forecloses the escape route from the others. No hospital means telehealth; no internet means no telehealth. Vacancy means no property tax base; no tax base means no hospital.</p>
+<p>This chapter measures that interaction. It is also the chapter in which this paper's own instrument is subjected to the same scrutiny the instrument applies to everyone else.</p>
+<hr />
+<h2>7.1 The FarmBlock Distress Index</h2>
+<p>The FDI is a place-level composite operating at two resolutions.</p>
+<p><strong>County layer</strong> (24-county published pilot):</p>
+<p><code>FDI_county = poverty(0.25) + health_burden(0.25) + digital_exclusion(0.20)
+           + vacancy(0.15) + Black_pct_proxy(0.15)</code></p>
+<p><strong>Tract layer</strong> (15,507 tracts), which deliberately excludes racial composition entirely:</p>
+<p><code>FDI_tract = (D1_poverty + D2_income_deficit + D3_food_access
+           + D4_health + D5_vacancy + D6_digital) / 6 × 100</code></p>
+<p>All dimensions are min–max normalized across the corpus before compositing. The two instruments are built differently on purpose: the county formula includes Black population share at 15 percent as a structural-exposure proxy; the tract formula uses structural dimensions only. Where the two agree, the agreement is not an artifact of the race variable, because one of them does not contain it.</p>
+<p>The rationale for the county proxy is set out in full in Appendix E, along with the strongest objection to it — that including racial composition in an instrument used to demonstrate racial disparity risks circularity. The tract instrument exists partly as the answer to that objection.</p>
+<hr />
+<h2>7.2 The Ranked Counties</h2>
+<p><strong>Table 7.1 — FarmBlock County Distress Index, top 12 of 24 published</strong></p>
+<table>
+<thead>
+<tr>
+<th>Rank</th>
+<th>County</th>
+<th>FDI</th>
+<th>% Black</th>
+<th>Poverty</th>
+<th>Median income</th>
+<th>No internet</th>
+<th>Vacancy</th>
+<th>Hypertension</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>Humphreys, MS</strong></td>
+<td><strong>87.25</strong></td>
+<td>80.0%</td>
+<td>35.0%</td>
+<td>$24,000</td>
+<td>30.0%</td>
+<td>28.0%</td>
+<td>51.7%</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>Claiborne, MS</strong></td>
+<td><strong>85.26</strong></td>
+<td>83.0%</td>
+<td>35.0%</td>
+<td>$26,000</td>
+<td>28.0%</td>
+<td>25.0%</td>
+<td>50.0%</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>Sunflower, MS</strong></td>
+<td><strong>78.34</strong></td>
+<td>72.0%</td>
+<td>32.0%</td>
+<td>$28,000</td>
+<td>26.0%</td>
+<td>24.0%</td>
+<td>48.0%</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>Alexander, IL</strong></td>
+<td><strong>77.38</strong></td>
+<td>33.2%</td>
+<td>21.4%</td>
+<td>$40,365</td>
+<td>38.2%</td>
+<td>42.4%</td>
+<td>47.9%</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>Amite, MS</strong></td>
+<td><strong>70.86</strong></td>
+<td>40.2%</td>
+<td>27.1%</td>
+<td>$34,866</td>
+<td>30.2%</td>
+<td>19.3%</td>
+<td>43.2%</td>
+</tr>
+<tr>
+<td>6</td>
+<td>East Carroll, LA</td>
+<td>70.02</td>
+<td>67.0%</td>
+<td>40.3%</td>
+<td>$30,856</td>
+<td>29.7%</td>
+<td>28.3%</td>
+<td>49.6%</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Adams, MS</td>
+<td>68.31</td>
+<td>53.4%</td>
+<td>27.2%</td>
+<td>$37,271</td>
+<td>17.3%</td>
+<td>22.0%</td>
+<td>51.7%</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Barbour, AL</td>
+<td>65.68</td>
+<td>46.9%</td>
+<td>24.2%</td>
+<td>$39,712</td>
+<td>24.3%</td>
+<td>22.8%</td>
+<td>46.4%</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Ashley, AR</td>
+<td>59.55</td>
+<td>24.8%</td>
+<td>23.3%</td>
+<td>$44,804</td>
+<td>23.6%</td>
+<td>23.7%</td>
+<td>41.4%</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Gadsden, FL</td>
+<td>57.98</td>
+<td>55.0%</td>
+<td>22.0%</td>
+<td>$45,000</td>
+<td>18.0%</td>
+<td>14.0%</td>
+<td>40.0%</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Wayne (Detroit), MI</td>
+<td>56.79</td>
+<td>40.0%</td>
+<td>22.0%</td>
+<td>$54,000</td>
+<td>16.0%</td>
+<td>20.0%</td>
+<td>38.0%</td>
+</tr>
+<tr>
+<td>12</td>
+<td>St. Louis City, MO</td>
+<td>55.43</td>
+<td>44.0%</td>
+<td>22.0%</td>
+<td>$51,020</td>
+<td>14.0%</td>
+<td>18.0%</td>
+<td>43.0%</td>
+</tr>
+</tbody>
+</table>
+<p><strong>A correction to this paper's own framing.</strong> Earlier drafts named five "compound catastrophe zones": Humphreys County, Detroit, East St. Louis, Claiborne County, and the Louisiana petrochemical corridor. That list does not match the instrument's output and is withdrawn.</p>
+<p>The instrument's actual top five are <strong>Humphreys, Claiborne, Sunflower, Alexander and Amite</strong> — four Mississippi Delta counties and one Illinois river county. Wayne County (Detroit) ranks eleventh at 56.79, thirty points below Humphreys. East St. Louis sits in St. Clair County, Illinois, which is not in the published corpus at all; Alexander County, Illinois — rank four — is Cairo, a different place with a different history.</p>
+<p>The five originally named were selected for documentary depth, not by score. Detroit and Cancer Alley belong in this paper, and they appear below as case studies with their actual standing disclosed. But a composite index that names a top five must name the top five the composite produced. Substituting the more familiar cities would have been the exact failure this instrument exists to prevent.</p>
+<hr />
+<h2>7.3 Humphreys County, Mississippi</h2>
+<p>FIPS 28053. Population approximately 7,400 and falling. FDI 87.25 — the highest score in the corpus.</p>
+<p><strong>Table 7.2 — Humphreys County score decomposition</strong></p>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Raw value</th>
+<th>Normalized</th>
+<th>Weight</th>
+<th>Contribution</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Poverty</td>
+<td>35.0%</td>
+<td>1.000</td>
+<td>0.25</td>
+<td>0.250</td>
+</tr>
+<tr>
+<td>Health burden</td>
+<td>36.15% (mean of diabetes 20.6, hypertension 51.7)</td>
+<td>1.000</td>
+<td>0.25</td>
+<td>0.250</td>
+</tr>
+<tr>
+<td>Digital exclusion</td>
+<td>30.0% no internet</td>
+<td>0.447</td>
+<td>0.20</td>
+<td>0.089</td>
+</tr>
+<tr>
+<td>Vacancy</td>
+<td>28.0%</td>
+<td>0.419</td>
+<td>0.15</td>
+<td>0.063</td>
+</tr>
+<tr>
+<td>Structural exposure (% Black)</td>
+<td>80.0%</td>
+<td>0.964</td>
+<td>0.15</td>
+<td>0.145</td>
+</tr>
+</tbody>
+</table>
+<p>Humphreys sits at the corpus ceiling on both of the highest-weighted components. <strong>51.7 percent hypertension prevalence</strong> — in a county where high blood pressure is the statistical majority condition, not the exception. The nearest acute-care hospital option disappeared when Humphreys County Medical Center closed in <strong>2013</strong>; thirteen years later, three in ten residents have no home internet, which means the telehealth substitute is unavailable to the same households.</p>
+<p>The county qualifies as low-income, low-access under USDA Food Access Research Atlas criteria. <em>An earlier draft stated "no grocery store within fifteen miles." USDA FARA does not use a fifteen-mile threshold — its measures are 0.5, 1, 10 and 20 miles — and the claim is replaced with the designation the federal instrument actually issues.</em></p>
+<p><strong>On poverty, three figures and why all three appear.</strong> ACS 2015–2019 recorded 36.4 percent all-persons poverty; ACS 2022 recorded 32.1 percent, with <strong>55.0 percent of children</strong> below the line; the most recent ACS five-year release reports approximately 27 percent, with a margin of error of ±6.3 points. Earlier drafts used "37 percent" without a vintage lock. All three vintages are printed here because in a county of 7,400 the survey margin is wide enough that a single figure asserted without its interval is not a finding — it is a rounding decision presented as one. The decline is also not straightforwardly good news: Humphreys has lost roughly a third of its population since 1980, and a poverty rate calculated on a shrinking denominator measures departure as much as improvement.</p>
+<p><strong>On the score itself.</strong> The published FDI is 87.25. Recomputing the five components by hand against approximate corpus bounds yields <strong>79.7</strong> — a gap of roughly 7.5 points, arising because the published score normalizes against the full Phase 3 corpus while a hand calculation uses approximate range endpoints. The published figure stands as the citation of record. The discrepancy is printed rather than smoothed because Humphreys is this paper's flagship example, and a flagship example that cannot be audited is a slogan.</p>
+<hr />
+<h2>7.4 The Cases the Index Ranks Lower</h2>
+<h3>Detroit — Wayne County, Michigan (rank 11, FDI 56.79)</h3>
+<p>Wayne County's composite is thirty points below Humphreys, and the reason is instructive rather than exculpatory. Detroit has infrastructure: hospitals, broadband, a tax base, transit. Its distress is concentrated and internal rather than county-wide. The tract layer shows this directly — across <strong>587 Detroit tracts</strong> the median FDI is 33.9 while the maximum reaches <strong>68.8</strong>. The county average conceals a distribution in which specific neighborhoods score in Delta territory while others do not.</p>
+<p>This is the strongest argument for the tract instrument. County-level analysis of a large metropolitan county will systematically understate concentrated urban distress, because the affluent tracts and the abandoned tracts are averaged into a single unremarkable number. Detroit's problem is not that the county is uniformly distressed. It is that the distressed parts are as distressed as rural Mississippi and are politically invisible inside a county average.</p>
+<h3>The Louisiana corridor</h3>
+<p>The petrochemical corridor does not appear as a single ranked unit because it is not a county — it spans several parishes along an 85-mile stretch, and the burden is concentrated in fence-line tracts rather than distributed across parish geography. East Carroll Parish, Louisiana ranks sixth at 70.02 with the highest poverty rate in the corpus (40.3 percent), but East Carroll is in the northeast Delta, not the industrial corridor.</p>
+<p>The corridor's documentation is therefore tract-level and is presented in Chapter 6: fence-line census tracts in St. James Parish Districts 4 and 5 are 65 to 94 percent Black, against a parish-wide figure of approximately 44 percent. The instrument that captures this is the tract instrument, and the geography that matters is the tract geography.</p>
+<hr />
+<h2>7.5 The Tract Layer: 15,507 Tracts, 49 Cities</h2>
+<p><strong>Table 7.3 — Highest-distress cities by median tract FDI</strong></p>
+<table>
+<thead>
+<tr>
+<th>City</th>
+<th>Tracts</th>
+<th>Median FDI</th>
+<th>Max FDI</th>
+<th>Median poverty</th>
+<th>Median % Black</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Albany, GA</td>
+<td>29</td>
+<td>49.5</td>
+<td>70.8</td>
+<td>27.5%</td>
+<td>70.6%</td>
+</tr>
+<tr>
+<td>Jackson, MS</td>
+<td>67</td>
+<td>45.3</td>
+<td>62.5</td>
+<td>24.2%</td>
+<td>85.7%</td>
+</tr>
+<tr>
+<td>Macon, GA</td>
+<td>48</td>
+<td>41.9</td>
+<td>74.1</td>
+<td>26.8%</td>
+<td>51.5%</td>
+</tr>
+<tr>
+<td>Shreveport, LA</td>
+<td>73</td>
+<td>39.9</td>
+<td>71.0</td>
+<td>19.0%</td>
+<td>52.4%</td>
+</tr>
+<tr>
+<td>Bronx, NY</td>
+<td>348</td>
+<td>39.0</td>
+<td>58.2</td>
+<td>25.0%</td>
+<td>32.0%</td>
+</tr>
+<tr>
+<td>St. Louis, MO</td>
+<td>104</td>
+<td>38.6</td>
+<td>67.2</td>
+<td>21.0%</td>
+<td>44.3%</td>
+</tr>
+<tr>
+<td>Augusta, GA</td>
+<td>56</td>
+<td>37.6</td>
+<td>62.0</td>
+<td>19.7%</td>
+<td>60.7%</td>
+</tr>
+<tr>
+<td>New Orleans, LA</td>
+<td>182</td>
+<td>35.3</td>
+<td>66.2</td>
+<td>20.9%</td>
+<td>58.5%</td>
+</tr>
+<tr>
+<td>Detroit, MI</td>
+<td>587</td>
+<td>33.9</td>
+<td>68.8</td>
+<td>19.3%</td>
+<td>31.0%</td>
+</tr>
+<tr>
+<td>Baltimore, MD</td>
+<td>199</td>
+<td>33.4</td>
+<td>65.8</td>
+<td>19.7%</td>
+<td>71.7%</td>
+</tr>
+</tbody>
+</table>
+<p>The gap between median and maximum in every row is the finding. Macon's median tract scores 41.9 and its worst scores 74.1. Detroit's median is 33.9 and its worst is 68.8. <strong>Distress is not distributed across these cities. It is concentrated inside them</strong>, which is why place-based intervention has to be targeted below the city level to reach it.</p>
+<h3>7.5.1 Corrections to the published counts</h3>
+<p>Three canonical figures in this paper's own governance documents were found to be stale and are corrected here.</p>
+<table>
+<thead>
+<tr>
+<th>Claim</th>
+<th>Previously locked</th>
+<th><strong>Verified</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tracts scored</td>
+<td>15,578</td>
+<td><strong>15,507</strong></td>
+</tr>
+<tr>
+<td>Cities</td>
+<td>50</td>
+<td><strong>49</strong> (48 distinct names; Columbus appears in both GA and OH)</td>
+</tr>
+<tr>
+<td>Counties, tract layer</td>
+<td>—</td>
+<td>49</td>
+</tr>
+</tbody>
+</table>
+<p>The Stack Truth Table of April 18, 2026 locked 15,578 tracts and 50 cities as "verified row counts," and explicitly instructed that the pipeline manifest's lower city figure be corrected upward to match. Direct row counts of the published files show the opposite: the manifest was right and the truth table was wrong. The manifest records the reason — <strong>Selma, Alabama was removed at version 2.1 because its rows duplicated Montgomery County</strong> — a deduplication performed after the truth table was written and never propagated to it.</p>
+<p>Every downstream figure in this paper has been rebuilt on 15,507 and 49.</p>
+<h3>7.5.2 A defect in the published tract file</h3>
+<p>Eight of the 15,507 tracts carry an imputation artifact that inflates their scores, and one of them is the highest-scoring tract in the corpus.</p>
+<p>All eight share a signature: <code>poverty_rate</code> set to exactly 100.0 alongside <code>median_hh_income</code> set to exactly $75,738.50 — the corpus median, a fill value. Several also carry <code>pct_no_internet</code> at 5.879292, likewise a corpus mean. These are tracts where the Census returned suppressed or null values, and the pipeline substituted a maximum for one field and a central-tendency fill for another.</p>
+<p>The consequence is concrete. <strong>Census Tract 106.06, Muscogee County, Georgia — the top-ranked tract in the entire dataset at FDI 79.42 — is one of these eight.</strong> It records 100 percent poverty, 100 percent without internet, and a $75,738 median household income simultaneously, which is not a possible combination. It is a group-quarters tract on a military installation. Its inflated score also sets the reported maximum for Columbus, Georgia in the published city rankings.</p>
+<p>Because the tract instrument min–max normalizes across the corpus, an artificially maximal tract compresses every other tract's normalized position on the affected dimensions. The eight rows are enumerated in Appendix E and flagged for exclusion in FDI v3.0.</p>
+<p>A second, opposite-direction issue: <strong>398 tracts — 2.6 percent of the corpus — have the D4 health dimension imputed to zero</strong> where CDC PLACES data was unavailable. That choice is conservative and it understates distress in exactly the data-sparse places most likely to be distressed.</p>
+<p>Neither defect changes the county rankings or any finding in Chapters 5 or 6. Both are disclosed because the alternative — publishing an index whose top-ranked unit is an artifact, and waiting to see whether anyone checks — is the practice this paper was built to refuse.</p>
+<hr />
+<h2>7.6 What Targeting Means</h2>
+<p>The FarmBlock instrument exists to answer an operational question: given finite capacity, where does intervention go first?</p>
+<p>The answer the data gives is not the answer political attention gives. The highest-distress places in this corpus are small Delta counties with declining populations and no organized constituency — Humphreys, Claiborne, Sunflower, Amite — and one Illinois river county, Alexander, whose profile is driven by 42.4 percent housing vacancy and 38.2 percent digital exclusion rather than by poverty alone.</p>
+<p>These places are not where cameras go. They are where the composite says the compound burden is heaviest.</p>
+<p>That is the entire argument for building the instrument. A ranked, auditable, publicly available composite makes it possible to direct resources by measured burden rather than by visibility — and to be held accountable when the direction chosen does not match what the measurement says.</p>
+<p>Chapter 8 turns to what the full record demands.</p></section><section class="partpage" id="part-four"><p class="part-label">Part Four</p><h1 class="part-title">The Argument</h1></section><section class="chapter" id="sec9"><p class="ch-label">CHAPTER 8</p><h1 class="ch-title">WHAT THE DATA DEMANDS</h1>
+<blockquote>
+<p><em>"Strong people don't need strong leaders."</em></p><p class="attrib">— Ella Baker</p>
+</blockquote>
+<p>This is not a call for sympathy. It is a demand for accounting. The preceding chapters settled a factual question; this one addresses what follows from the answer.</p>
+<hr />
+<h2>8.1 The Political Pillar, and the Inflection of 2013</h2>
+<p>One series has been held back until now, because it is the pillar that governs whether any of the others can be addressed.</p>
+<p><strong>Table 8.1 — Voter turnout by race, Census CPS November supplement</strong></p>
+<table>
+<thead>
+<tr>
+<th>Year</th>
+<th>Black</th>
+<th>White</th>
+<th>Gap (pp)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1964</td>
+<td>58.5%</td>
+<td>70.7%</td>
+<td>−12.2</td>
+</tr>
+<tr>
+<td>1976</td>
+<td>48.7%</td>
+<td>60.9%</td>
+<td>−12.2</td>
+</tr>
+<tr>
+<td>1984</td>
+<td>55.8%</td>
+<td>61.4%</td>
+<td>−5.6</td>
+</tr>
+<tr>
+<td>1996</td>
+<td>50.6%</td>
+<td>60.7%</td>
+<td>−10.1</td>
+</tr>
+<tr>
+<td>2004</td>
+<td>60.0%</td>
+<td>65.8%</td>
+<td>−5.8</td>
+</tr>
+<tr>
+<td>2008</td>
+<td>64.7%</td>
+<td>64.4%</td>
+<td><strong>+0.3</strong></td>
+</tr>
+<tr>
+<td><strong>2012</strong></td>
+<td><strong>66.6%</strong></td>
+<td><strong>64.1%</strong></td>
+<td><strong>+2.5</strong></td>
+</tr>
+<tr>
+<td>2016</td>
+<td>59.6%</td>
+<td>65.3%</td>
+<td>−5.7</td>
+</tr>
+<tr>
+<td>2020</td>
+<td>62.6%</td>
+<td>70.9%</td>
+<td>−8.3</td>
+</tr>
+</tbody>
+</table>
+<p>In 2012, for the first and only time in fifty-six years of recorded federal data, <strong>Black voter turnout exceeded white voter turnout</strong> — 66.6 percent against 64.1. It was the highest civic participation rate Black Americans have ever achieved in a measured American election.</p>
+<p>In June 2013, the Supreme Court decided <em>Shelby County v. Holder</em>, removing the coverage formula in Section 4(b) of the Voting Rights Act and with it the preclearance requirement that had governed jurisdictions with documented histories of voting discrimination since 1965.</p>
+<p>By 2016 the gap was −5.7 points. By 2020 it was −8.3 — wider than in 2004, before the Obama-era surge.</p>
+<p><strong>The data does not establish causation.</strong> Turnout responds to candidates, contests, mobilization budgets and a dozen other things; a single decision cannot be isolated as the cause of a multi-election decline, and this paper does not claim it. What the data establishes is sequence: the peak was 2012, the decision was 2013, and the two subsequent presidential elections produced the widest gaps since the 1990s. Whether that sequence is causal is a legal and social-scientific question. That it is the sequence is a matter of record.</p>
+<p>This is why the political pillar carries only 5 percent weight in the composite — its measurement noise is the highest of any pillar, and epistemic humility about what turnout data can support is the honest position. It is also why it is discussed last and at length: it is the pillar that determines whether the other seven can be legislated about at all.</p>
+<hr />
+<h2>8.2 The Historical Architecture</h2>
+<p>Three figures anchor the record that precedes the empirical window. Each is stated at full precision, because precision is the argument.</p>
+<p><strong>12,521,337.</strong> Africans forced onto slave ships between 1514 and 1866, across roughly 36,000 documented voyages. Not "about twelve and a half million" — a counted figure, from a database of individual voyage records maintained across four decades of archival work.</p>
+<p><strong>1,818,681.</strong> Those who did not survive the crossing. A 14.5 percent mortality rate. They appear in no census of the enslaved because they never arrived. They exist in the record only as the difference between two numbers.</p>
+<p><strong>10,702,656.</strong> Those who reached the Americas. Of these, approximately <strong>388,747</strong> disembarked on the North American mainland — 3.6 percent of the total. That population reached roughly four million by 1860, a factor of about 10.3 across two centuries, through natural increase under conditions of legal chattel slavery.</p>
+<p><em>Earlier drafts of this paper stated that "12.5 million Africans were transported to the Americas." That sentence conflates the embarked and disembarked figures and erases 1.8 million deaths. It is corrected everywhere it appeared.</em></p>
+<p>To these three, a fourth from Chapter 5: <strong>13,500,000 acres</strong> of Black-owned farmland lost between 1910 and 1997 — ninety percent of the peak.</p>
+<p>The wealth gap measured at $240,100 in 2022 is the present-tense reading of an instrument calibrated by these figures. No economic model in existence contains them.</p>
+<hr />
+<h2>8.3 What the Eight Pillars Demand</h2>
+<p>The findings do not translate into a single policy. They translate into a standard against which policies can be tested, and the standard has four parts.</p>
+<h3>Enforcement is the variable, not legislation</h3>
+<p>The pattern in Chapter 5 is not an absence of law. The Fair Housing Act (1968), the Home Mortgage Disclosure Act (1975), Section 3 of the HUD Act (1968) and the Voting Rights Act (1965) are all on the books. The homeownership gap is wider than when the Fair Housing Act passed. The mortgage denial ratio has not dropped below 2.0 in thirty years of mandatory disclosure. Fifty-three percent of public housing authorities did not file the Section 3 reports that would show whether the statute was being honored.</p>
+<p><strong>The measurable variable is not whether a remedy exists but whether anyone is required to demonstrate compliance with it.</strong> Any intervention proposed on the basis of this data should be evaluated first on its enforcement architecture and reporting requirement, because the historical record shows that a mandate without a filing obligation produces an unmeasurable and therefore unaccountable program.</p>
+<h3>Ratios are the metric, not rates</h3>
+<p>Every pillar in this paper shows absolute improvement. Poverty fell. Denial rates fell. Imprisonment fell 46 percent from its peak. Maternal deaths fell from 900 per 100,000 to 49.5. Life expectancy rose 39 years.</p>
+<p>And in every pillar the ratio held, or widened. A program evaluated on absolute improvement will report success in every one of these domains while the disparity it was created to address is unchanged or worse. <strong>The maternal mortality series is the decisive case: absolute performance improved by a factor of eighteen while the disparity ratio grew by a factor of 1.76.</strong></p>
+<p>Any intervention derived from this data must be measured on the gap, not on the level. This is a methodological demand, and it is the one most often refused, because level metrics are easier to achieve and easier to report.</p>
+<h3>The unit of intervention is below the county</h3>
+<p>Chapter 7 established that county-level analysis systematically understates concentrated urban distress. Detroit's county composite is unremarkable; its worst tracts score in Delta territory. A funding formula that allocates by county will route resources away from the neighborhoods with the highest measured burden, because the county average is diluted by the tracts that do not need it.</p>
+<p>The tract instrument exists for this reason, and its limitation is disclosed: it covers 15,507 tracts in 49 cities, not the nation. National tract coverage is the principal deliverable of version 2.0.</p>
+<h3>Interaction effects require simultaneous intervention</h3>
+<p>Humphreys County has no hospital and thirty percent of households without internet. Addressing either alone yields little: telehealth without connectivity is unavailable, and connectivity without a care endpoint is a browser. The compound structure means sequential single-pillar programs — a broadband grant this year, a clinic study next year — can each succeed on their own metrics while the compound burden does not move.</p>
+<p>This is the operational case for place-based, multi-dimensional intervention, and it is the design premise of the FarmBlock program.</p>
+<hr />
+<h2>8.4 The Sovereign Standard</h2>
+<p>A word about why this record was built the way it was.</p>
+<p><strong>CC0, not open access.</strong> Open access means free to read under a license. CC0 means public domain: no license, no attribution requirement, no permission, no restriction. The organizer in Humphreys County does not need to cite anyone, ask anyone, or credit anyone to use this in a grant application.</p>
+<p><strong>On-chain, not merely archived.</strong> The dataset is sealed on Base Mainnet. This is not a technological flourish. During the period this paper documents, EPA's EJScreen environmental justice tool was removed from EPA.gov (February 5, 2025). Federal datasets documenting racial disparity have been contested, defunded and withdrawn. A record that exists only on servers controlled by institutions subject to political pressure is a record that can be edited by political pressure. This one cannot.</p>
+<p><strong>Unfunded, deliberately.</strong> Every condition of funding is a potential condition of finding. This dataset has no funder to satisfy and therefore one obligation: accuracy. That is also why Appendix H exists.</p>
+<p><strong>Corrected in public.</strong> Twenty-seven claims were triaged; eleven conflicted with their sources. Ten further arithmetic errors were found in the drafts by recomputation. Three canonical counts in the project's own governance documents were stale. The highest-scoring tract in the published index is an imputation artifact. All of it is printed.</p>
+<p>A record that has never been corrected is a record no one has audited. The corrections are the credential, and any organization publishing a sovereign dataset should expect to publish its errata alongside it.</p>
+<hr />
+<h2>8.5 The Next Instrument</h2>
+<p>Version 2.0 requires four things, stated as commitments rather than aspirations:</p>
+<ol>
+<li><strong>National tract coverage</strong> — all eight pillars at census-tract resolution, beyond the current 49-city universe.</li>
+<li><strong>The eight tracts excluded and the imputation logic rebuilt</strong> — sentinel values must fail loudly rather than fill silently.</li>
+<li><strong>PCA-derived or expert-assigned dimension weights</strong>, with the assignment process published, replacing the equal-weight v2.0 baseline.</li>
+<li><strong>Mental health burden and criminal legal debt</strong> added as measured dimensions. Both are documented mechanisms of extraction that the current instrument cannot see.</li>
+</ol>
+<hr />
+<h2>8.6 What Is Being Asked</h2>
+<p>The data has settled whether the wound is real. It cannot settle what should be done, and this paper does not pretend that a spreadsheet can adjudicate a moral question.</p>
+<p>What it can do is remove a specific excuse. It is no longer possible to say that the disparities are unmeasured, or that the measurement is behind a paywall, or that the record is fragmented across agencies that do not speak to one another, or that no one has assembled it, or that the community most affected has not documented its own condition.</p>
+<p>It is measured. It is free. It is in one place. It is auditable, and its errors are printed with it.</p>
+<p>What remains is a decision, and the decision does not belong to the data.</p></section><section class="chapter" id="sec10"><p class="ch-label">CONCLUSION</p><h1 class="ch-title">WHAT THE DATA DEMANDS OF WHOEVER HOLDS THIS PAPER</h1>
+<p>Thirty-three years in the core window, and series reaching back to 1900, to 1925, to 1940, to 1514. Eight dimensions of American life. Seventeen priority states. Forty-nine cities. Fifteen thousand five hundred and seven census tracts. Approximately fourteen thousand eight hundred and eleven raw federal observations, synthesized into one thousand five hundred and seventy-four verified empirical records, sealed on a public blockchain and released into the public domain.</p>
+<p>The question before every person who holds this paper is no longer whether the wound is real. The data settled that. The question is what you intend to do now that you know.</p>
+<hr />
+<h2>What the Data Established</h2>
+<p><strong>On wealth.</strong> The median gap between Black and white families did not narrow in absolute terms. It grew from $83,000 in 1989 to $240,100 in 2022 — a 2.89-fold expansion, $157,100 of new distance. The wealth ratio improved by 3.2 cents on the dollar across thirty-three years. At that rate, ratio parity is roughly eight and a half centuries away.</p>
+<p><strong>On labor.</strong> Across fifty-four years of monthly federal data — the longest continuous race-disaggregated labor series in American statistics — the Black/white unemployment ratio ranged from 1.58 to 2.56 and averaged 2.115. It has never once inverted. Not in one year of fifty-four, through four recessions, one pandemic and nine presidencies.</p>
+<p><strong>On housing.</strong> The Fair Housing Act was signed in 1968, when the homeownership gap stood at approximately twenty-four percentage points. In 2022 it was 28.9. The gap is wider than when the law was passed. Mortgage denial ratios have not fallen below 2.0 in thirty years of mandatory federal disclosure. And fifty-three percent of public housing authorities did not file the reports that would show whether a 1968 statutory mandate was ever honored.</p>
+<p><strong>On health.</strong> In 2021, Black women in America died in childbirth at 69.9 per 100,000 live births — a rate the World Health Organization associates with low-income nations. And the ratio that matters most in this dataset: in 1930, under legal Jim Crow and in segregated hospitals, a Black woman died in childbirth 1.48 times as often as a white woman. In 2022, she died 2.61 times as often. Ninety-two years of modern medicine widened the disparity by a factor of 1.76. Between 2019 and 2021, Black life expectancy fell four full years, to a level last seen in the mid-1990s.</p>
+<p><strong>On criminal justice.</strong> In 1925, Black Americans were imprisoned at 6.45 times the white rate. In 2022, at 6.31 times. The ratio moved 0.14 points in ninety-seven years, across two world wars, the Civil Rights Act, the Voting Rights Act, mass incarceration's rise and a genuine 46 percent decarceration from its peak. From 2013 to 2023, 3,496 Black Americans were killed by police; 397 were unarmed.</p>
+<p><strong>On education.</strong> The Grade 8 reading gap narrowed from 29.6 points in 1992 to 24.5 in 2022 — five points in thirty years. At the observed convergence rate, closing what remains requires approximately 144 years.</p>
+<p><strong>On political participation.</strong> In 2012, Black voter turnout exceeded white turnout for the first and only time in fifty-six years of federal record. In 2013, <em>Shelby County v. Holder</em> removed the Voting Rights Act's preclearance coverage formula. By 2020, the gap was −8.3 points, the widest since the 1990s. The sequence is documented. The causation is a legal argument this paper does not make.</p>
+<p><strong>On the historical record.</strong> Between 1514 and 1866, 12,521,337 Africans were forced onto slave ships. 1,818,681 did not survive the crossing. 10,702,656 reached the Americas. And between 1910 and 1997, thirteen and a half million acres of Black-owned farmland — ninety percent of the peak — passed out of Black hands without a single event large enough to be remembered by name.</p>
+<hr />
+<h2>What the Pattern Reveals</h2>
+<p>Across every pillar, in every decade, the same sequence.</p>
+<p>A crisis is documented. Public pressure builds. A law is passed or a program funded. Enforcement infrastructure is underfunded and deprioritized. The metric improves in absolute terms — sometimes dramatically — while the ratio between Black and white outcomes holds or widens. The absolute improvement is reported as progress. Political energy dissipates. The structure continues.</p>
+<p>This is not policy failure in the ordinary sense. Failure implies the intended outcome was not achieved. But the maternal mortality series makes the sharper reading unavoidable: absolute performance improved by a factor of eighteen while the disparity ratio grew by a factor of 1.76. A system can improve enormously and distribute the improvement unequally, and if it does so consistently for ninety-two years, the distribution is not an accident of the improvement. It is a property of the system doing the improving.</p>
+<p>This is a claim about function, not intention. Systems are judged by what they produce. What this one has produced, measured across fifty-four years of labor data, ninety-seven years of incarceration data and one hundred and twenty-two years of mortality data, is a set of ratios more durable than every legal remedy aimed at them.</p>
+<p>Ralph McCartney understood this from inside the geography. <em>"They have their plans set decades and scores in advance."</em> He was not speaking metaphorically. The redlining maps confirm it. The urban renewal records confirm it. This paper confirms it at national scale across eight dimensions.</p>
+<hr />
+<h2>What This Paper Is</h2>
+<p>A forensic instrument, and a corrected one.</p>
+<p>It documents what the system has done, where, and with what consistency. It maps the places where the compound weight of every pillar lands simultaneously — Humphreys, Claiborne, Sunflower, Amite, Alexander — and it names them by what the instrument measured rather than by what would have been more familiar to name.</p>
+<p>It also documents its own errors. Twenty-seven claims triaged, eleven found conflicting with their sources. Ten arithmetic errors found by recomputing every derived statistic from the raw series. Three canonical counts in this project's own governance documents found stale. The highest-scoring tract in the published index found to be an imputation artifact. An unsourced $4.5 billion aggregate removed entirely. A "five compound catastrophe zones" list that did not match the instrument's output, withdrawn and replaced.</p>
+<p>All of it is in Appendix H, with the original claim and the verified value side by side.</p>
+<p>We print it because the alternative is a record that invites scrutiny it has not performed on itself. Every number in this paper can be checked against a public federal source or a public repository. Inviting that and concealing our own findings would be incoherent.</p>
+<p>It is licensed CC0. It is sealed on-chain. It cannot be revised under pressure, placed behind a paywall, or defunded. It will be the same data in 2030 and in 2040, in the collections of institutions that do not yet exist.</p>
+<hr />
+<h2>The Call</h2>
+<p>Every generation of this tradition has faced the same question in a different form: knowing what we know, with the tools we have, in the moment we are in — what is the move?</p>
+<p>The data answers the diagnostic question. It does not answer the strategic one. That answer lives in the communities this paper documents — in the organizing rooms, the churches, the HBCUs, the school board meetings, the courtrooms, the legislative chambers, and on the front porches of Humphreys County and Cairo and the Delta and Overtown and Liberty City.</p>
+<p>McCartney was asked, near the end of his 1997 testimony, what he would want Overtown to be. He said: <em>"Where every child belongs to them and every child realizes that he has a parent in every adult. That's the type of community — sure it's ideal, but everybody looks for a haven."</em></p>
+<p>He was describing what was taken. The data in this paper is the empirical record of the taking.</p>
+<p>The wound is measured. The address is known. The lineage is long and the cost has been staggering. What the next chapter says depends on what is done with this instrument — by whom, in which rooms, toward which ends, and with what urgency.</p>
+<p>The board submits this paper as evidence of what is, as testimony to what was, and as instrument for what must come.</p>
+<hr />
+<p><em>By Grace, perfect ways.</em></p></section><section class="chapter backmatter" id="sec11"><h1 class="ch-title solo">APPENDICES</h1>
+<h2>APPENDIX A — SOURCE CITATION TABLE</h2>
+<p>Every series used in this paper, with the agency, instrument, coverage and vault location. All raw files were committed unmodified to <code>bdi-raw-data-vault</code> before any analysis was performed.</p>
+<table class="srctable">
+<thead>
+<tr>
+<th>#</th>
+<th>Series</th>
+<th>Agency &amp; instrument</th>
+<th>Years</th>
+<th>Vault file</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Unemployment by race</td>
+<td>Bureau of Labor Statistics<br/>CPS, series LNS14000006 / LNS14000003</td>
+<td>1972–2025</td>
+<td><code>economic/bls_unemployment_by_race_1972-2025_FULL_RAW.json</code></td>
+</tr>
+<tr>
+<td>2</td>
+<td>State unemployment</td>
+<td>Bureau of Labor Statistics<br/>LAUS</td>
+<td>2010–2024</td>
+<td><code>economic/tier1_state_bls_unemployment_2010-2024_RAW.json</code></td>
+</tr>
+<tr>
+<td>3</td>
+<td>Homeownership, income</td>
+<td>Census Bureau<br/>ACS 1-year, B25003B/H, B19013B/H</td>
+<td>2005–2022</td>
+<td><code>economic/census_acs_homeownership_income_RAW.json</code></td>
+</tr>
+<tr>
+<td>4</td>
+<td>Poverty</td>
+<td>Census Bureau<br/>ACS 1-year, B17001B/H</td>
+<td>2005–2022</td>
+<td><code>economic/census_acs_poverty_RAW.json</code></td>
+</tr>
+<tr>
+<td>5</td>
+<td>Family wealth</td>
+<td>Federal Reserve Board<br/>Survey of Consumer Finances, triennial</td>
+<td>1989–2022</td>
+<td><code>economic/fed_reserve_scf_wealth_usda_land_RAW.json</code></td>
+</tr>
+<tr>
+<td>6</td>
+<td>Black farmland</td>
+<td>USDA NASS<br/>Census of Agriculture</td>
+<td>1910–2022</td>
+<td><code>economic/fed_reserve_scf_wealth_usda_land_RAW.json</code></td>
+</tr>
+<tr>
+<td>7</td>
+<td>State economics</td>
+<td>Census Bureau<br/>ACS 5-year, all states</td>
+<td>2010–2022</td>
+<td><code>economic/tier1_state_economics_ACS_2010-2022_RAW.json</code></td>
+</tr>
+<tr>
+<td>8</td>
+<td>Metro economics</td>
+<td>Census Bureau<br/>ACS 5-year, 516+ MSAs</td>
+<td>2015–2022</td>
+<td><code>economic/tier2_metro_msa_economics_ACS_2015-2022_RAW.json</code></td>
+</tr>
+<tr>
+<td>9</td>
+<td>County economics</td>
+<td>Census Bureau<br/>ACS 5-year, 3,222 counties</td>
+<td>2015–2022</td>
+<td><code>economic/tier3_county_economics_ACS5Y_2015-2022_RAW.json</code></td>
+</tr>
+<tr>
+<td>10</td>
+<td>Life expectancy, maternal mortality</td>
+<td>NCHS<br/>National Vital Statistics Reports</td>
+<td>1900–2022</td>
+<td><code>health/nchs_life_expectancy_maternal_mortality_RAW.json</code></td>
+</tr>
+<tr>
+<td>11</td>
+<td>Imprisonment by race</td>
+<td>Bureau of Justice Statistics<br/>Prisoners series; Cahalan 1986 for pre-1980</td>
+<td>1925–2022</td>
+<td><code>criminal_justice/bjs_incarceration_mpv_killings_RAW.json</code></td>
+</tr>
+<tr>
+<td>12</td>
+<td>Police killings</td>
+<td>Mapping Police Violence <em>(non-federal)</em><br/>MPV public database</td>
+<td>2013–2023</td>
+<td><code>criminal_justice/bjs_incarceration_mpv_killings_RAW.json</code></td>
+</tr>
+<tr>
+<td>13</td>
+<td>NAEP score gaps</td>
+<td>NCES<br/>Main Assessment, reading and mathematics</td>
+<td>1992–2022</td>
+<td><code>education/tier1_naep_score_gaps_national_1992-2022_RAW.json</code></td>
+</tr>
+<tr>
+<td>14</td>
+<td>Educational attainment</td>
+<td>Census Bureau<br/>ACS B15002, all states</td>
+<td>2022</td>
+<td><code>education/tier1_state_education_attainment_2022_RAW.json</code></td>
+</tr>
+<tr>
+<td>15</td>
+<td>Historical homeownership; voter turnout</td>
+<td>Census Bureau<br/>Census of Housing; CPS P20 November supplement</td>
+<td>1940–2010; 1964–2020</td>
+<td><code>housing/census_decennial_homeownership_1940-2010_RAW.json</code></td>
+</tr>
+<tr>
+<td>16</td>
+<td>Mortgage denial; eviction</td>
+<td>CFPB / FFIEC; Princeton Eviction Lab<br/>HMDA; Eviction Lab national dataset</td>
+<td>1993–2022; 2000–2016</td>
+<td><code>housing/hmda_mortgage_denial_eviction_RAW.json</code></td>
+</tr>
+<tr>
+<td>17</td>
+<td>Transatlantic slave trade</td>
+<td>Slave Voyages, Emory University<br/>Trans-Atlantic Slave Trade Database, 2023 edition</td>
+<td>1514–1866</td>
+<td><code>historical/slavevoyages_1514-1866_aggregate_RAW.json</code></td>
+</tr>
+<tr>
+<td>18</td>
+<td>County Black population share</td>
+<td>Census Bureau<br/>ACS B02001</td>
+<td>2022</td>
+<td><code>demographics/tier3_county_black_population_pct_2022_RAW.json</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Supplementary sources cited in text:</strong> HUD Office of Inspector General, <em>Audit of HUD's Section 3 Program</em>, 2013-AT-0003 (March 28, 2013); Graetz et al., <em>PNAS</em> (2023), eviction and filing rates by race; EPA EJScreen via Public Environmental Data Partners (removed from EPA.gov February 5, 2025); Tessum et al. (2021); Mikati et al. (2018); CDC PLACES 2023; USDA Food Access Research Atlas 2019; HRSA Area Health Resources File.</p>
+<p><strong>Primary-source qualitative evidence:</strong> McCartney, Ralph, oral history interview, August 14, 1997, Samuel Proctor Oral History Program, University of Florida / Black Archives of South Florida. Meek, Carrie P., Congressional Record, 103rd Congress, February 1, 1994, p. 723.</p>
+<hr />
+<h2>APPENDIX B — COUNTING METHODOLOGY</h2>
+<p><strong>The rule.</strong> One data point equals one row in a time series, or one unique observation record.</p>
+<p><strong>Included:</strong> each year of an annual series; each census decade in a decennial series; each year × race combination in a stratified series; each year × grade combination in NAEP.</p>
+<p><strong>Excluded:</strong> JSON metadata keys (<code>source</code>, <code>pillar</code>, <code>notes</code>, <code>verification_note</code>); text-only records carrying no numeric observation; duplicate series committed from the same source in more than one file.</p>
+<p><strong>The correction of record.</strong> The dataset was publicly described at one point as containing <strong>1,855 data points</strong>. That count included metadata keys as though they were observations. Applying the rule above yields <strong>1,574 verified empirical observations</strong>. The corrected figure is used in every public statement, is recorded in the dataset JSON itself (<code>total_data_points_original_claim: 1855</code>, with a correction note), and appears in this paper's Introduction rather than only in a methods note.</p>
+<p><strong>Tier breakdown of the raw vault (~14,811 observations):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Tier</th>
+<th>Scope</th>
+<th>Observations</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tier 1</td>
+<td>National series</td>
+<td>479</td>
+</tr>
+<tr>
+<td>Tier 1</td>
+<td>State series</td>
+<td>358</td>
+</tr>
+<tr>
+<td>Tier 2</td>
+<td>Metro / MSA (516+ areas)</td>
+<td>1,550</td>
+</tr>
+<tr>
+<td>Tier 3</td>
+<td>County (3,222 counties)</td>
+<td>12,382</td>
+</tr>
+<tr>
+<td>Historical</td>
+<td>1514–1866 aggregates</td>
+<td>42</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>APPENDIX C — PILLAR SUMMARY</h2>
+<table>
+<thead>
+<tr>
+<th>Pillar</th>
+<th>Weight</th>
+<th>Headline finding</th>
+<th>Series span</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Economic</td>
+<td>20%</td>
+<td>Wealth gap grew $83,000 → $240,100 (2.89×) while the ratio improved 3.2 cents</td>
+<td>1972–2025</td>
+</tr>
+<tr>
+<td>Health</td>
+<td>20%</td>
+<td>Maternal mortality ratio 1.48 (1930) → 2.61 (2022); Black life expectancy −4.0 years, 2019–2021</td>
+<td>1900–2022</td>
+</tr>
+<tr>
+<td>Criminal justice</td>
+<td>20%</td>
+<td>Imprisonment ratio 6.45 (1925) → 6.31 (2022); moved 0.14 points in 97 years</td>
+<td>1925–2023</td>
+</tr>
+<tr>
+<td>Education</td>
+<td>15%</td>
+<td>Grade 8 reading gap 29.6 → 24.5 points; ~144 years to parity at observed rate</td>
+<td>1992–2022</td>
+</tr>
+<tr>
+<td>Housing</td>
+<td>10%</td>
+<td>Homeownership gap 28.9 pp in 2022 vs ~24 pp when the Fair Housing Act passed</td>
+<td>1940–2023</td>
+</tr>
+<tr>
+<td>Environmental</td>
+<td>10%</td>
+<td>Fence-line tracts, St. James Parish Districts 4–5: 65–94% Black vs ~44% parish-wide</td>
+<td>2015–2022</td>
+</tr>
+<tr>
+<td>Political</td>
+<td>5%</td>
+<td>2012 the only year Black turnout exceeded white (+2.5); −8.3 by 2020</td>
+<td>1964–2020</td>
+</tr>
+<tr>
+<td>Historical</td>
+<td>context only</td>
+<td>12,521,337 embarked; 1,818,681 lost; 13.5M acres of farmland lost 1910–1997</td>
+<td>1514–1997</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>APPENDIX D — THE RANKED COMPOUND DISTRESS COUNTIES</h2>
+<p>FarmBlock County Distress Index, Phase 2 published pilot, n = 24.</p>
+<table>
+<thead>
+<tr>
+<th>Rank</th>
+<th>County</th>
+<th>FDI</th>
+<th>Rank</th>
+<th>County</th>
+<th>FDI</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Humphreys, MS</td>
+<td>87.25</td>
+<td>13</td>
+<td>Acadia, LA</td>
+<td>55.28</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Claiborne, MS</td>
+<td>85.26</td>
+<td>14</td>
+<td>Accomack, VA</td>
+<td>54.37</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Sunflower, MS</td>
+<td>78.34</td>
+<td>15</td>
+<td>Benton, TN</td>
+<td>51.59</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Alexander, IL</td>
+<td>77.38</td>
+<td>16</td>
+<td>Adams, WI</td>
+<td>50.89</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Amite, MS</td>
+<td>70.86</td>
+<td>17</td>
+<td>Bronx, NY</td>
+<td>50.43</td>
+</tr>
+<tr>
+<td>6</td>
+<td>East Carroll, LA</td>
+<td>70.02</td>
+<td>18</td>
+<td>Adams, OH</td>
+<td>48.85</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Adams, MS</td>
+<td>68.31</td>
+<td>19</td>
+<td>Tallapoosa, AL</td>
+<td>48.36</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Barbour, AL</td>
+<td>65.68</td>
+<td>20</td>
+<td>Ashtabula, OH</td>
+<td>45.70</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Ashley, AR</td>
+<td>59.55</td>
+<td>21</td>
+<td>Allegany, MD</td>
+<td>43.14</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Gadsden, FL</td>
+<td>57.98</td>
+<td>22</td>
+<td>Essex (Newark), NJ</td>
+<td>42.83</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Wayne (Detroit), MI</td>
+<td>56.79</td>
+<td>23</td>
+<td>Fresno, CA</td>
+<td>40.03</td>
+</tr>
+<tr>
+<td>12</td>
+<td>St. Louis City, MO</td>
+<td>55.43</td>
+<td>24</td>
+<td>Allen, IN</td>
+<td>34.47</td>
+</tr>
+</tbody>
+</table>
+<p><em>Earlier drafts named a "five compound catastrophe zones" list — Humphreys, Detroit, East St. Louis, Claiborne and Cancer Alley — that did not correspond to this ranking. Detroit ranks 11th. East St. Louis lies in St. Clair County, Illinois, which is not in this corpus. The list is withdrawn; the ranking above stands.</em></p>
+<hr />
+<h2>APPENDIX E — FARMBLOCK METHODOLOGY AND KNOWN DEFECTS</h2>
+<h3>E.1 Formulas</h3>
+<p><strong>County (Phase 2, n = 24):</strong>
+<code>FDI_county = normalize(poverty_rate)                        × 0.25
+           + normalize(mean(diabetes_pct, hypertension_pct)) × 0.25
+           + normalize(pct_no_internet)                      × 0.20
+           + normalize(vacancy_rate)                         × 0.15
+           + normalize(pct_black)                            × 0.15</code></p>
+<p><strong>Tract (v2.0, n = 15,507):</strong>
+<code>FDI_tract = (D1_poverty + D2_income_deficit + D3_food_access
+           + D4_health + D5_vacancy + D6_digital) / 6 × 100</code>
+where <code>normalize(x) = (x − corpus_min) / (corpus_max − corpus_min)</code>, and the tract formula contains <strong>no racial composition variable</strong>.</p>
+<h3>E.2 The <code>% Black</code> variable, and the objection to it</h3>
+<p>The county formula includes Black population share at 15 percent weight as a structural-exposure proxy: the theoretical basis is that communities with higher Black population concentration have been subjected to greater documented disinvestment, redlining and exclusion, and that the variable therefore captures accumulated exposure to systemic risk rather than any intrinsic characteristic.</p>
+<p><strong>The strongest objection is that this is partly circular.</strong> An index that includes racial composition and is then used to demonstrate racial disparity in outcomes has assumed part of what it sets out to show. This objection is legitimate and is not dismissed here.</p>
+<p>Two responses, offered as arguments rather than refutations. First, the tract instrument excludes the variable entirely and produces convergent results — the highest-distress tracts are overwhelmingly majority-Black without the formula being told to look for that. Second, the county weights were sensitivity-tested and alternative weight sets produce similar rank orderings among high-distress counties. Readers who find the objection dispositive should use the tract instrument, which was built partly for them.</p>
+<h3>E.3 Humphreys County decomposition</h3>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Raw</th>
+<th>Normalized</th>
+<th>Weight</th>
+<th>Contribution</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Poverty</td>
+<td>35.0%</td>
+<td>1.000</td>
+<td>0.25</td>
+<td>0.250</td>
+</tr>
+<tr>
+<td>Health burden</td>
+<td>36.15%</td>
+<td>1.000</td>
+<td>0.25</td>
+<td>0.250</td>
+</tr>
+<tr>
+<td>Digital exclusion</td>
+<td>30.0%</td>
+<td>0.447</td>
+<td>0.20</td>
+<td>0.089</td>
+</tr>
+<tr>
+<td>Vacancy</td>
+<td>28.0%</td>
+<td>0.419</td>
+<td>0.15</td>
+<td>0.063</td>
+</tr>
+<tr>
+<td>Structural exposure</td>
+<td>80.0%</td>
+<td>0.964</td>
+<td>0.15</td>
+<td>0.145</td>
+</tr>
+<tr>
+<td><strong>Hand-calculated total</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td><strong>0.797 → 79.7</strong></td>
+</tr>
+<tr>
+<td><strong>Published score</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td><strong>87.25</strong></td>
+</tr>
+</tbody>
+</table>
+<p>The published score normalizes against the full Phase 3 corpus; the hand calculation above uses approximate range endpoints, producing a 7.5-point difference. The published figure is the citation of record. The discrepancy is printed rather than reconciled away.</p>
+<h3>E.4 Known defects in the published tract file</h3>
+<p><strong>Eight tracts carry imputation artifacts.</strong> Each has <code>poverty_rate</code> filled to exactly 100.0 alongside <code>median_hh_income</code> filled to exactly $75,738.50 — the corpus median. Several also carry <code>pct_no_internet</code> at the corpus mean. These are rows where the Census returned suppressed or null values and the pipeline substituted a maximum for one field and a central-tendency fill for another.</p>
+<table>
+<thead>
+<tr>
+<th>FIPS tract</th>
+<th>City</th>
+<th>Pop</th>
+<th>FDI</th>
+<th>Fills</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>13215010606</td>
+<td>Columbus, GA</td>
+<td>1815</td>
+<td>79.42</td>
+<td>poverty=100.0; income=corpus median; no_internet=100.0</td>
+</tr>
+<tr>
+<td>36005031900</td>
+<td>Bronx, NY</td>
+<td>762</td>
+<td>58.19</td>
+<td>poverty=100.0; income=corpus median; no_internet=100.0</td>
+</tr>
+<tr>
+<td>06037980014</td>
+<td>Los Angeles, CA</td>
+<td>40</td>
+<td>58.08</td>
+<td>poverty=100.0; income=corpus median</td>
+</tr>
+<tr>
+<td>45079010806</td>
+<td>Columbia, SC</td>
+<td>876</td>
+<td>45.41</td>
+<td>poverty=100.0; income=corpus median; no_internet=corpus mean</td>
+</tr>
+<tr>
+<td>45079010408</td>
+<td>Columbia, SC</td>
+<td>4243</td>
+<td>43.01</td>
+<td>poverty=100.0; income=corpus median; no_internet=corpus mean</td>
+</tr>
+<tr>
+<td>04013981000</td>
+<td>Phoenix, AZ</td>
+<td>696</td>
+<td>42.22</td>
+<td>poverty=100.0; income=corpus median; no_internet=corpus mean</td>
+</tr>
+<tr>
+<td>12057010900</td>
+<td>Lakeland, FL</td>
+<td>7218</td>
+<td>31.37</td>
+<td>poverty=100.0; income=corpus median</td>
+</tr>
+<tr>
+<td>12011980000</td>
+<td>Jacksonville, FL</td>
+<td>2</td>
+<td>31.12</td>
+<td>poverty=100.0; income=corpus median; no_internet=corpus mean</td>
+</tr>
+</tbody>
+</table>
+<p>The first row is the highest-scoring tract in the entire published corpus. It reports 100 percent poverty, 100 percent without home internet, and a $75,738 median household income simultaneously — an impossible combination. It is a group-quarters tract on a military installation, and its score also sets the reported maximum for Columbus, Georgia in the published city rankings.</p>
+<p>Because the tract instrument min–max normalizes across the corpus, an artificially maximal tract compresses every other tract's normalized position on the affected dimensions. These eight rows are flagged for exclusion in FDI v3.0, and the imputation logic will be rebuilt to fail loudly rather than fill silently.</p>
+<p><strong>398 tracts (2.6 percent) have D4 health imputed to zero</strong> where CDC PLACES data was unavailable. This is conservative in the wrong direction: it understates distress in precisely the data-sparse places most likely to be distressed.</p>
+<p><strong>Food-desert proxy.</strong> USDA FARA direct download returned HTTP 404 at collection time. The substitute is <code>food_desert_proxy = 1 WHERE poverty_rate ≥ 20% AND median_household_income ≤ $65,000</code>, approximating the USDA low-income/low-access standard. Every row carries a <code>food_desert_source</code> flag distinguishing proxy-assigned from FARA-confirmed designations.</p>
+<h3>E.5 Verified corpus counts</h3>
+<table>
+<thead>
+<tr>
+<th>Quantity</th>
+<th>Value</th>
+<th>Basis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tracts scored</td>
+<td><strong>15,507</strong></td>
+<td>direct row count, <code>processed/farmblock_fdi_v2.csv</code></td>
+</tr>
+<tr>
+<td>Cities</td>
+<td><strong>49</strong></td>
+<td>direct row count, <code>processed/farmblock_city_rankings.csv</code> (48 distinct names; Columbus appears in GA and OH)</td>
+</tr>
+<tr>
+<td>Counties, tract layer</td>
+<td>49</td>
+<td>pipeline manifest v2.1</td>
+</tr>
+<tr>
+<td>Counties, published county pilot</td>
+<td>24</td>
+<td>direct row count, <code>farmblock_fdi_phase2.csv</code></td>
+</tr>
+</tbody>
+</table>
+<p><em>These supersede the Stack Truth Table values of 15,578 and 50, which were locked April 18, 2026 and did not incorporate the version 2.1 removal of duplicated Selma, Alabama rows.</em></p>
+<hr />
+<h2>APPENDIX F — PROVENANCE AND SEALS</h2>
+<table>
+<thead>
+<tr>
+<th>Asset</th>
+<th>Contract</th>
+<th>Token</th>
+<th>Network</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BDI Sovereign Dataset v1.0</td>
+<td>ExodusV4 <code>0x8582684C53912D496Df60C5B1B9Bb44D3d2f9B44</code></td>
+<td>#2</td>
+<td>Base Mainnet</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Repositories, all CC0 1.0 Universal:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Repo</th>
+<th>Layer</th>
+<th>Contents</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>IAMGODIAM/bdi-raw-data-vault</code></td>
+<td>Layer 1</td>
+<td>18 raw federal source files, ~14,811 observations; reports and triage records</td>
+</tr>
+<tr>
+<td><code>IAMGODIAM/bdi-sovereign-dataset</code></td>
+<td>Layer 2</td>
+<td>1,574 verified observations, 8 pillars; quantitative specification</td>
+</tr>
+<tr>
+<td><code>IAMGODIAM/farmblock-data</code></td>
+<td>Layer 3, tract</td>
+<td>15,507 tracts, 49 cities</td>
+</tr>
+<tr>
+<td><code>IAMGODIAM/farmblock-dataset</code></td>
+<td>Layer 3, county</td>
+<td>24-county published pilot</td>
+</tr>
+<tr>
+<td><code>IAMGODIAM/bdi-black-paper</code></td>
+<td>Layer 4</td>
+<td>This manuscript, drafts, peer review</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Related campaign record:</strong> the DC Package — nine policy packets delivered to congressional leaders and to Justice Clarence Thomas in July 2026, comprising a 166-page shared evidentiary record per packet — is published at <code>dc.e5enclave.com</code>. This paper is the empirical instrument underlying that record.</p>
+<hr />
+<h2>APPENDIX G — ACKNOWLEDGMENTS AND INTELLECTUAL LINEAGE</h2>
+<p>W.E.B. Du Bois · Ida B. Wells · Harriet Tubman · Frederick Douglass · Nat Turner · Ella Baker · Malcolm X · James Baldwin · Cornel West · Melina Abdullah · The Movement for Black Lives</p>
+<p>Ralph McCartney, Overtown, Miami · Congresswoman Carrie Meek · The Black Archives of South Florida · The Samuel Proctor Oral History Program, University of Florida</p>
+<p><em>Nil satis nisi optimum.</em></p>
+<hr />
+<h2>APPENDIX H — CORRECTIONS LEDGER</h2>
+<h2>A. ERRORS FOUND BY RECOMPUTATION (not previously flagged)</h2>
+<p>These are new. They were not in the April triage matrix; they surfaced when the drafts' arithmetic was rebuilt from the source series.</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Draft claim</th>
+<th>Status</th>
+<th>Verified value</th>
+<th>Print-edition language</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>R-1</td>
+<td>"Black unemployment has never fallen below 2x the white rate" (Conclusion v2, v2.1)</td>
+<td><strong>FALSE</strong></td>
+<td>Ratio fell below 2.0 in <strong>17 of 54 years</strong>; low 1.576 (2020)</td>
+<td>"The ratio has ranged from 1.58 to 2.56 and averaged 2.115 across 54 years. It has never inverted — not in one month of one year."</td>
+</tr>
+<tr>
+<td>R-2</td>
+<td>"Below 1.86, no normal economic year has gone in more than half a century" (Report 3, Adj. 3)</td>
+<td><strong>FALSE</strong></td>
+<td>2023 = 1.683, 2024 = 1.666 — both normal expansion years</td>
+<td>Floor language removed. Replaced with the distributional statement above.</td>
+</tr>
+<tr>
+<td>R-3</td>
+<td>"3,015 Black Americans killed by police 2013–2023; 377 unarmed"</td>
+<td><strong>UNDERCOUNT</strong></td>
+<td>Vault row sum: <strong>3,496 killed; 397 unarmed</strong></td>
+<td>Corrected to 3,496 and 397; aggregate Black share 26.7% of 13,096 total.</td>
+</tr>
+<tr>
+<td>R-4</td>
+<td>"Incarceration ratio has never fallen below 5.7"</td>
+<td><strong>FALSE</strong></td>
+<td>1991–2022 window minimum <strong>5.80 (2018)</strong>; full 1925–2022 series minimum 5.44 (1940); maximum 7.70 (2000)</td>
+<td>"In the empirical window the ratio has not fallen below 5.8. Across the full 97-year series it has ranged 5.44 to 7.70."</td>
+</tr>
+<tr>
+<td>R-5</td>
+<td>"Homeownership gap stands at 30.1 points today"</td>
+<td><strong>WRONG VINTAGE</strong></td>
+<td>ACS 2022: <strong>28.9 pp</strong>; ACS 2023 (NAR): 44.7% vs 72.4% = <strong>27.7 pp</strong></td>
+<td>"28.9 percentage points (ACS 2022); 27.7 points on the 2023 release."</td>
+</tr>
+<tr>
+<td>R-6</td>
+<td>"Wealth ratio reaches parity in approximately 263 years"</td>
+<td><strong>ARITHMETIC ERROR</strong></td>
+<td>Observed rate 0.00097/yr → <strong>868 years</strong> to ratio parity from 2022</td>
+<td>"At the rate of change actually observed since 1989, ratio parity is roughly eight and a half centuries away."</td>
+</tr>
+<tr>
+<td>R-7</td>
+<td>"The gap tripled in absolute dollars"</td>
+<td><strong>IMPRECISE</strong></td>
+<td>$83,000 → $240,100 = <strong>2.893×</strong></td>
+<td>"The absolute gap nearly tripled — a 2.89-fold increase, $157,100 of new distance."</td>
+</tr>
+<tr>
+<td>R-8</td>
+<td>"COVID erased 20 years of life expectancy gains in 18 months"</td>
+<td><strong>TIMELINE WRONG</strong></td>
+<td>Black life expectancy fell <strong>4.0 years</strong> across <strong>two calendar years</strong> (74.8 → 70.8, 2019→2021), returning to a mid-1990s level</td>
+<td>"Between 2019 and 2021 — two years, not eighteen months — Black life expectancy fell four full years, to a level last seen in the mid-1990s."</td>
+</tr>
+<tr>
+<td>R-9</td>
+<td>"NAEP gap... exists in 2022 as it did in 1992" (Conclusion)</td>
+<td><strong>OVERSTATED</strong></td>
+<td>G8 reading gap narrowed 29.6 → 24.5; G8 math 40 → 32; G4 reading 32 → 28</td>
+<td>Movement acknowledged and quantified; convergence rate stated.</td>
+</tr>
+<tr>
+<td>R-10</td>
+<td>"Eviction rate three times the white rate"</td>
+<td><strong>SCOPE UNSTATED</strong></td>
+<td>Eviction Lab 2000–2016: 3.00–3.54×. Graetz et al. 2023 PNAS: ~4× evictions, ~4.8× filings</td>
+<td>Both cited with explicit scope and instrument.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>B. TRIAGE MATRIX RULINGS APPLIED (April 18, 2026 — 27 claims)</h2>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Ruling</th>
+<th>Print-edition disposition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>E-1</td>
+<td>source-confirmed</td>
+<td>SCF 1989 $83,000 → 2022 $240,100. Vintage locked, footnoted.</td>
+</tr>
+<tr>
+<td>E-2</td>
+<td>source-confirmed</td>
+<td>~30 pp restated as 28.9 pp (ACS 2022) per R-5.</td>
+</tr>
+<tr>
+<td>E-3</td>
+<td>source-conflicted</td>
+<td>"Ranged 2.24 to 2.84 across ACS 2005–2022" — no "never below 2:1" absolute.</td>
+</tr>
+<tr>
+<td>E-4</td>
+<td>source-confirmed</td>
+<td>1968 ≈ 24 pp vs 2022 28.9 pp. Both vintages footnoted.</td>
+</tr>
+<tr>
+<td>H-1</td>
+<td>source-confirmed</td>
+<td>69.9/100K locked to <strong>2021</strong>; 2022 = 49.5 shown; NCHS 2024 trajectory noted.</td>
+</tr>
+<tr>
+<td>H-2</td>
+<td>source-conflicted</td>
+<td>Rewritten per R-8.</td>
+</tr>
+<tr>
+<td>H-3</td>
+<td>source-conflicted</td>
+<td>Fence-line tract geography specified: 65–94% Black (St. James Districts 4–5); parish ≈44%.</td>
+</tr>
+<tr>
+<td>CJ-1</td>
+<td>source-conflicted</td>
+<td>Rewritten per R-4.</td>
+</tr>
+<tr>
+<td>ED-1</td>
+<td>source-conflicted</td>
+<td>24-point gap and century-plus parity horizon — <strong>independently confirmed against the live NAEP API</strong> (see §C).</td>
+</tr>
+<tr>
+<td>HO-1</td>
+<td>source-confirmed</td>
+<td>HMDA denial ratio; range 2.01–2.36 stated rather than a single figure.</td>
+</tr>
+<tr>
+<td>HO-2</td>
+<td>source-conflicted</td>
+<td>Rewritten per R-10.</td>
+</tr>
+<tr>
+<td>HO-3</td>
+<td>internally-derived</td>
+<td><strong>$4.5B aggregate removed.</strong> Replaced with HUD OIG 2013-AT-0003: 53% of PHAs did not file required Section 3 reports.</td>
+</tr>
+<tr>
+<td>HO-4</td>
+<td>source-conflicted</td>
+<td>"Erased a decade in 18 months" → "reversed nearly a decade of gains across the 2007–2013 window."</td>
+</tr>
+<tr>
+<td>HI-1</td>
+<td>source-conflicted</td>
+<td>Embarked/disembarked disambiguated: 12,521,337 / 10,702,656 / 1,818,681 lost (14.5%).</td>
+</tr>
+<tr>
+<td>HI-2</td>
+<td>source-confirmed</td>
+<td>1514 anchor retained with footnote.</td>
+</tr>
+<tr>
+<td>EN-1</td>
+<td>citation-vintage</td>
+<td>EJScreen cited via Public Environmental Data Partners; EPA.gov removal (Feb 5, 2025) disclosed.</td>
+</tr>
+<tr>
+<td>CD-1</td>
+<td>source-confirmed</td>
+<td>Humphreys 78.6% (ACS 2022).</td>
+</tr>
+<tr>
+<td>CD-2</td>
+<td>source-confirmed</td>
+<td>Detroit 77.1%.</td>
+</tr>
+<tr>
+<td>CD-3</td>
+<td>source-confirmed</td>
+<td>East St. Louis 97.4%.</td>
+</tr>
+<tr>
+<td>CD-4</td>
+<td>source-confirmed</td>
+<td>Claiborne 86.1%.</td>
+</tr>
+<tr>
+<td>CD-5</td>
+<td>source-conflicted</td>
+<td>Same fix as H-3.</td>
+</tr>
+<tr>
+<td>CD-6</td>
+<td>citation-vintage</td>
+<td><strong>32.1% all-persons and 55.0% child poverty (ACS 2022)</strong> adopted as the citation figures; 36.4% (ACS 2015–2019) retained as the historical vintage; ACS 2024 5-year now reports 27% ±6.3 — disclosed as the current release.</td>
+</tr>
+<tr>
+<td>CD-7</td>
+<td>source-confirmed</td>
+<td>Hospital closure 2013 (HRSA AHRF).</td>
+</tr>
+<tr>
+<td>CD-8</td>
+<td>source-conflicted</td>
+<td>"No grocery within 15 miles" → USDA FARA low-income/low-access (LILA) designation.</td>
+</tr>
+<tr>
+<td>CD-9</td>
+<td>internally-derived → <strong>published</strong></td>
+<td>Humphreys score corrected <strong>83.5 → 87.25</strong> and the full five-component decomposition printed as Appendix E.</td>
+</tr>
+<tr>
+<td>META-1</td>
+<td>source-confirmed</td>
+<td><strong>1,855 → 1,574</strong> verified empirical observations, everywhere.</td>
+</tr>
+<tr>
+<td>META-2</td>
+<td>internally-derived</td>
+<td>"MiroFish 94%" removed. Replaced with the dual-source protocol description.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>C. LIVE FEDERAL-SOURCE VERIFICATION (August 2026)</h2>
+<table>
+<thead>
+<tr>
+<th>Series</th>
+<th>Endpoint</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Black unemployment (LNS14000006)</td>
+<td>BLS via FRED, monthly 2019–2025</td>
+<td>Annual averages reproduce the vault series. 2019 = 6.1, 2023 = 5.5, 2024 = 5.9, 2025 = 6.9. <strong>Confirms vault.</strong></td>
+</tr>
+<tr>
+<td>White unemployment (LNS14000003)</td>
+<td>BLS via FRED, monthly 2019–2025</td>
+<td>2019 = 3.3, 2023 = 3.3, 2024 = 3.6, 2025 = 3.7. <strong>Confirms vault.</strong> Ratios recomputed from live monthly data reproduce R-1 and R-2.</td>
+</tr>
+<tr>
+<td>NAEP G8 reading by race, national</td>
+<td>NCES Nation's Report Card data service</td>
+<td><strong>1992:</strong> White 267.001, Black 237.374 → gap <strong>29.63</strong>. <strong>2022:</strong> White 268.443, Black 243.902 → gap <strong>24.54</strong>. Confirms ED-1 exactly: the gap is ~24 points, not 20. Convergence 5.09 points in 30 years → <strong>~144 years to parity</strong>, not 64.</td>
+</tr>
+<tr>
+<td>Humphreys County, MS (FIPS 28053)</td>
+<td>Census ACS 5-year profile</td>
+<td>Current release reports 27% ±6.3 poverty, median household income $33,731, population 7,395. Wide margin of error at this population size disclosed in text.</td>
+</tr>
+<tr>
+<td>Homeownership by race</td>
+<td>ACS 2023 via NAR <em>Snapshot of Race and Home Buying in America</em> (2025)</td>
+<td>Black 44.7%, White 72.4% → 27.7 pp. Confirms direction; updates the vintage.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Note on API access.</strong> The Census Bureau data API now requires a registered key for programmatic access; the figures above were verified against the Bureau's published profiles and released tables rather than by unauthenticated API call. The vault's underlying ACS pulls (committed April 2026) remain the citation of record for the series tables, and each is footnoted to its table number.</p>
+<hr />
+<h2>D. STRUCTURAL ADDITIONS</h2>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Chapters 5, 6, 7, 8</td>
+<td><strong>Drafted</strong> from the locked outline; previously stubs.</td>
+</tr>
+<tr>
+<td>Introduction</td>
+<td><strong>Drafted</strong>; previously a stub.</td>
+</tr>
+<tr>
+<td>Appendices A–H</td>
+<td><strong>Drafted</strong>; previously stubs.</td>
+</tr>
+<tr>
+<td>Report 3 drafting directives 3–8</td>
+<td>Executed inside the new chapters (unemployment distribution, maternal mortality reversal, COVID reversal, housing headline, Shelby inflection, three historical anchors).</td>
+</tr>
+<tr>
+<td>Scope statement (Adj. 1)</td>
+<td>Introduction now states the nested window: 1991–2024 core, with series to 1900 (health), 1925 (justice), 1940 (housing), 1964 (political), 1514 (historical).</td>
+</tr>
+<tr>
+<td>Chapter 2 longitudinal claim (Adj. 2)</td>
+<td>Added.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>E. WHAT A REVIEWER SHOULD STILL CONTEST</h2>
+<p>Disclosed, not concealed. A sovereign record that hides its soft edges is promotional, not empirical.</p>
+<ol>
+<li><strong>The <code>% Black</code> variable at 15% weight in the county FDI.</strong> Defended as a structural-exposure proxy in Appendix E; a reviewer may reasonably argue it makes the instrument partly tautological with respect to racial concentration. The tract instrument excludes it — compare the two.</li>
+<li><strong>Equal weighting in the tract FDI.</strong> A transparent baseline, not an empirically derived one. PCA weighting is the stated v3.0 path.</li>
+<li><strong>The Humphreys decomposition reproduces 79.7, not 87.25</strong>, when recalculated against approximate corpus bounds. The published score stands on the full-corpus normalization; the arithmetic gap is printed in Appendix E rather than smoothed over.</li>
+<li><strong>D4 health imputed to zero</strong> where CDC PLACES is unavailable — conservative, but it understates distress in data-sparse tracts.</li>
+<li><strong>The food-desert proxy</strong> substitutes an ACS income/poverty threshold for a FARA download that 404'd at collection. Rows are flagged.</li>
+<li><strong>Mapping Police Violence is not a federal instrument.</strong> It is the most complete public database of its kind, and it is labeled as non-federal wherever cited.</li>
+<li><strong>Small-county ACS margins of error</strong> — Humphreys' poverty estimate carries a ±6.3-point margin. Stated in text.</li>
+</ol>
+<hr />
+<p><em>E5 Enclave Incorporated · EIN 99-3822441 · CC0 1.0 Universal</em></p></section></body></html>
