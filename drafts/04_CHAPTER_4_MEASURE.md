@@ -19,7 +19,7 @@ The federal government measures Black unemployment (BLS). It measures Black inca
 
 The academic literature on racial inequality has produced powerful multi-dimensional analyses — Robert Sampson's work on neighborhood effects, Patrick Sharkey's research on urban poverty, Keeanga-Yamahtta Taylor on predatory inclusion in housing markets. But this scholarship is paywalled, time-bounded by research funding cycles, and produced for academic audiences, not for the communities it describes.
 
-The BDI synthesizes across eight dimensions simultaneously because the lived experience of structural distress is not single-pillar. A family in one of the five compound catastrophe zones identified in Chapter 7 is not experiencing poverty or health burden or carceral threat — they are experiencing all of these simultaneously, interacting with each other, compounding each other, foreclosing paths out of each other. An instrument that cannot see the compound cannot measure the catastrophe.
+The BDI synthesizes across eight dimensions simultaneously because the lived experience of structural distress is not single-pillar. A family in one of the highest-distress counties ranked in Chapter 7 is not experiencing poverty or health burden or carceral threat — they are experiencing all of these simultaneously, interacting with each other, compounding each other, foreclosing paths out of each other. An instrument that cannot see the compound cannot measure the catastrophe.
 
 ---
 

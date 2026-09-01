@@ -36,11 +36,13 @@ Three layers, each publicly auditable, each committed before the analysis that u
 
 The middle figure was once published as 1,855. It was wrong — the count had included JSON metadata keys as though they were observations. The correction to 1,574 is documented in the counting specification, disclosed in Chapter 3, and printed in Appendix B. It is recorded here, in the introduction, rather than buried in a methods note, because a record that corrects itself in public is the only kind worth trusting.
 
-## The Five Compound Catastrophe Zones
+## The Compound Catastrophe Zones
 
 Eight pillars measured separately produce eight findings. Measured together, they produce something different: a small number of places where every pillar has failed at once, and where the failures reinforce each other faster than any single-pillar intervention can address them.
 
-Humphreys County, Mississippi. Detroit, Michigan. East St. Louis, Illinois. Claiborne County, Mississippi. The petrochemical corridor of southeastern Louisiana. These are not the poorest places in America by any single measure. They are the places where poverty, health burden, housing abandonment, digital exclusion and structural exposure arrive simultaneously and compound. Chapter 7 documents each.
+The instrument's five highest-scoring counties are Humphreys, Claiborne, Sunflower and Amite in Mississippi, and Alexander County, Illinois. These are not the poorest places in America by any single measure. They are the places where poverty, health burden, housing abandonment, digital exclusion and structural exposure arrive simultaneously and compound.
+
+Readers of earlier drafts will notice that this is not the list those drafts named. They named Humphreys, Detroit, East St. Louis, Claiborne and the Louisiana petrochemical corridor — a selection made for documentary depth rather than by score. Detroit ranks eleventh. East St. Louis is not in the published corpus at all. That list is withdrawn, and Chapter 7 sets out both the corrected ranking and the reason a composite index must name the places its own composite produced.
 
 ## What This Paper Is, and Is Not
 
