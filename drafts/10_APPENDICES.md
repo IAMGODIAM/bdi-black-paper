@@ -57,7 +57,7 @@ Every series used in this paper, with the agency, instrument, coverage and vault
 
 | Pillar | Weight | Headline finding | Series span |
 |---|---|---|---|
-| Economic | 20% | Wealth gap grew $83,000 → $240,100 (2.89×) while the ratio improved 3.2 cents | 1972–2025 |
+| Economic | 20% | Real wealth gap widened $154,830 → $240,120 (widest on record) while the ratio nearly tripled, 0.056 → 0.158 | 1972–2025 |
 | Health | 20% | Maternal mortality ratio 1.48 (1930) → 2.61 (2022); Black life expectancy −4.0 years, 2019–2021 | 1900–2022 |
 | Criminal justice | 20% | Imprisonment ratio 6.45 (1925) → 6.31 (2022); moved 0.14 points in 97 years | 1925–2023 |
 | Education | 15% | Grade 8 reading gap 29.6 → 24.5 points; ~144 years to parity at observed rate | 1992–2022 |
@@ -156,6 +156,14 @@ Because the tract instrument min–max normalizes across the corpus, an artifici
 
 **Food-desert proxy.** USDA FARA direct download returned HTTP 404 at collection time. The substitute is `food_desert_proxy = 1 WHERE poverty_rate ≥ 20% AND median_household_income ≤ $65,000`, approximating the USDA low-income/low-access standard. Every row carries a `food_desert_source` flag distinguishing proxy-assigned from FARA-confirmed designations.
 
+### E.4a Reproducibility status
+
+**The FDI outputs in this paper are not independently reproducible from the published package.** That is the finding of the September 2026 independent review and it is accepted here without qualification.
+
+What exists publicly: the scored output CSVs, the formulas, the weights, the normalization method, the Humphreys decomposition and the enumerated defects. What does not yet exist publicly: the raw pre-scoring inputs with ACS table identifiers, release years and geography codes; the full Phase 3 corpus that supplies the normalization bounds; the transformation code with a dependency lockfile; and a deterministic command that rebuilds every published score from raw inputs.
+
+Until that package is released, a reader can audit the *logic* of the FDI and cannot audit its *arithmetic*. The distinction matters and it is stated plainly: the 87.25 score for Humphreys County, the 15,507 tract scores and the 49 city rankings should be cited as this organization's published outputs, not as independently verified results. Producing that package is the first deliverable of FDI v3.0.
+
 ### E.5 Verified corpus counts
 
 | Quantity | Value | Basis |
@@ -212,8 +220,8 @@ These are new. They were not in the April triage matrix; they surfaced when the 
 | R-3 | "3,015 Black Americans killed by police 2013–2023; 377 unarmed" | **UNDERCOUNT** | Vault row sum: **3,496 killed; 397 unarmed** | Corrected to 3,496 and 397; aggregate Black share 26.7% of 13,096 total. |
 | R-4 | "Incarceration ratio has never fallen below 5.7" | **FALSE** | 1991–2022 window minimum **5.80 (2018)**; full 1925–2022 series minimum 5.44 (1940); maximum 7.70 (2000) | "In the empirical window the ratio has not fallen below 5.8. Across the full 97-year series it has ranged 5.44 to 7.70." |
 | R-5 | "Homeownership gap stands at 30.1 points today" | **WRONG VINTAGE** | ACS 2022: **28.9 pp**; ACS 2023 (NAR): 44.7% vs 72.4% = **27.7 pp** | "28.9 percentage points (ACS 2022); 27.7 points on the 2023 release." |
-| R-6 | "Wealth ratio reaches parity in approximately 263 years" | **ARITHMETIC ERROR** | Observed rate 0.00097/yr → **868 years** to ratio parity from 2022 | "At the rate of change actually observed since 1989, ratio parity is roughly eight and a half centuries away." |
-| R-7 | "The gap tripled in absolute dollars" | **IMPRECISE** | $83,000 → $240,100 = **2.893×** | "The absolute gap nearly tripled — a 2.89-fold increase, $157,100 of new distance." |
+| R-6 | "Wealth ratio reaches parity in approximately 263 years" | **ARITHMETIC ERROR**, then **WITHDRAWN ENTIRELY** (see W-1) | The 263-year figure was miscalculated; the recomputed 868-year figure rested on a defective series; the corrected series yields 274 years from 1989 but 1,632 from 1992 and no convergence from 2001 | No parity horizon is asserted. The sensitivity table is printed in §5.1 instead. |
+| R-7 | "The gap tripled in absolute dollars" | **IMPRECISE**, then **SUPERSEDED** (see W-1) | Nominal 2.893×; in constant 2022 dollars **1.55×**, $154,830 → $240,120 | "The absolute gap widened by $85,290 in real terms and is the widest in the series." |
 | R-8 | "COVID erased 20 years of life expectancy gains in 18 months" | **TIMELINE WRONG** | Black life expectancy fell **4.0 years** across **two calendar years** (74.8 → 70.8, 2019→2021), returning to a mid-1990s level | "Between 2019 and 2021 — two years, not eighteen months — Black life expectancy fell four full years, to a level last seen in the mid-1990s." |
 | R-9 | "NAEP gap... exists in 2022 as it did in 1992" (Conclusion) | **OVERSTATED** | G8 reading gap narrowed 29.6 → 24.5; G8 math 40 → 32; G4 reading 32 → 28 | Movement acknowledged and quantified; convergence rate stated. |
 | R-10 | "Eviction rate three times the white rate" | **SCOPE UNSTATED** | Eviction Lab 2000–2016: 3.00–3.54×. Graetz et al. 2023 PNAS: ~4× evictions, ~4.8× filings | Both cited with explicit scope and instrument. |
@@ -224,7 +232,7 @@ These are new. They were not in the April triage matrix; they surfaced when the 
 
 | ID | Ruling | Print-edition disposition |
 |---|---|---|
-| E-1 | source-confirmed | SCF 1989 $83,000 → 2022 $240,100. Vintage locked, footnoted. |
+| E-1 | source-confirmed → **REVERSED** (see W-1) | The 1989 endpoint could not be reconciled to the Federal Reserve's published race-specific medians under either price basis. Table rebuilt from the Fed's constant-2022-dollar series. |
 | E-2 | source-confirmed | ~30 pp restated as 28.9 pp (ACS 2022) per R-5. |
 | E-3 | source-conflicted | "Ranged 2.24 to 2.84 across ACS 2005–2022" — no "never below 2:1" absolute. |
 | E-4 | source-confirmed | 1968 ≈ 24 pp vs 2022 28.9 pp. Both vintages footnoted. |
@@ -251,6 +259,28 @@ These are new. They were not in the April triage matrix; they surfaced when the 
 | CD-9 | internally-derived → **published** | Humphreys score corrected **83.5 → 87.25** and the full five-component decomposition printed as Appendix E. |
 | META-1 | source-confirmed | **1,855 → 1,574** verified empirical observations, everywhere. |
 | META-2 | internally-derived | "MiroFish 94%" removed. Replaced with the dual-source protocol description. |
+
+---
+
+## B2. SECOND-WAVE CORRECTIONS — INDEPENDENT REVIEW (v1.2)
+
+On September 1, 2026 an independent review of the v1.1 print edition was conducted by Manus AI, working only from the published PDF, the corrections ledger and the supplied git bundle — with no access to this project's repositories. It found problems the internal audit had missed, and its principal finding is the most material error yet identified in this paper. The findings are adopted below.
+
+**Why the internal audit missed them.** The recomputation pass described in §A verified that every derived figure followed correctly from the vault's stored series. It did. What it never asked was whether a stored series was itself coherent, or whether it reconciled to the agency's published figures. An internal consistency check cannot detect an incoherent input. The audit protocol is amended: **primary-source reconciliation of every series endpoint is now a required pass.**
+
+| # | Claim | Finding | Print-edition disposition |
+|---|---|---|---|
+| **W-1** | **Table 5.1, the SCF wealth series; the "$83,000 → $240,100" gap; "nearly tripled"; the 3.2-cent ratio gain; the 868-year parity horizon** | **CRITICAL — series defective.** The table stated no price basis. Its 1989 endpoint ($12k / $95k) was nominal while its 2022 endpoint ($44.9k / $285k) was the Fed's constant-2022-dollar figure — a real endpoint back-filled with nominal history, whose apparent trend was substantially an inflation artifact. Worse, deflating the old 1989 values to 2022 dollars yields $28,321 and $224,211 against the Fed's published $9,200 and $164,030 — so they reconcile under **neither** basis, and their provenance was undocumented. | **Table rebuilt in full** from Federal Reserve FEDS Notes (Oct 18, 2023), Figure 2, constant 2022 dollars, families. Corrected findings: real gap **$154,830 → $240,120** (1.55×, +$85,290, widest in the series); ratio **0.056 → 0.158** (nearly tripled); Black median wealth **+388%** vs white **+74%**. The "nearly tripled gap," the 3.2-cent gain and the 868-year horizon are all withdrawn. |
+| **W-2** | Parity projections (wealth and NAEP) | Presented with insufficient warning that they are mechanical extrapolations. The wealth horizon proves extremely baseline-sensitive: 274 years from 1989, 1,632 from 1992, 1,511 from 1995, 366 from 2007, 117 from 2013, and **no convergence at all** from 2001. | **No wealth parity horizon is asserted.** The full sensitivity table is printed in §5.1. The NAEP 144-year figure is retained but explicitly labelled an arithmetic extension of two endpoints, not a forecast. |
+| **W-3** | Incarceration ratios, and "Black Americans were imprisoned at 6.31 times the white rate" | **Definition unverified and probably overstated in scope.** BJS publishes, for 2022, **1,196 per 100,000 Black adult residents and 229 per 100,000 white adult residents — a ratio of 5.22.** The series' 1,862 and 295 correspond closely to BJS *male* rates (≈1,826 and 279). The vault does not record the denominator, and the Cahalan (1986) pre-1980 crosswalk is undocumented. BJS also dates its series to 1926, not 1925. | Chapter 6 now prints the BJS all-adults ratio of **5.22** alongside the series ratio of 6.31, states that the basis is probably male rates, and stops writing "Black Americans" where the source may say "Black males." The stability finding, which holds on either basis, carries the argument. |
+| **W-4** | 1930 maternal mortality ratio of 1.48, and the 1.76-fold widening | The pre-1933 figures come from the birth-registration states only, which were not nationally representative. The cross-era comparison is not strictly commensurable. | Caveat added in full. The 2022 ratio is confirmed directly against NCHS (49.5 ÷ 19.0 = 2.605 → 2.61). The chapter now notes that the direction holds across every intermediate decade, and offers the 2010→2022 rise (2.24 → 2.61), entirely within a fully registered system, to readers who reject the 1930 datum. |
+| **W-5** | Unemployment ratios shown beside rounded annual rates | 5.5 ÷ 3.3 = 1.667, not the 1.683 printed. The discrepancy arises because ratios are computed from unrounded monthly data while the displayed component rates are rounded annual averages. | Aggregation rule now stated explicitly in §5.2, with the worked 2023 example (5.5167 ÷ 3.2750 = 1.685) and a vintage-revision note. The stored values are correct; the method was undisclosed. |
+| **W-6** | Black farmland "13.5 million acres lost, 1910–1997" | The 15-million-acre peak's year and level are contested; some compilations place the maximum nearer 1900. | Note added. The 1997 figure of 1.5 million is well supported; the 90 percent loss is now framed against a peak carrying acknowledged uncertainty in year and level. |
+| **W-7** | NAEP endpoint precision and comparability | NCES publishes rounded scores (267/237, 268/244) and discloses that 1992 permitted no testing accommodations while later years did. | Both disclosed in §6.6. |
+| **W-8** | The supplied git bundle | **Unusable for independent review.** It was created incrementally (`main..branch`) and declares a prerequisite commit the reviewer did not have, so the repository tree, raw vault JSON and manifests could not be inspected at all. | Replaced with a **complete-history bundle** requiring no prerequisite. This was the single largest obstacle to the review and it was an avoidable packaging error. |
+| **W-9** | Introduction's "Five Compound Catastrophe Zones" heading | Flagged as an apparent contradiction with the Chapter 7 ranking. | **Already corrected before the review was received** — the reviewer worked from the superseded v1.1 PDF. The Introduction now names the instrument's actual top five and states the withdrawal. |
+
+**Findings acknowledged and not yet closed.** The review's three "critical" reproducibility actions are only partly satisfied by this edition. The complete bundle (W-8) addresses repository access. It does **not** yet supply a full data package for the FDI computation — raw inputs, normalization bounds, transformation code and a deterministic rebuild command — nor ACS table identifiers and geography codes for every Humphreys input. Until those exist, the correct characterisation is the reviewer's: **the FDI outputs are not independently reproducible from the supplied package.** Appendix E says so.
 
 ---
 
@@ -292,6 +322,10 @@ Disclosed, not concealed. A sovereign record that hides its soft edges is promot
 5. **The food-desert proxy** substitutes an ACS income/poverty threshold for a FARA download that 404'd at collection. Rows are flagged.
 6. **Mapping Police Violence is not a federal instrument.** It is the most complete public database of its kind, and it is labeled as non-federal wherever cited.
 7. **Small-county ACS margins of error** — Humphreys' poverty estimate carries a ±6.3-point margin. Stated in text.
+8. **The incarceration series' denominator is not established** (W-3). It is probably male rates; BJS's all-adults 2022 ratio is 5.22 against the series' 6.31. Both are printed. The crosswalk is owed.
+9. **The FDI computation is not independently reproducible** from the published package (see Appendix E.4a). The reviewer's characterisation is adopted verbatim.
+10. **The pre-1933 maternal mortality figures** rest on the birth-registration states only and are not nationally representative (W-4).
+11. **Table 5.1 now depends on a single secondary presentation** of the SCF — the Federal Reserve's own FEDS Note — rather than on an extraction from SCF microdata performed by this project. That is an improvement in provenance and a reduction in independence. A microdata extraction with published code is owed.
 
 ---
 

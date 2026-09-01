@@ -60,7 +60,11 @@ This is the corrected print edition. Between the working drafts and this printin
 
 Twenty-seven claims were triaged; eleven conflicted with their sources and four had been derived internally without published methodology. Ten additional arithmetic and transcription errors were found in the drafts. Three canonical counts in our own governance documents were stale. The highest-scoring tract in our published index turned out to be an imputation artifact.
 
+Then the corrected edition was itself reviewed, independently, by a reader with no access to our repositories — and that review found the most serious error in the paper: the wealth table in Chapter 5 spliced a constant-dollar endpoint onto a nominal history, without saying so, and its 1989 figures could not be reconciled to the Federal Reserve's published race-specific medians under either basis. The table has been rebuilt from the Federal Reserve's own series. A headline claim about the wealth gap tripling, and a projection about parity, are withdrawn. So is an overstatement about the scope of the incarceration ratio.
+
 Every one of these is corrected in the text and enumerated in Appendix H, with the original claim, the verified value and the reason for the change.
+
+That second wave matters more than the first. Our own audit checked whether our arithmetic followed from our data; it never asked whether our data was coherent. An internal consistency check cannot catch an incoherent input. It took an outside reader to find that, which is the entire argument for publishing under a licence that invites one.
 
 We print the errata because a sovereign record that conceals its corrections is not sovereign — it is promotional. The dataset is CC0 and the sources are public precisely so that this paper can be checked. It would be incoherent to invite that scrutiny and then hide what our own scrutiny found.
 

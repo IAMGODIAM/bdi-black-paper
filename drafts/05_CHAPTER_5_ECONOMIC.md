@@ -7,36 +7,70 @@ The wealth gap between Black and white American families has not closed. Not in 
 
 ---
 
-## 5.1 Wealth: The Ratio Improved and the Gap Nearly Tripled
+## 5.1 Wealth: The Ratio Nearly Tripled and the Gap Is the Widest on Record
 
 The Federal Reserve's Survey of Consumer Finances is conducted every three years and is the most rigorous longitudinal measure of American household wealth in existence. Twelve waves span 1989 to 2022.
 
 **Table 5.1 — Median family wealth by race, Federal Reserve SCF, 1989–2022**
+*All figures in thousands of constant 2022 dollars. Source: Federal Reserve Board, FEDS Notes, "Greater Wealth, Greater Uncertainty: Changes in Racial Inequality in the Survey of Consumer Finances," October 18, 2023, Figure 2. Unit of observation: families.*
 
 | Year | Black median | White median | Absolute gap | Ratio |
 |---|---|---|---|---|
-| 1989 | $12,000 | $95,000 | $83,000 | 0.126 |
-| 1992 | $14,000 | $95,000 | $81,000 | 0.147 |
-| 1995 | $14,000 | $90,000 | $76,000 | 0.156 |
-| 1998 | $17,000 | $107,000 | $90,000 | 0.159 |
-| 2001 | $20,000 | $121,000 | $101,000 | 0.165 |
-| 2004 | $20,400 | $134,000 | $113,600 | 0.152 |
-| 2007 | $19,200 | $171,000 | $151,800 | 0.112 |
-| 2010 | $13,700 | $130,700 | $117,000 | 0.105 |
-| 2013 | $11,200 | $141,900 | $130,700 | 0.079 |
-| 2016 | $17,600 | $171,000 | $153,400 | 0.103 |
-| 2019 | $24,100 | $188,200 | $164,100 | 0.128 |
-| **2022** | **$44,900** | **$285,000** | **$240,100** | **0.158** |
+| 1989 | $9.20k | $164.03k | $154.83k | 0.056 |
+| 1992 | $20.51k | $144.42k | $123.91k | 0.142 |
+| 1995 | $21.13k | $148.33k | $127.20k | 0.143 |
+| 1998 | $28.26k | $174.75k | $146.49k | 0.162 |
+| 2001 | $32.45k | $205.53k | $173.08k | 0.158 |
+| 2004 | $32.09k | $221.47k | $189.38k | 0.145 |
+| 2007 | $30.14k | $245.11k | $214.97k | 0.123 |
+| 2010 | $21.80k | $178.28k | $156.48k | 0.122 |
+| 2013 | $16.78k | $180.68k | $163.90k | 0.093 |
+| 2016 | $21.09k | $210.94k | $189.85k | 0.100 |
+| 2019 | $27.97k | $218.14k | $190.17k | 0.128 |
+| **2022** | **$44.89k** | **$285.01k** | **$240.12k** | **0.158** |
 
-Read the ratio column and the story is modest progress: 0.126 to 0.158, a gain of 3.2 cents on the dollar across thirty-three years. Read the gap column and the story inverts. The absolute distance between the median Black family and the median white family grew from $83,000 to $240,100 — an increase of $157,100, a **2.89-fold** expansion.
+Three findings, and they do not point the same way.
 
-Both columns are true. They describe the same data. The reason they disagree is arithmetic that compounds: when the denominator triples, a ratio can improve while the distance between the two positions widens beyond any plausible route to closure.
+**Black median wealth grew faster than white median wealth, by a wide margin.** In constant dollars it rose from $9,200 to $44,890 — a 388 percent increase. White median wealth rose from $164,030 to $285,010, or 74 percent. Black family wealth grew more than five times faster in percentage terms across the thirty-three years. The ratio moved from 5.6 cents on the dollar to 15.8 cents: it nearly tripled.
 
-How far beyond? The observed rate of ratio improvement is 0.00097 per year — just under one-tenth of one cent on the dollar, annually, sustained since 1989. Projected forward at that rate, ratio parity arrives in approximately **868 years**.
+**And the absolute gap is wider in 2022 than in any other year of the series.** It grew from $154,830 to $240,120 — an increase of $85,290 in real terms, a 1.55-fold expansion. Not one of the eleven earlier waves records a larger real gap.
 
-An earlier draft of this paper put the figure at 263 years. That was an arithmetic error and it is corrected here. The correct number is worse, and the correction is the point: this instrument is designed to be checked.
+Both statements are true, from the same twelve rows. Faster percentage growth on a base one-eighteenth the size does not close a distance; it widens it. A family starting at $9,200 that quintuples its wealth ends at $44,890. A family starting at $164,030 that grows 74 percent ends at $285,010. The first family did far better proportionally and finished $85,000 further behind in absolute terms than it started.
 
-The 2013 trough deserves its own sentence. Black median wealth fell to $11,200 — below the 1989 figure in nominal terms, twenty-four years later. That is the residue of the subprime collapse, and Section 5.4 returns to why it landed where it did.
+That is the arithmetic of compounding inequality, and it is the central mechanism of this chapter. It recurs in every pillar that follows: the rate improves, sometimes dramatically, and the distance grows.
+
+### A correction to this table, and what it cost
+
+**The wealth table printed in earlier editions of this paper was wrong, and the error was material.** It is corrected above and the correction is worth stating in full, because of how it was found.
+
+Earlier editions gave 1989 as $12,000 Black and $95,000 white, with a gap of $83,000, and reported that the gap had "nearly tripled" to $240,100 — a 2.89-fold increase. Those 1989 figures were nominal, the table never said so, and the 2022 endpoint was the Federal Reserve's constant-2022-dollar figure. The series was a splice: a real endpoint back-filled with nominal history. Its apparent trend was substantially an artifact of thirty-three years of inflation.
+
+The problem is not only the price basis. Deflating the old 1989 values to 2022 dollars yields $224,211 white and $28,321 Black — against the Federal Reserve's published $164,030 and $9,200. The old figures do not reconcile with the Fed's race-specific medians under *either* basis, by $60,181 and $19,121 respectively. They came from some other series or definition, and their provenance was never documented. The whole table has therefore been rebuilt directly from the Federal Reserve's published figures, which are cited above by title, date and figure number.
+
+Note where the two series agree exactly: 2022. That agreement is the diagnostic. Whoever assembled the original table took the Fed's current real endpoint and extended it backward from an incompatible source.
+
+This error survived the recomputation audit described in Chapter 3 and Appendix H, because that audit verified that every derived figure followed correctly from the vault's stored series. It did — the arithmetic was right. What it did not ask was whether the stored series was itself coherent. An internal consistency check cannot catch an incoherent input, and this paper's audit protocol has been amended accordingly: primary-source reconciliation of every series endpoint is now a required pass, not an optional one.
+
+The correction was identified by an independent review of the printed edition, conducted with no access to this project's repositories. That is the process working as intended, and it is the reason this paper is released under a licence that permits exactly such review.
+
+### On projecting parity
+
+Earlier editions stated that ratio parity was "approximately 868 years" away. That figure was computed from the flawed nominal series and is withdrawn. But it should not simply be replaced with a corrected single number, because the corrected number is not stable.
+
+Extrapolating the observed rate of ratio change from 1989 to 2022 gives 274 years to parity. Extrapolating the same way from other baseline years in the same table gives:
+
+| Baseline | Implied years to parity |
+|---|---|
+| 1989 | 274 |
+| 1992 | 1,632 |
+| 1995 | 1,511 |
+| 2001 | no convergence — the ratio is lower in 2022 than in 2001 |
+| 2007 | 366 |
+| 2013 | 117 |
+
+The answer moves by a factor of fourteen depending on which year one starts from, and one plausible baseline yields no convergence at all. The 1989 wave is a particular problem: the ratio rises from 0.056 to 0.142 in the single step to 1992, a 2.5-fold move that no subsequent wave approaches, which makes 1989 a fragile anchor for any trend line.
+
+**No parity horizon is asserted in this paper.** A linear extrapolation of two endpoints is an arithmetic operation on history, not a statement about the future, and when the operation is this sensitive to its inputs it does not support a headline figure. What the table does establish, without extrapolation, is that after thirty-three years the ratio stands at 15.8 cents on the dollar and the absolute gap has never been larger. Those are measurements. They are enough.
 
 ### The land beneath the wealth
 
@@ -56,7 +90,7 @@ Thirteen and a half million acres — ninety percent of the peak — transferred
 
 This is the largest systematic asset transfer in American history without a conventional name.
 
-*A note on the 2017 and 2022 figures:* the Census of Agriculture changed methodology in 2017 to include leased acreage, producing an apparent recovery to 4.7 million acres and then 2.9 million in 2022. These are not comparable to the pre-2017 ownership series and are excluded from the trend statement above.
+*Two notes on this series.* The Census of Agriculture changed methodology in 2017 to include leased acreage, producing an apparent recovery to 4.7 million acres and then 2.9 million in 2022; these are not comparable to the pre-2017 ownership series and are excluded from the trend statement above. Separately, the peak year is contested in the literature: 15 million acres is commonly dated to 1910, as here, but some compilations place the maximum nearer 1900 and others give a somewhat higher 1910 total. The 1997 figure of 1.5 million acres is well supported by that year's Census of Agriculture; the 90 percent loss should be read as measured against a peak whose exact year and level carry some uncertainty.
 
 ---
 
@@ -81,6 +115,8 @@ The BLS series LNS14000006 and LNS14000003 — Black and white unemployment, sea
 | 2025 | 6.90% | 3.73% | 1.850 | |
 
 **Fifty-four-year distribution:** minimum 1.576 (2020), maximum 2.560 (1989), mean 2.115, median 2.130, standard deviation 0.230. The ratio equalled or exceeded 2.0 in 37 of 54 years.
+
+*Aggregation rule.* Each annual ratio is computed from the twelve unrounded monthly seasonally-adjusted rates, not from the rounded annual averages displayed in the table. The two methods differ in the second decimal place: 2023's monthly averages are 5.5167 and 3.2750, giving 1.685, whereas dividing the displayed 5.5 by 3.3 gives 1.667. The unrounded method is used throughout, and readers reproducing these figures from published annual averages should expect small differences on that account. Figures are also subject to BLS vintage revision.
 
 Two claims that appeared in earlier drafts do not survive this table, and both are withdrawn here.
 

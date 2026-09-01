@@ -41,6 +41,10 @@ The ratio did not narrow across ninety-two years of modern medicine. It widened 
 
 The mechanism is differential improvement. Medicine got better for everyone and better for white women faster, and it did so continuously enough that the disparity ratio is now higher than it was under a healthcare system that did not pretend to serve Black women equally.
 
+**A necessary caveat on the 1930 comparator.** Before 1933 the United States had no complete national birth registration area; the figures for 1915 and 1930 derive from the registration states only, and the racial composition of those states was not representative of the country. The 1930 ratio of 1.48 is therefore a weaker measurement than the 2022 ratio of 2.61, and the two are not strictly commensurable. The 2022 figures are confirmed directly against NCHS: 49.5 per 100,000 for Black women and 19.0 for white women, a ratio of 2.605, conventionally rounded to 2.61.
+
+The cross-era comparison is offered because the direction is robust across every intermediate decade in the table — the ratio is higher in 2022 than in 1930, 1940, 1980, 2000 and 2010 alike — not because the 1930 datum is precise. Readers who reject the pre-1933 figures entirely still face a ratio that rose from 2.24 in 2010 to 2.61 in 2022, within a fully registered national system.
+
 The 2021 peak — **69.9 deaths per 100,000** — is the highest Black maternal mortality rate recorded in the United States since 1968. The World Health Organization associates rates in that range with low-income countries. It occurred in the wealthiest nation in human history, in the twenty-first century, three years ago.
 
 The 2022 figure of 49.5 represents real improvement from the pandemic peak, and NCHS reporting indicates continued decline thereafter. Improvement without erasure: the rate falls, the ratio holds.
@@ -116,7 +120,19 @@ Between those two readings: two world wars, the Great Migration, the New Deal, *
 
 The absolute rates tell a second story. Black imprisonment rose from 142 to a peak of 3,457 per 100,000 and has since fallen to 1,862 — a genuine and substantial decarceration since 2000, roughly 46 percent off the peak. White imprisonment followed nearly the same arc. The decline is real; the ratio between the two is what refused to move.
 
-**A correction.** Earlier drafts stated the ratio "has never fallen below 5.7." Within the paper's empirical window the verified minimum is **5.80, in 2018**; across the full 97-year series the range is **5.44 to 7.70**. The corrected bounds are used throughout. They do not weaken the finding — the finding is the stability itself, and the stability is what a 0.14-point movement across ninety-seven years demonstrates.
+**Two corrections, and one of them is unresolved.**
+
+Earlier drafts stated the ratio "has never fallen below 5.7." Within this table the minimum is **5.80, in 2018**, and the full-series range is **5.44 to 7.70**. Those are the corrected bounds.
+
+The second correction is more serious and is disclosed here rather than settled. **The series above does not match the Bureau of Justice Statistics' published all-adults imprisonment rates.** BJS reports, for 2022, an imprisonment rate of **1,196 per 100,000 Black adult U.S. residents and 229 per 100,000 white adult residents — a ratio of 5.22**, not 6.31. The table's 1,862 and 295 sit far above those figures and correspond closely to BJS's *male* imprisonment rates (approximately 1,826 and 279 per 100,000 same-race male residents).
+
+The likely explanation is that this series measures male imprisonment rates, or uses a total-population rather than adult-population denominator. The vault does not record which, and the pre-1980 figures come from a separate historical compilation (Cahalan 1986) whose crosswalk to the modern BJS series is not documented. Until that crosswalk is published, the correct statement of scope is narrower than earlier editions claimed:
+
+> On the all-adults basis that BJS publishes, Black adults were imprisoned at **5.22 times** the white rate in 2022. On the basis used in the series above — which appears to be male rates — the 2022 ratio is 6.31. Both exceed five. The paper does not assert which basis its historical series uses, because that has not been established.
+
+The finding that survives either reading is the **stability**: a ratio between roughly five and eight for as long as the United States has measured it, moving 0.14 points across the ninety-seven years of the compiled series. That stability is what the chapter argues from, and it does not depend on the denominator. But a paper that prints "Black Americans" where its source may say "Black males" is overstating its scope, and this edition stops doing so.
+
+*Required for the next edition: the exact BJS table identifiers, numerator and denominator definitions, and sex and age restrictions for every endpoint in this series, plus the Cahalan-to-BJS crosswalk.*
 
 When a system produces the same ratio across a century of legal, political and cultural transformation, that ratio is not a byproduct. It is an output specification.
 
@@ -160,9 +176,11 @@ The National Assessment of Educational Progress is the most methodologically rig
 
 Grade 8 reading, verified against the live NCES data service in August 2026: in 1992 white students averaged 267.0 and Black students 237.4, a gap of 29.6 points. In 2022 the figures were 268.4 and 243.9 — a gap of **24.5 points**.
 
-**Two corrections, both material.** Earlier drafts stated the current gap at 20 points and projected parity in 64 years. The verified gap is approximately 24 points. At the observed convergence rate — 5.1 points across thirty years, or 0.17 points annually — **closing the remaining 24.5 points requires roughly 144 years.**
+*Two measurement notes. NCES discloses that the 1992 administration did not permit testing accommodations while later administrations did, so the endpoints are not perfectly comparable instruments. And the figures above carry more decimal places than NCES publishes in its rounded digest tables (267/237 and 268/244); the precision comes from the underlying data service, not from the printed tables.*
 
-Not sixty-four. A century and a half. The children entering kindergarten this September would need to be succeeded by four more generations before the trend line, extended, reaches parity.
+**Two corrections, both material.** Earlier drafts stated the current gap at 20 points and projected parity in 64 years. The verified gap is approximately 24 points, and a mechanical linear extension of the observed rate — 5.1 points across thirty years, or 0.17 points annually — puts the remaining 24.5 points **roughly 144 years** out.
+
+Not sixty-four. A century and a half — and, as with the wealth projection in Chapter 5, that figure is an arithmetic extension of two endpoints, not a forecast. It is stated to give the observed rate a human scale, not to predict a year. The children entering kindergarten this September would need to be succeeded by four more generations before the trend line, extended, reaches parity.
 
 Both errors understated the severity, and both were trivially checkable by any education researcher. They are corrected here because a paper that overstates progress in the direction of comfort is making the same error as one that overstates distress in the direction of alarm.
 

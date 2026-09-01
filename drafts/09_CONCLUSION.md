@@ -8,7 +8,7 @@ The question before every person who holds this paper is no longer whether the w
 
 ## What the Data Established
 
-**On wealth.** The median gap between Black and white families did not narrow in absolute terms. It grew from $83,000 in 1989 to $240,100 in 2022 — a 2.89-fold expansion, $157,100 of new distance. The wealth ratio improved by 3.2 cents on the dollar across thirty-three years. At that rate, ratio parity is roughly eight and a half centuries away.
+**On wealth.** In constant 2022 dollars, Black median family wealth grew 388 percent between 1989 and 2022 while white median wealth grew 74 percent — Black wealth rising more than five times faster in percentage terms. And the absolute gap widened, from $154,830 to $240,120, an increase of $85,290. The gap is larger in 2022 than in any other wave of the survey. Faster proportional growth on a base one-eighteenth the size does not close a distance; it widens it. That arithmetic is the mechanism this paper documents eight times over.
 
 **On labor.** Across fifty-four years of monthly federal data — the longest continuous race-disaggregated labor series in American statistics — the Black/white unemployment ratio ranged from 1.58 to 2.56 and averaged 2.115. It has never once inverted. Not in one year of fifty-four, through four recessions, one pandemic and nine presidencies.
 

@@ -10,18 +10,18 @@ FRONT = """
   <p class="tp-sub">A Sovereign Empirical Record of<br/>Black American Structural Distress</p>
   <p class="tp-dates">1991&#8202;&ndash;&#8202;2024</p>
   <div class="tp-rule"></div>
-  <p class="tp-ed">Corrected Print Edition &middot; Black Paper v1.1</p>
+  <p class="tp-ed">Corrected Print Edition &middot; Black Paper v1.2</p>
   <p class="tp-place">Liberty City &middot; Miami, Florida</p>
 </section>
 
 <section class="copyright">
   <p><strong>The Measure of the Wound: A Sovereign Empirical Record of Black American Structural Distress, 1991&ndash;2024</strong></p>
-  <p>Corrected Print Edition &middot; Black Paper v1.1<br/>Published {date}</p>
+  <p>Corrected Print Edition &middot; Black Paper v1.2<br/>Published {date}</p>
   <p>E5 Enclave Incorporated<br/>820 NW 64th Street, Liberty City, Miami, Florida 33150<br/>EIN 99-3822441 &middot; UEI H8NGXEYE2HH8 &middot; CAGE 07E88<br/>e5enclave.com</p>
   <p class="cc"><strong>CC0 1.0 Universal &mdash; Public Domain Dedication.</strong> To the extent possible under law, E5 Enclave Incorporated has waived all copyright and related or neighboring rights to this work. No permission is required to copy, translate, adapt, excerpt or republish it, in whole or in part, for any purpose. No attribution is required, though it is appreciated.</p>
   <p><strong>Suggested citation.</strong> E5 Enclave Incorporated. (2026). <em>The Measure of the Wound: A Sovereign Empirical Record of Black American Structural Distress, 1991&ndash;2024.</em> Corrected Print Edition. CC0 1.0 Universal. github.com/IAMGODIAM/bdi-black-paper</p>
   <p><strong>Underlying data.</strong> All source data is public and openly licensed. Layer 1 raw evidence: <span class="mono">IAMGODIAM/bdi-raw-data-vault</span>. Layer 2 synthesized instrument: <span class="mono">IAMGODIAM/bdi-sovereign-dataset</span>, sealed on Base Mainnet, ExodusV4 token #2. Layer 3 place-level application: <span class="mono">IAMGODIAM/farmblock-data</span> and <span class="mono">IAMGODIAM/farmblock-dataset</span>.</p>
-  <p><strong>On this edition.</strong> Every derived statistic in this paper was recomputed from the raw source series rather than carried forward from prior drafts, and flagged figures were re-verified against live federal sources in August 2026. Twenty-seven public claims were put through evidentiary triage; ten further arithmetic errors were found by recomputation; three canonical counts in the project&rsquo;s own governance documents were found stale. All corrections are enumerated in Appendix H.</p>
+  <p><strong>On this edition.</strong> Every derived statistic was recomputed from the raw source series rather than carried forward from prior drafts, and flagged figures were re-verified against live federal sources in August 2026. Twenty-seven public claims were put through evidentiary triage; ten further arithmetic errors were found by recomputation; three canonical counts in the project&rsquo;s own governance documents were found stale. This edition then incorporates a second wave of corrections arising from an independent review of the v1.1 print edition (September 1, 2026), which identified a defective price basis in the Chapter 5 wealth series and an unverified denominator in the incarceration series. Both are corrected; several claims are withdrawn. All corrections are enumerated in Appendix H, sections A, B and B2.</p>
   <p class="motto"><em>Nil satis nisi optimum.</em></p>
 </section>
 
