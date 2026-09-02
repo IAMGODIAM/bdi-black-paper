@@ -10,19 +10,31 @@ FRONT = """
   <p class="tp-sub">A Sovereign Empirical Record of<br/>Black American Structural Distress</p>
   <p class="tp-dates">1991&#8202;&ndash;&#8202;2024</p>
   <div class="tp-rule"></div>
-  <p class="tp-ed">Corrected Print Edition &middot; Black Paper v1.2</p>
-  <p class="tp-place">Liberty City &middot; Miami, Florida</p>
+  <p class="tp-author">Israel Lee Armstead</p>
+  <p class="tp-affil">E5 Enclave Incorporated &middot; Liberty City, Miami, Florida</p>
+  <p class="tp-ed">Corrected Print Edition &middot; Black Paper v1.3 &middot; Submission Edition</p>
 </section>
 
 <section class="copyright">
   <p><strong>The Measure of the Wound: A Sovereign Empirical Record of Black American Structural Distress, 1991&ndash;2024</strong></p>
-  <p>Corrected Print Edition &middot; Black Paper v1.2<br/>Published {date}</p>
+  <p>Corrected Print Edition &middot; Black Paper v1.3 &middot; Submission Edition<br/>Published {date}</p>
   <p>E5 Enclave Incorporated<br/>820 NW 64th Street, Liberty City, Miami, Florida 33150<br/>EIN 99-3822441 &middot; UEI H8NGXEYE2HH8 &middot; CAGE 07E88<br/>e5enclave.com</p>
   <p class="cc"><strong>CC0 1.0 Universal &mdash; Public Domain Dedication.</strong> To the extent possible under law, E5 Enclave Incorporated has waived all copyright and related or neighboring rights to this work. No permission is required to copy, translate, adapt, excerpt or republish it, in whole or in part, for any purpose. No attribution is required, though it is appreciated.</p>
   <p><strong>Suggested citation.</strong> E5 Enclave Incorporated. (2026). <em>The Measure of the Wound: A Sovereign Empirical Record of Black American Structural Distress, 1991&ndash;2024.</em> Corrected Print Edition. CC0 1.0 Universal. github.com/IAMGODIAM/bdi-black-paper</p>
   <p><strong>Underlying data.</strong> All source data is public and openly licensed. Layer 1 raw evidence: <span class="mono">IAMGODIAM/bdi-raw-data-vault</span>. Layer 2 synthesized instrument: <span class="mono">IAMGODIAM/bdi-sovereign-dataset</span>, sealed on Base Mainnet, ExodusV4 token #2. Layer 3 place-level application: <span class="mono">IAMGODIAM/farmblock-data</span> and <span class="mono">IAMGODIAM/farmblock-dataset</span>.</p>
-  <p><strong>On this edition.</strong> Every derived statistic was recomputed from the raw source series rather than carried forward from prior drafts, and flagged figures were re-verified against live federal sources in August 2026. Twenty-seven public claims were put through evidentiary triage; ten further arithmetic errors were found by recomputation; three canonical counts in the project&rsquo;s own governance documents were found stale. This edition then incorporates a second wave of corrections arising from an independent review of the v1.1 print edition (September 1, 2026), which identified a defective price basis in the Chapter 5 wealth series and an unverified denominator in the incarceration series. Both are corrected; several claims are withdrawn. All corrections are enumerated in Appendix H, sections A, B and B2.</p>
+  <p><strong>On this edition.</strong> Every derived statistic was recomputed from the raw source series rather than carried forward from prior drafts, and flagged figures were re-verified against live federal sources in August 2026. Twenty-seven public claims were put through evidentiary triage; ten further arithmetic errors were found by recomputation; three canonical counts in the project&rsquo;s own governance documents were found stale. This edition then incorporates a second wave of corrections arising from an independent review of the v1.1 print edition (September 1, 2026), which identified a defective price basis in the Chapter 5 wealth series and an unverified denominator in the incarceration series. Both are corrected; several claims are withdrawn. All corrections are enumerated in Appendix H, sections A, B and B2. The Submission Edition (v1.3) adds an abstract, an author of record, an AI-assistance disclosure, keywords and JEL codes, and a consolidated References section; it makes no substantive change to any finding.</p>
   <p class="motto"><em>Nil satis nisi optimum.</em></p>
+</section>
+
+
+<section class="abstract-page">
+  <h1 class="toc-h">Abstract</h1>
+  <p class="abs">This paper assembles an eight-pillar empirical record of Black American structural disparity across the era of formal legal equality, 1991&ndash;2024, nested within federal series that reach to 1900 (health), 1925 (criminal justice), 1940 (housing), 1964 (political participation), 1972 (labor) and 1514 (the historical architecture). Drawing on approximately 14,811 raw observations from the Bureau of Labor Statistics, the Census Bureau, the National Center for Health Statistics, the Bureau of Justice Statistics, the Federal Reserve, the National Center for Education Statistics, the Consumer Financial Protection Bureau, the Department of Agriculture and the Slave Voyages Database, synthesized into 1,574 verified observations and applied to 15,507 census tracts in 49 cities, it documents a consistent pattern: absolute conditions improve while the ratio between Black and white outcomes holds or widens. In constant 2022 dollars, Black median family wealth rose 388 percent while the absolute wealth gap reached its widest point in the survey&rsquo;s history. The Black/white unemployment ratio has never inverted in fifty-four years. The maternal mortality ratio is higher in 2022 (2.61) than in 1930 (1.48). The imprisonment ratio moved 0.14 points across ninety-seven years. The homeownership gap is wider than when the Fair Housing Act was signed. The paper contributes a place-level composite index, publishes its full corrections ledger and an independent verification review as appendices, and releases all data and code under CC0.</p>
+  <p class="abs-meta"><strong>Keywords:</strong> racial inequality; wealth gap; structural racism; Black Americans; longitudinal federal data; composite index; maternal mortality; incarceration; homeownership; open data</p>
+  <p class="abs-meta"><strong>JEL codes:</strong> J15, D63, I14, I24, K42, R21, N32</p>
+  <p class="abs-meta"><strong>Author of record.</strong> Israel Lee Armstead, Founder and Chairman of the Board, E5 Enclave Incorporated (EIN 99-3822441), 820 NW 64th Street, Miami, FL 33150. israel@e5enclave.com. The organization is the institutional publisher; responsibility for the content rests with the author.</p>
+  <p class="abs-meta"><strong>Disclosure of AI assistance.</strong> Generative AI systems were used substantially in preparing this work. Claude (Anthropic) was used to draft and revise prose, recompute derived statistics from the raw source series, build the typesetting pipeline and compile the corrections ledger, under the direction of the author, who set the research questions, selected and approved every source, reviewed every figure and is accountable for all content. An independent verification review of the v1.1 edition was performed by Manus AI and is reproduced with the author&rsquo;s response in the project repository. No AI system is an author of this work. Every numeric claim traces to a named federal or archival source listed in the References and in Appendix A.</p>
+  <p class="abs-meta"><strong>Data and code availability.</strong> All source data, manuscript sources, the build pipeline, the recomputation log and the corrections ledger are public under CC0 1.0 at github.com/IAMGODIAM/bdi-black-paper and the four data repositories cited in Appendix F. The FarmBlock Distress Index outputs are published but not yet independently reproducible from the released package; see Appendix E.4a.</p>
 </section>
 
 <section class="toc-page">
@@ -46,6 +58,7 @@ ORDER = [
  ("part",   "Part Four",   "The Argument", None),
  ("ch",     None,          "08_CHAPTER_8_POLICY.md", None),
  ("front",  None,          "09_CONCLUSION.md", "Conclusion"),
+ ("back",   None,          "11_REFERENCES.md", "References"),
  ("back",   None,          "10_APPENDICES.md", "Appendices"),
 ]
 
@@ -99,6 +112,8 @@ for kind,a,b,c in ORDER:
         toctxt="Chapters 1&ndash;2 &middot; The Tradition, and the Data Gap"
     if kind=="back":
         html=html.replace('<table>','<table class="srctable">',1)
+        if b=="11_REFERENCES.md":
+            html='<div class="refs">'+html+'</div>' 
     cls="chapter" + (" backmatter" if kind=="back" else "")
     body.append(f'<section class="{cls}" id="{cid}">{html}</section>')
     toc.append(f'<div class="toc-item"><a href="#{cid}"><span class="t">{toctxt}</span><span class="dots"></span></a></div>')

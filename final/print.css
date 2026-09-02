@@ -154,3 +154,13 @@ hr { border:none; border-top:.5pt solid var(--rule); width:28%; margin: 6mm auto
 .srctable th:nth-child(3), .srctable td:nth-child(3) { width: 26%; }
 .srctable th:nth-child(4), .srctable td:nth-child(4) { width: 12%; }
 .srctable th:nth-child(5), .srctable td:nth-child(5) { width: 35%; }
+
+/* ---------- SUBMISSION EDITION front matter ---------- */
+.tp-author { font-size: 13pt; color: var(--ink); margin: 10mm 0 1.5mm; text-indent:0; letter-spacing:.01em; }
+.tp-affil  { font-size: 9.5pt; font-style: italic; color: var(--mute); margin: 0 0 6mm; text-indent:0; }
+.abstract-page { page: blank; break-after: page; }
+.abstract-page .abs { font-size: 10pt; line-height: 1.5; text-align: justify; text-indent: 0; margin: 0 0 5mm; }
+.abstract-page .abs-meta { font-size: 8.8pt; line-height: 1.45; color: var(--body); text-indent: 0; margin: 0 0 3mm; text-align: left; }
+.abstract-page .abs-meta strong { color: var(--ink); }
+/* references: hanging indent, no justification */
+.backmatter #sec-references p, .refs p { text-indent: -5mm; padding-left: 5mm; text-align: left; margin: 0 0 1.6mm; font-size: 9.4pt; line-height: 1.42; }
