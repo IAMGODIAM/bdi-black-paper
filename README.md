@@ -2,6 +2,7 @@
 ### A Sovereign Empirical Record of Black American Structural Distress, 1991–2024
 
 **Publisher:** E5 Enclave Incorporated · EIN 99-3822441 · Liberty City, Miami, Florida  
+**DOI:** [10.5281/zenodo.22270905](https://doi.org/10.5281/zenodo.22270905) (concept DOI — resolves to the current edition)  
 **License:** CC0 1.0 Universal — Public Domain  
 **Status:** CORRECTED PRINT EDITION — complete, reconciled, peer-review ready  
 **Version:** Black Paper v1.4 — Submission Edition  
@@ -113,7 +114,7 @@ This paper draws from a four-layer public data stack. All repositories are CC0 l
 
 ## CITATION
 
-> Armstead, Israel Lee. (2026). *The Measure of the Wound: A Sovereign Empirical Record of Black American Structural Distress, 1991–2024.* Corrected Print Edition v1.4. E5 Enclave Incorporated. CC0 1.0 Universal. GitHub: IAMGODIAM/bdi-black-paper · publication package: IAMGODIAM/measure-of-the-wound
+> Armstead, Israel Lee. (2026). *The Measure of the Wound: A Sovereign Empirical Record of Black American Structural Distress, 1991–2024.* Corrected Print Edition v1.4. E5 Enclave Incorporated. doi:10.5281/zenodo.22270905. CC0 1.0 Universal. Publication package: IAMGODIAM/measure-of-the-wound
 
 ---
 
