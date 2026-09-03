@@ -40,3 +40,14 @@ Any Ubuntu 24.04 host with the packages named in the Dockerfile and
 `pip install -r build/requirements.txt` will reproduce the same bytes. Other platforms
 will produce a visually identical document whose hash may differ, because Pango,
 HarfBuzz and the font files differ; the page count (90) and text content should not.
+
+## Scope of the guarantee
+
+The image installs its distribution packages by name, not by pinned version, so an image
+built much later may pull newer Pango, HarfBuzz or font builds and produce a different
+hash. The guarantee is therefore precise but bounded: any two builds from the *same*
+image are byte-identical — verified by two independent runs on the machine that produced
+this edition — and the hash in `final/The_Measure_of_the_Wound.pdf.sha256` is the one the
+image produced as built on 2026-09-03. A later rebuild that yields a different hash is
+evidence of a changed toolchain, not of changed content; confirm by comparing the page
+count (90) and the extracted text, both of which are fixed by the sources.
