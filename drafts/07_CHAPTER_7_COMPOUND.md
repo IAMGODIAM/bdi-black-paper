@@ -33,6 +33,10 @@ All dimensions are min–max normalized across the corpus before compositing. Th
 
 The rationale for the county proxy is set out in full in Appendix E, along with the strongest objection to it — that including racial composition in an instrument used to demonstrate racial disparity risks circularity. The tract instrument exists partly as the answer to that objection.
 
+**Reproducibility status, stated before the scores rather than after them.** The FDI outputs in this chapter are **not independently reproducible from the published package.** Public: the scored files, the formulas above, the weights, the normalization method, the Humphreys decomposition and the enumerated defects. Not yet public: the raw pre-scoring inputs with their ACS table identifiers and vintages, the full Phase 3 corpus that supplies the normalization bounds, and the transformation code with a dependency lockfile. A reader can therefore audit the *logic* of everything that follows and cannot yet audit its *arithmetic*. Every score in this chapter — 87.25 for Humphreys County, the 15,507 tract scores, the 49 city rankings — should be cited as this organization's published output, not as an independently verified result. This is the finding of the September 2026 independent review, accepted without qualification; the full statement is Appendix E.4a, and closing the gap is the first deliverable of FDI v3.0.
+
+The chapter is retained on that footing rather than withdrawn, because a disclosed limitation a reader can navigate is worth more than a silence. What follows is offered as a published instrument with its audit trail attached and its weakest joint named — including, in §7.3, this project's own failed attempt to reproduce its flagship score.
+
 ---
 
 ## 7.2 The Ranked Counties
