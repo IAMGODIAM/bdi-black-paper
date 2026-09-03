@@ -1,5 +1,11 @@
 # Reproducing the print edition
 
+> **Two layouts use this file.** In the manuscript repository `bdi-black-paper` the sources are in
+> `drafts/`, the script is `final/build.py`, and the outputs land in `final/`. In the publication
+> package `measure-of-the-wound` the sources are in `manuscript/`, the script is `build/build.py`,
+> and the outputs land at the package root. `build.py` detects which it is in; `rebuild.sh` and
+> `rebuild.ps1` work unchanged in both. Paths below are written for the manuscript repository.
+
 The PDF in `final/` is a deterministic function of the manuscript sources in `drafts/`,
 the stylesheet `final/print.css`, the build script `final/build.py`, and the pinned
 toolchain in `build/Dockerfile`. Two independent runs of the container on the same
