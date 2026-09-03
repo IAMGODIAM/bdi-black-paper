@@ -25,7 +25,7 @@ or, without the wrapper:
     docker build -f build/Dockerfile -t mow-build .
     docker run --rm -v "$PWD:/work" mow-build
 
-Expected console output ends with `pages: 90` and a `sha256:` line equal to the
+Expected console output ends with `pages: 91` and a `sha256:` line equal to the
 contents of `final/The_Measure_of_the_Wound.pdf.sha256`. Pass `--no-pdf` to produce
 the HTML only.
 
@@ -45,7 +45,7 @@ the HTML only.
 Any Ubuntu 24.04 host with the packages named in the Dockerfile and
 `pip install -r build/requirements.txt` will reproduce the same bytes. Other platforms
 will produce a visually identical document whose hash may differ, because Pango,
-HarfBuzz and the font files differ; the page count (90) and text content should not.
+HarfBuzz and the font files differ; the page count (91) and text content should not.
 
 ## Scope of the guarantee
 
@@ -56,4 +56,4 @@ image are byte-identical — verified by two independent runs on the machine tha
 this edition — and the hash in `final/The_Measure_of_the_Wound.pdf.sha256` is the one the
 image produced as built on 2026-09-03. A later rebuild that yields a different hash is
 evidence of a changed toolchain, not of changed content; confirm by comparing the page
-count (90) and the extracted text, both of which are fixed by the sources.
+count (91) and the extracted text, both of which are fixed by the sources.

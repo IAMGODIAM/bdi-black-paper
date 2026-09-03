@@ -43,6 +43,23 @@ a { color: inherit; text-decoration: none; }
          text-transform:uppercase; color:var(--mute); margin: 8mm 0 2mm; text-indent:0; }
 .tp-place { font-size: 10pt; font-style: italic; color: var(--faint); text-indent:0; margin:0; }
 
+/* ---------- DEDICATION ---------- */
+.dedication { page: blank; break-after: page; padding-top: 44mm;
+              max-width: 116mm; margin: 0 auto; hyphens: none; }
+.dedication .ded-label { font-family:"DejaVu Sans",sans-serif; font-size:8pt;
+              letter-spacing:.34em; text-transform:uppercase; color:var(--mute);
+              text-align:center; text-indent:0; margin: 0 0 14mm; }
+.dedication p { font-size: 10.6pt; line-height: 1.62; text-indent: 0;
+              margin: 0 0 5.6mm; text-align: left; }
+.dedication .ded-open { font-size: 11.4pt; line-height: 1.58; }
+.dedication .ded-close { text-align: center; font-size: 11.6pt; font-style: italic;
+              color: var(--ink); margin: 11mm 0 6mm; }
+.dedication .ded-sign { text-align: center; font-size: 10pt; text-indent:0; margin: 0; }
+.dedication .ded-sign .nm { font-style: italic; color: var(--ink); }
+.dedication .ded-sign .pl { display:block; font-family:"DejaVu Sans",sans-serif;
+              font-size: 7.8pt; letter-spacing:.16em; text-transform:uppercase;
+              color: var(--faint); margin-top: 2.5mm; }
+
 /* ---------- COPYRIGHT ---------- */
 .copyright { page: blank; break-after: page; font-size: 8.6pt; line-height: 1.5;
              color: var(--mute); text-align: left; padding-top: 30mm; }

@@ -1,6 +1,6 @@
 # Reproducible build environment for The Measure of the Wound (print edition).
 #
-# Pins the environment in which the v1.3 Submission Edition PDF was produced:
+# Pins the environment in which the v1.4 Submission Edition PDF was produced:
 #   Ubuntu 24.04  |  Pango 1.52  |  HarfBuzz 8.3  |  fontconfig 2.15
 #   Bitstream Charter (xfonts-scalable)  |  DejaVu Sans (fonts-dejavu-core, fonts-dejavu-extra)
 #   WeasyPrint 69.0  |  Python-Markdown 3.10.2  |  see build/requirements.txt for every wheel

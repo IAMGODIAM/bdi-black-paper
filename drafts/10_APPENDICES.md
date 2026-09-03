@@ -201,7 +201,7 @@ Until that package is released, a reader can audit the *logic* of the FDI and ca
 
 W.E.B. Du Bois · Ida B. Wells · Harriet Tubman · Frederick Douglass · Nat Turner · Ella Baker · Malcolm X · James Baldwin · Cornel West · Melina Abdullah · The Movement for Black Lives
 
-Ralph McCartney, Overtown, Miami · Congresswoman Carrie Meek · The Black Archives of South Florida · The Samuel Proctor Oral History Program, University of Florida
+Ralph C. McCartney, Overtown, Miami · Congresswoman Carrie Meek · The Black Archives of South Florida · The Samuel Proctor Oral History Program, University of Florida
 
 *Nil satis nisi optimum.*
 

@@ -4,7 +4,7 @@
 **Publisher:** E5 Enclave Incorporated · EIN 99-3822441 · Liberty City, Miami, Florida  
 **License:** CC0 1.0 Universal — Public Domain  
 **Status:** CORRECTED PRINT EDITION — complete, reconciled, peer-review ready  
-**Version:** Black Paper v1.1  
+**Version:** Black Paper v1.4 — Submission Edition  
 **DAG:** bdi-black-paper-genesis-2026-0420
 
 ---
@@ -27,7 +27,7 @@ This paper is built on the largest unified open dataset documenting Black Americ
 
 ## THIS EDITION
 
-**`final/The_Measure_of_the_Wound.pdf`** — 90-page Corrected Print Edition, Black Paper **v1.3 (Submission Edition)**. v1.3 adds an abstract, author of record, AI-assistance disclosure, keywords/JEL codes and a consolidated References section; v1.2 carried the second-wave corrections that arose from an independent verification review of v1.1 (Manus AI, September 1, 2026 — review and author response in `peer-review/`).
+**`final/The_Measure_of_the_Wound.pdf`** — 91-page Corrected Print Edition, Black Paper **v1.4 (Submission Edition)**. v1.4 states the FarmBlock reproducibility limit in Chapter 7 where the index is introduced, and rewrites the AI disclosure to describe the division of labor exactly rather than approximately. v1.3 added the abstract, author of record, AI-assistance disclosure, keywords/JEL codes and consolidated References; v1.2 carried the second-wave corrections from an independent verification review of v1.1 (Manus AI, September 1, 2026 — review and author response in `peer-review/`).
 
 All chapters are complete. Every derived statistic was recomputed from the Layer-1 raw series rather than carried forward from prior drafts, and flagged figures were re-verified against live federal sources in August 2026.
 
@@ -106,14 +106,14 @@ This paper draws from a four-layer public data stack. All repositories are CC0 l
 |------|------|------|
 | `bdi-raw-data-vault` | Layer 1 — Raw federal evidence archive (~14,811 points) | [GitHub](https://github.com/IAMGODIAM/bdi-raw-data-vault) |
 | `bdi-sovereign-dataset` | Product A — Synthesized 8-pillar instrument (1,574 observations) | [GitHub](https://github.com/IAMGODIAM/bdi-sovereign-dataset) |
-| `farmblock-data` | Product B — Tract-level distress scoring (15,578 tracts) | [GitHub](https://github.com/IAMGODIAM/farmblock-data) |
+| `farmblock-data` | Product B — Tract-level distress scoring (15,507 tracts, 49 cities) | [GitHub](https://github.com/IAMGODIAM/farmblock-data) |
 | `farmblock-dataset` | Product B (county pilot) — Phase 2 county publication | [GitHub](https://github.com/IAMGODIAM/farmblock-dataset) |
 
 ---
 
 ## CITATION
 
-> E5 Enclave Incorporated. (2026). *The Measure of the Wound: A Sovereign Empirical Record of Black American Structural Distress, 1991–2024.* Black Paper v1.0. CC0 1.0 Universal. GitHub: IAMGODIAM/bdi-black-paper
+> Armstead, Israel Lee. (2026). *The Measure of the Wound: A Sovereign Empirical Record of Black American Structural Distress, 1991–2024.* Corrected Print Edition v1.4. E5 Enclave Incorporated. CC0 1.0 Universal. GitHub: IAMGODIAM/bdi-black-paper · publication package: IAMGODIAM/measure-of-the-wound
 
 ---
 
