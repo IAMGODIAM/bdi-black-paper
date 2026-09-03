@@ -203,6 +203,8 @@ W.E.B. Du Bois · Ida B. Wells · Harriet Tubman · Frederick Douglass · Nat Tu
 
 Ralph C. McCartney, Overtown, Miami · Congresswoman Carrie Meek · The Black Archives of South Florida · The Samuel Proctor Oral History Program, University of Florida
 
+**Editor of the manuscript:** Elvia G. Brazil-Armstead, who read every draft by hand.
+
 *Nil satis nisi optimum.*
 
 ---
