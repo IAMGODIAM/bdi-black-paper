@@ -27,7 +27,7 @@ This paper is built on the largest unified open dataset documenting Black Americ
 
 ## THIS EDITION
 
-**`final/The_Measure_of_the_Wound.pdf`** — 80-page print-ready corrected edition.
+**`final/The_Measure_of_the_Wound.pdf`** — 90-page Corrected Print Edition, Black Paper **v1.3 (Submission Edition)**. v1.3 adds an abstract, author of record, AI-assistance disclosure, keywords/JEL codes and a consolidated References section; v1.2 carried the second-wave corrections that arose from an independent verification review of v1.1 (Manus AI, September 1, 2026 — review and author response in `peer-review/`).
 
 All chapters are complete. Every derived statistic was recomputed from the Layer-1 raw series rather than carried forward from prior drafts, and flagged figures were re-verified against live federal sources in August 2026.
 
@@ -43,7 +43,7 @@ Every correction is enumerated in [`metadata/CORRECTIONS_LEDGER.md`](metadata/CO
 
 Notable withdrawals: the unsourced "$4.5 billion Section 3 gap"; the "never below 2× unemployment" and "never below 5.7× incarceration" floor claims; the "five compound catastrophe zones" list that did not match the instrument's own ranking.
 
-**Reproducing the PDF:** `cd final && python3 build.py && python3 -c "import weasyprint; weasyprint.HTML('measure_of_the_wound.html').write_pdf('The_Measure_of_the_Wound.pdf')"` (requires `markdown` and `weasyprint`).
+**Reproducing the PDF (deterministic):** `./build/rebuild.sh` (or `.\build\rebuild.ps1` on Windows) builds the pinned container in `build/Dockerfile` and regenerates `final/measure_of_the_wound.html` and `final/The_Measure_of_the_Wound.pdf`. Two runs on the same commit are byte-identical; compare against `final/The_Measure_of_the_Wound.pdf.sha256`. Procedure and rationale in [`build/REPRODUCING.md`](build/REPRODUCING.md). Without Docker: `python3 final/build.py` on any host with `markdown` and `weasyprint` (visually identical; hash may differ).
 
 ---
 
@@ -57,18 +57,29 @@ bdi-black-paper/
 ├── drafts/                            ← Working drafts (living documents)
 │   ├── 00_PREFACE.md
 │   ├── 01_INTRODUCTION.md
-│   ├── 02_PART_ONE_CHAPTERS_1-2.md
+│   ├── 02_CHAPTERS_1_2.md
 │   ├── 03_CHAPTER_3_METHODOLOGY.md
-│   ├── 04_CHAPTER_4_FINDINGS.md
-│   ├── 05_CHAPTER_5_COMPOUND_DISTRESS.md
-│   ├── 06_CHAPTER_6_HISTORICAL.md
-│   ├── 07_CHAPTER_7_FARMBLOCK.md
+│   ├── 04_CHAPTER_4_MEASURE.md
+│   ├── 05_CHAPTER_5_ECONOMIC.md
+│   ├── 06_CHAPTER_6_HEALTH_JUSTICE_EDUCATION.md
+│   ├── 07_CHAPTER_7_COMPOUND.md
 │   ├── 08_CHAPTER_8_POLICY.md
 │   ├── 09_CONCLUSION.md
-│   └── 10_APPENDICES.md
+│   ├── 10_APPENDICES.md
+│   └── 11_REFERENCES.md
 │
-├── final/                             ← Locked peer-review copy (promoted from drafts/)
-│   └── .gitkeep
+├── final/                             ← Built edition (from drafts/ via build.py)
+│   ├── build.py                       ← Deterministic HTML+PDF build
+│   ├── print.css
+│   ├── measure_of_the_wound.html
+│   ├── The_Measure_of_the_Wound.pdf
+│   └── The_Measure_of_the_Wound.pdf.sha256
+│
+├── build/                             ← Pinned container for byte-identical rebuilds
+│   ├── Dockerfile
+│   ├── requirements.txt
+│   ├── rebuild.sh / rebuild.ps1
+│   └── REPRODUCING.md
 │
 ├── data/                              ← Wrangled data support files
 │   ├── SOURCES.md                     ← Full source citation table

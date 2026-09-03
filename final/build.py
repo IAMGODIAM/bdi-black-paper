@@ -1,4 +1,34 @@
-import markdown, re, pathlib, datetime
+"""Build the print edition of *The Measure of the Wound*.
+
+Deterministic build: run from any working directory.
+
+    python3 final/build.py            # writes final/measure_of_the_wound.html and final/The_Measure_of_the_Wound.pdf
+    python3 final/build.py --no-pdf   # HTML only
+
+Manuscript sources are read from ../drafts/ (manuscript repository; outputs to final/),
+else ../manuscript/ (publication package; outputs to the package root), else the
+directory containing this script (flat layout).
+PDF metadata dates are fixed (BUILD_STAMP) so that identical sources, library
+versions and fonts yield a byte-identical PDF; see build/Dockerfile for the
+pinned environment and build/REPRODUCING.md for the procedure.
+"""
+import markdown, re, pathlib, sys, hashlib, os, datetime
+
+HERE   = pathlib.Path(__file__).resolve().parent
+ROOT   = HERE.parent
+# Two layouts are supported: the manuscript repository (drafts/ -> final/) and the
+# publication package (manuscript/ -> package root).
+if (ROOT / 'drafts').is_dir():
+    DRAFTS, OUT = ROOT / 'drafts', HERE
+elif (ROOT / 'manuscript').is_dir():
+    DRAFTS, OUT = ROOT / 'manuscript', ROOT
+else:
+    DRAFTS, OUT = HERE, HERE
+EDITION_DATE = "August 2026"
+BUILD_STAMP  = "2026-09-03T00:00:00Z"   # fixed for reproducible PDF metadata
+# fontTools stamps every subset font with the current time unless SOURCE_DATE_EPOCH is set;
+# pin it to BUILD_STAMP so the embedded fonts, and therefore the PDF, are byte-identical across runs.
+os.environ.setdefault("SOURCE_DATE_EPOCH", str(int(datetime.datetime.fromisoformat(BUILD_STAMP.replace("Z","+00:00")).timestamp())))
 
 MD = markdown.Markdown(extensions=['tables','attr_list','md_in_html'])
 
@@ -88,7 +118,7 @@ for kind,a,b,c in ORDER:
         body.append(f'<section class="partpage" id="{pid}"><p class="part-label">{a}</p><h1 class="part-title">{b}</h1></section>')
         toc.append(f'<div class="toc-part"><span class="t">{a} &middot; {b}</span></div>')
         continue
-    md=pathlib.Path(b).read_text()
+    md=(DRAFTS / b).read_text(encoding='utf-8')
     html=MD.convert(md); MD.reset()
     # epigraph attribution onto its own line
     html=re.sub(r'(<blockquote>\s*<p>.*?)\n?\s*—\s*(.*?)</p>',
@@ -118,7 +148,24 @@ for kind,a,b,c in ORDER:
     body.append(f'<section class="{cls}" id="{cid}">{html}</section>')
     toc.append(f'<div class="toc-item"><a href="#{cid}"><span class="t">{toctxt}</span><span class="dots"></span></a></div>')
 
-front=FRONT.replace("TOC_ITEMS","\n".join(toc)).replace("{date}", "August 2026")
-doc=f"<!DOCTYPE html><html lang='en'><head><meta charset='utf-8'><title>The Measure of the Wound</title><style>{pathlib.Path('print.css').read_text()}</style></head><body>{front}{''.join(body)}</body></html>"
-pathlib.Path('measure_of_the_wound.html').write_text(doc)
+front=FRONT.replace("TOC_ITEMS","\n".join(toc)).replace("{date}", EDITION_DATE)
+head=("<meta charset='utf-8'><title>The Measure of the Wound</title>"
+      "<meta name='author' content='Israel Lee Armstead'>"
+      "<meta name='description' content='The Measure of the Wound: A Sovereign Empirical Record of Black American Structural Distress, 1991-2024. Corrected Print Edition, Black Paper v1.3, Submission Edition. E5 Enclave Incorporated. CC0 1.0.'>"
+      "<meta name='keywords' content='racial inequality, wealth gap, structural racism, Black Americans, longitudinal federal data, composite index, maternal mortality, incarceration, homeownership, open data'>"
+      "<meta name='generator' content='bdi-black-paper build.py; python-markdown; WeasyPrint'>"
+      f"<meta name='dcterms.created' content='{BUILD_STAMP}'>"
+      f"<meta name='dcterms.modified' content='{BUILD_STAMP}'>")
+doc=f"<!DOCTYPE html><html lang='en'><head>{head}<style>{(HERE / 'print.css').read_text(encoding='utf-8')}</style></head><body>{front}{''.join(body)}</body></html>"
+(OUT / 'measure_of_the_wound.html').write_text(doc, encoding='utf-8')
 print("sections:", n, "| html bytes:", len(doc))
+
+if '--no-pdf' not in sys.argv:
+    from weasyprint import HTML
+    rendered = HTML(string=doc, base_url=str(OUT)).render()
+    pdf_path = OUT / 'The_Measure_of_the_Wound.pdf'
+    rendered.write_pdf(pdf_path)
+    digest = hashlib.sha256(pdf_path.read_bytes()).hexdigest()
+    print("pages:", len(rendered.pages), "| pdf bytes:", pdf_path.stat().st_size)
+    print("sha256:", digest)
+    (OUT / 'The_Measure_of_the_Wound.pdf.sha256').write_text(f"{digest}  The_Measure_of_the_Wound.pdf\n")
